@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+// ------------------------------------
+// GLOBAL
+// ------------------------------------
+
+@import "./sass/global/variables";
+@import "./sass/global/reset";
+@import "./sass/global/base";
+
+// ------------------------------------
+// COMPONENTS
+// ------------------------------------
+@import "./sass/components/btn";
+
+// ------------------------------------
+// MIXINS
+// ------------------------------------
+
+@import "./sass/mixins/mixins";
+
+
+
+// ------------------------------------
+// FONTS
+// ------------------------------------
+//@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+@font-face {
+  font-family: FuturaPTBook;
+  src: url(./assets/fonts/FuturaPTBook.woff) format("woff");
+}
+@font-face {
+  font-family: FuturaPTDemi;
+  src: url(./assets/fonts/FuturaPTDemi.woff) format("woff");
+}
+@font-face {
+  font-family: FuturaPTLight;
+  src: url(./assets/fonts/FuturaPTLight.woff) format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

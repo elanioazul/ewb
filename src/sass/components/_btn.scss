@@ -1,0 +1,32 @@
+@import "global/variables";
+@import "mixins/mixins";
+.btn {
+  color: $base;
+  background-color: $ewb-color;
+  border-color: #1ee2e7;
+  text-transform: uppercase;
+  font-family: $font-bold;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: 0;
+  padding: 17px 18px;
+  border-radius: rem(13px);
+  cursor: pointer;
+  outline: none;
+
+
+}
+
+
+
+//tablet styles
+@media screen and (min-width: 767px) {
+
+
+}
+
+//desktop styles
+@media screen and (min-width: 1024px) {
+
+
+}

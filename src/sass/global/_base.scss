@@ -1,0 +1,12 @@
+@import "global/variables";
+@import "mixins/mixins";
+
+body {
+  @include size(100%, 100vh);
+  overflow-x: hidden;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: $bg-color;
+}
+a {
+  text-decoration: none;
+}
