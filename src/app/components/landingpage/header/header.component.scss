@@ -16,25 +16,25 @@ header {
 }
 
 header .intro-text {
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 50px;
 }
 
 header .intro-text .intro-lead-in {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: $font-extrabold;
-  font-size: 22px;
+  font-size: rem(22px);
   font-style: italic;
   line-height: 22px;
 }
 
 header .intro-text .intro-heading {
-  margin-bottom: 25px;
+  margin-bottom: 55px;
   text-transform: uppercase;
   font-family: $font-extrabold, "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 30px;
 }
 
 @media(min-width:768px) {
@@ -50,16 +50,12 @@ header .intro-text .intro-heading {
       margin-bottom: 25px;
       font-family: $font-bold;
       font-size: rem(80px);
-      font-style: italic;
       line-height: 40px;
   }
 
   header .intro-text .intro-heading {
       margin-bottom: 50px;
-      text-transform: uppercase;
-      font-family: $font-extrabold, "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 75px;
-      font-weight: 700;
       line-height: 75px;
   }
 }

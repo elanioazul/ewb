@@ -7,7 +7,7 @@
   text-transform: uppercase;
   font-family: $font-bold;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 0;
   padding: 17px 18px;
   border-radius: rem(13px);
@@ -21,7 +21,12 @@
 
 //tablet styles
 @media screen and (min-width: 767px) {
+  .btn {
+    font-size: 1.2rem;
 
+
+
+  }
 
 }
 
