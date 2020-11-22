@@ -1,15 +1,26 @@
 @import 'global/variables';
 @import 'mixins/mixins';
 
+
 .navbar {
   height: rem(40px);
   background-color: $ewb-color;
 }
 
+.authorLink {
+  font-family: $font-bold, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  padding-left: rem(12px);
+  padding-top: rem(8px);
+  display: inline-block;
+}
+
 #menu {
   //@at-root: 171px;
   /*change here related your menu height*/
-  position: relative;
+  position: absolute;
+  top: 0px;
   overflow: none;
   width: 100%;
   z-index: 100;
@@ -130,6 +141,60 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 @media screen and (max-width: 950px) {
   .sidebarIconToggle {
     display: block
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .authorLink {
+    font-family: $font-bold, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    padding-left: rem(12px);
+    padding-top: rem(8px);
+    display: inline-block;
+    width: 40%;
+  }
+
+  #menu {
+    display: inline-block;
+    width: 60%;
+    padding-right: 80px;
+    padding-top: rem(8px);
+    transform: translateY(0px);
+  }
+
+  .main-content-wrapper a {
+    display: inline;
+    background: $ewb-color;
+    border: none;
+    color: $bg-color;
+    text-decoration: none;
+    font-family: $font-bold, Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+  }
+
+  .link-nav {
+    display: inline-block;
+    line-height: 24px;
+    margin: 10px 5px;
+    padding: 8px 16px;
+    letter-spacing: 0.2rem;
+
+  }
+
+  .main-content-wrapper a:visited, a:link {
+    color: $bg-color;
+  }
+  .main-content-wrapper a:hover {
+    color: $ewb-color;
+    background-color: $bg-color;
+    border-radius: 5px;
+
+
+  }
+  .main-content-wrapper a.active {
+    color: #1ee2e7;
+    font-weight: bold;
   }
 }
 
