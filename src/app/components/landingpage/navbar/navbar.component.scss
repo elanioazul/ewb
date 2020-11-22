@@ -145,12 +145,14 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 @media screen and (min-width: 950px) {
+  .navbar {
+    height: rem(80px);
+  }
   .authorLink {
     font-family: $font-bold, Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    color: whitesmoke;
+    font-size: 1.6rem;
     padding-left: rem(12px);
-    padding-top: rem(8px);
+    padding-top: rem(22px);
     display: inline-block;
     width: 40%;
   }
