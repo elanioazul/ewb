@@ -153,7 +153,6 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
   }
   .authorLink {
     font-family: $font-bold, Arial, Helvetica, sans-serif;
-    font-style: italic;
     font-size: 1.6rem;
     padding-left: rem(12px);
     padding-top: rem(22px);
@@ -166,10 +165,19 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
       width: 39.5%;
     }
     @media screen and (min-width: 1200px) {
-      width: 40%;
+      width: 42%;
     }
     @media screen and (min-width: 1300px) {
       width: 50%;
+    }
+    @media screen and (min-width: 1400px) {
+      width: 52.5%;
+    }
+    @media screen and (min-width: 1500px) {
+      width: 57%;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 60%;
     }
   }
 
@@ -189,10 +197,19 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
       width: 61.5%;
     }
     @media screen and (min-width: 1200px) {
-      width: 60%;
+      width: 58%;
     }
     @media screen and (min-width: 1300px) {
       width: 50%;
+    }
+    @media screen and (min-width: 1400px) {
+      width: 47.5%;
+    }
+    @media screen and (min-width: 1500px) {
+      width: 43%;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 40%;
     }
   }
 
