@@ -13,6 +13,7 @@ import { FooterComponent } from './components/landingpage/footer/footer.componen
 import { MapComponent } from './components/map/map/map.component';
 import { PinselectorComponent } from './components/map/pinselector/pinselector.component';
 import { CommunityComponent } from './components/landingpage/community/community.component';
+import { PingpongComponent } from './components/landingpage/pingpong/pingpong.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CommunityComponent } from './components/landingpage/community/community
     FooterComponent,
     MapComponent,
     PinselectorComponent,
-    CommunityComponent
+    CommunityComponent,
+    PingpongComponent
   ],
   imports: [
     BrowserModule
