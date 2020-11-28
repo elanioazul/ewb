@@ -35,6 +35,7 @@
     }
     &-subheading {
       display: block;
+      margin-top: 10px;
       margin-bottom: 75px;
       text-transform: none;
       font-family: $font-light,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -44,6 +45,10 @@
   }
   &__boxtimeline {
     display: block;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -149,15 +154,22 @@
 .timeline .timeline-heading h4 {
   margin-top: 0;
   color: inherit;
+  font-size: rem(17px);
 }
 
 .timeline .timeline-heading h4.subheading {
   text-transform: none;
+  font-size: rem(24px);
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
   margin-bottom: 0;
+  font-family: $font-light;
+  font-size: rem(20px);
 }
 
 @media(min-width:768px) {
