@@ -2,14 +2,16 @@
 @import 'mixins/mixins';
 
 .guidelines {
-
+  display: block;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $primary;
+    background-color: $grey-400;
     color: $bg-color;
     font-family: $font-extrabold;
+
+
   }
 
   &__main {
@@ -17,20 +19,29 @@
     flex-direction: column;
     align-items: center;
 
+    padding: 80px 40px;
+
+    @media screen and (max-width: 950px) {
+      display: block;
+    }
+
     &-box {
-      border: 1px solid green;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      padding: 10px 10px;
     }
     &-title {
       display: block;
-      font-size: rem(22px);
+      font-size: rem(30px);
+      text-transform: uppercase;
     }
     &-desc {
       display: block;
       font-size: rem(20px);
       font-family: $font-light;
+      text-align: center;
     }
   }
 
@@ -39,11 +50,24 @@
     flex-direction: column;
     align-items: center;
 
+    padding: 0px 20px;
+
+    @media screen and (min-width: 950px) {
+      flex-direction: row;
+      align-items: center;
+      width: 70vw;
+    }
+
     &-box {
-      border: 1px solid red;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      padding: 10px 10px;
+
+      @media screen and (min-width: 950px) {
+        padding: 10px 40px;
+      }
     }
     &-title {
       display: block;
@@ -53,6 +77,12 @@
       display: block;
       font-size: rem(20px);
       font-family: $font-light;
+      text-align: center;
+
+      padding: 10px 0px 10px 0px;
+      @media screen and (min-width: 950px) {
+        padding: 10px 40px;
+      }
     }
   }
 }
