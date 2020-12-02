@@ -14,6 +14,9 @@ import { MapComponent } from './components/map/map/map.component';
 import { PinselectorComponent } from './components/map/pinselector/pinselector.component';
 import { CommunityComponent } from './components/landingpage/community/community.component';
 import { PingpongComponent } from './components/landingpage/pingpong/pingpong.component';
+import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollmark.component';
+import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
+import { GalleriaModalComponent } from './components/landingpage/galleria-modal/galleria-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { PingpongComponent } from './components/landingpage/pingpong/pingpong.co
     MapComponent,
     PinselectorComponent,
     CommunityComponent,
-    PingpongComponent
+    PingpongComponent,
+    ScrollmarkComponent,
+    GalleriaComponent,
+    GalleriaModalComponent
   ],
   imports: [
     BrowserModule
