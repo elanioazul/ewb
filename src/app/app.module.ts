@@ -17,6 +17,7 @@ import { PingpongComponent } from './components/landingpage/pingpong/pingpong.co
 import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollmark.component';
 import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
 import { GalleriaModalComponent } from './components/landingpage/galleria-modal/galleria-modal.component';
+import { GalleriaMansonriComponent } from './components/landingpage/galleria-mansonri/galleria-mansonri.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { GalleriaModalComponent } from './components/landingpage/galleria-modal/
     PingpongComponent,
     ScrollmarkComponent,
     GalleriaComponent,
-    GalleriaModalComponent
+    GalleriaModalComponent,
+    GalleriaMansonriComponent
   ],
   imports: [
     BrowserModule
