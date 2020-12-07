@@ -10,7 +10,7 @@ export class PhotosService {
     {
       title:'Baseline survey',
       subtitle: 'Form filling out by locals in a socialization meeting',
-      src: '../assets/photos/community/men_survey_1.jpg',
+      src: 'men_survey_1.jpg',
       desc: 'asasa yes oo asasasassssssd dddsd d d sd  e',
       comments: 'ssaaas',
       date: 'Jan 2019',
@@ -20,7 +20,7 @@ export class PhotosService {
     {
       title:'Baseline survey',
       subtitle: 'Form filling out by locals in their homes',
-      src: '../assets/photos/community/men_survey_4.jpg',
+      src: 'men_survey_4.jpg',
       desc: 'osoasoaisi aisiss isdhjdj a ahhdhd ',
       comments: 'ssaaas',
       date: 'Jan 2019',
@@ -29,7 +29,7 @@ export class PhotosService {
     {
       title:'Socialization',
       subtitle: 'Socialization meeting with water comitte, chief and local partner',
-      src: '../assets/photos/community/sociabilizacion_1.jpg',
+      src: 'sociabilizacion_1.jpg',
       desc: 'asasa',
       comments: 'ssaaas',
       date: 'Jan 2019',
@@ -38,7 +38,7 @@ export class PhotosService {
     {
       title:'Utilities',
       subtitle: 'Some of the sanitation facilities to be renovated',
-      src: '../assets/photos/community/sanitation_1.jpg',
+      src: 'sanitation_1.jpg',
       desc: 'asasa',
       comments: 'ssaaas',
       date: '02/10/2019',
@@ -47,7 +47,7 @@ export class PhotosService {
     {
       title:'Utilities',
       subtitle: 'Some of the water facilities to be renovated',
-      src: '../assets/photos/community/water_2.jpg',
+      src: 'water_2.jpg',
       desc: 'asasa',
       comments: 'ssaaas',
       date: 'Oct 2019',
@@ -56,7 +56,7 @@ export class PhotosService {
     {
       title:'Utilities',
       subtitle: 'Some of the water facilities to be renovated',
-      src: '../assets/photos/community/water_3.jpg',
+      src: 'water_3.jpg',
       desc: 'asasa',
       comments: 'ssaaas',
       date: 'Oct 2019',

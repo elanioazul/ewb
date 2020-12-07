@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" *ngFor="let photo of photos;">
   <a class="container__photo" href="#photoModal">
       <div class="container__photo-hover">
           <div class="container__photo-content">
               <i class="fa fa-plus fa-3x"></i>
           </div>
       </div>
-      <img class="container__photo-src" src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+      <img class="container__photo-src" src="assets/photos/community/{{photo.src}}" class="img-responsive" alt="">
   </a>
   <div class="container__details">
-      <h4 class="container__details-title">Round Icons</h4>
-      <p class="container__details-subtitle">Graphic Design</p>
+      <h4 class="container__details-title">{{photo.title}}</h4>
+      <p class="container__details-subtitle">{{photo.subtitle}}</p>
   </div>
 </div>
 

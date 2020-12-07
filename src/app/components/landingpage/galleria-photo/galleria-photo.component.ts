@@ -8,11 +8,12 @@ import { PhotosService } from 'src/app/services/photos.service';
 })
 export class GalleriaPhotoComponent implements OnInit {
 
+  photos;
 
-
-  constructor() { }
+  constructor(private photosList: PhotosService) { }
 
   ngOnInit(): void {
+    this.photos = this.photosList.photos;
   }
 
 }
