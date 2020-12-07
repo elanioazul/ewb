@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { PhotosService } from 'src/app/services/photos.service';
 
 @Component({
   selector: 'app-galleria-photo',
@@ -6,6 +7,8 @@ import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angu
   styleUrls: ['./galleria-photo.component.scss']
 })
 export class GalleriaPhotoComponent implements OnInit {
+
+
 
   constructor() { }
 

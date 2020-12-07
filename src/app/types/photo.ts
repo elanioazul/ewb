@@ -4,7 +4,6 @@ export interface Imagen {
   src: string,
   desc: string,
   comments: string,
-  date: Date,
-  client: string,
+  date: string,
   category: string
 }
