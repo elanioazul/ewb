@@ -29,7 +29,7 @@ export class PhotosService {
     {
       title:'Socialization',
       subtitle: 'Socialization meeting with water comitte, chief and local partner',
-      src: 'sociabilizacion_1.jpg',
+      src: 'sociabilizacion_1.JPG',
       desc: 'asasa',
       comments: 'ssaaas',
       date: 'Jan 2019',
