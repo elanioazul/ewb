@@ -6,7 +6,7 @@ import { Imagen } from '../../app/types/photo';
 })
 export class PhotosService {
 
-  photos: Imagen[] =[
+  photosArray: Imagen[] =[
     {
       title:'Baseline survey',
       subtitle: 'Form filling out by locals in a socialization meeting',

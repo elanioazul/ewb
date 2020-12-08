@@ -13,7 +13,7 @@ export class GalleriaPhotoComponent implements OnInit {
   constructor(private photosList: PhotosService) { }
 
   ngOnInit(): void {
-    this.photos = this.photosList.photos;
+    this.photos = this.photosList.photosArray;
   }
 
 }
