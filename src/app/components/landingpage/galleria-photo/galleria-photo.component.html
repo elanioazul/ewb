@@ -1,9 +1,6 @@
 <div class="container" *ngFor="let photo of photos;">
   <a class="container__photo" href="#photoModal">
       <div class="container__photo-hover">
-          <div class="container__photo-content">
-              <i class="fa fa-plus fa-3x"></i>
-          </div>
       </div>
       <img class="container__photo-src" src="assets/photos/community/{{photo.src}}" alt="">
   </a>
@@ -12,4 +9,6 @@
       <p class="container__details-subtitle">{{photo.subtitle}}</p>
   </div>
 </div>
+
+
 
