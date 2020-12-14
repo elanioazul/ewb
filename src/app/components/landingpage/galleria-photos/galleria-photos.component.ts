@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { PhotosService } from 'src/app/services/photos.service';
 
 @Component({
   selector: 'app-galleria-photos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleriaPhotosComponent implements OnInit {
 
-  constructor() { }
+  photos;
+
+  constructor(private photosList: PhotosService) { }
 
   ngOnInit(): void {
+    this.photos = this.photosList.photosArray;
   }
 
 }

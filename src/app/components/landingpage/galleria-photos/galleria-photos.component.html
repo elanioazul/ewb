@@ -1,1 +1,10 @@
-<p>galleria-photos works!</p>
+<div class="container" *ngFor="let photo of photos;">
+  <div class="container__photo">
+      <div class="container__photo-hover"></div>
+      <img class="container__photo-src" src="assets/photos/community/{{photo.src}}" alt="photo">
+  </div>
+  <div class="container__details">
+      <h4 class="container__details-title">{{photo.title}}</h4>
+      <p class="container__details-subtitle">{{photo.subtitle}}</p>
+  </div>
+</div>
