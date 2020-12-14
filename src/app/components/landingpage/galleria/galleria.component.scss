@@ -58,8 +58,8 @@
     width: 100%;
     padding: 0px 10px;
 
-    @media(min-width:768px) {
-      //flex-direction: row;
+    @media(min-width:992px) {
+      flex-direction: row;
     }
   }
 }

@@ -47,7 +47,7 @@ export class PhotosService {
     {
       title:'Utilities',
       subtitle: 'Some of the water facilities to be renovated',
-      src: 'water_2.jpg',
+      src: 'water_1.jpg',
       desc: 'asasa',
       comments: 'ssaaas',
       date: 'Oct 2019',
