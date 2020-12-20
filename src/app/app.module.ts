@@ -17,7 +17,6 @@ import { PingpongComponent } from './components/landingpage/pingpong/pingpong.co
 import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollmark.component';
 import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
 import { GalleriaModalComponent } from './components/landingpage/galleria-modal/galleria-modal.component';
-import { GalleriaPhotoComponent } from './components/landingpage/galleria-photo/galleria-photo.component';
 import { GalleriaPhotosComponent } from './components/landingpage/galleria-photos/galleria-photos.component';
 
 @NgModule({
@@ -38,7 +37,6 @@ import { GalleriaPhotosComponent } from './components/landingpage/galleria-photo
     ScrollmarkComponent,
     GalleriaComponent,
     GalleriaModalComponent,
-    GalleriaPhotoComponent,
     GalleriaPhotosComponent
   ],
   imports: [
