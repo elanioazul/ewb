@@ -1,89 +1,59 @@
+@import 'global/variables';
+@import 'mixins/mixins';
 
-.portfolio-modal .modal-content {
-  padding: 100px 0;
-  min-height: 100%;
-  border: 0;
-  border-radius: 0;
-  text-align: center;
-  background-clip: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.portfolio-modal .modal-content h2 {
-  margin-bottom: 15px;
-  font-size: 3em;
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content p.item-intro {
-  margin: 20px 0 30px;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-style: italic;
-}
-
-.portfolio-modal .modal-content ul.list-inline {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .close-modal {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
+.btn--close {
   background-color: transparent;
-  cursor: pointer;
+  color: rgba(0, 0, 0, 0.75);
+  transition: color 0.25;
+}
+.btn--close:hover {
+  color: #000;
 }
 
-.portfolio-modal .close-modal:hover {
-  opacity: .3;
+.modal {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
-.portfolio-modal .close-modal .lr {
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  background-color: #222;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.modal--show {
+  z-index: 1000;
+    opacity: 1;
+
 }
 
-.portfolio-modal .close-modal .lr .rl {
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  background-color: #222;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+.modal__container {
+  position: relative;
+  width: 100vw;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  transform: translate3d(0, -30px, 0);
+  transition: transform 0.35s linear;
+
 }
 
-::-moz-selection {
-  text-shadow: none;
-  background: #1ee2e7;
+.modal--show .modal__container {
+  transform: translate3d(0, 0, 0);
 }
 
-::selection {
-  text-shadow: none;
-  background: #1ee2e7;
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
 
-img::selection {
-  background: 0 0;
-}
-
-img::-moz-selection {
-  background: 0 0;
+.modal__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
