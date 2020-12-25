@@ -9,6 +9,7 @@ import { PhotosService } from 'src/app/services/photos.service';
 export class GalleriaPhotosComponent implements OnInit {
 
   photos;
+  photoId: string;
 
   constructor(private photosList: PhotosService) { }
 
