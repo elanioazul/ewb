@@ -18,6 +18,7 @@ import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollm
 import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
 import { GalleriaPhotosComponent } from './components/landingpage/galleria-photos/galleria-photos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalComponent } from './reusables/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PingpongComponent,
     ScrollmarkComponent,
     GalleriaComponent,
-    GalleriaPhotosComponent
+    GalleriaPhotosComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
