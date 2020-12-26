@@ -44,7 +44,8 @@ import { ModalComponent as ModalComponent } from './reusables/modal/modal.compon
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
