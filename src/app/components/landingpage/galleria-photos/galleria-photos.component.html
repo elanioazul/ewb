@@ -1,5 +1,5 @@
 <div class="container" *ngFor="let photo of photos; let i = index">
-  <div class="container__photo" id="'photo_' + i" (click)="openModal()">
+  <div class="container__photo" id="'photo_' + i" (click)="openModal(photo.src)">
       <div class="container__photo-hover"></div>
       <img class="container__photo-src" src="assets/photos/community/{{photo.src}}" alt="photo">
   </div>
