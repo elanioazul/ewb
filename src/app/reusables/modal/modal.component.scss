@@ -1,12 +1,54 @@
 @import 'global/variables';
 @import 'mixins/mixins';
 
+.modal {
+  &__content {
+
+  }
+  &__close {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &-fake {
+      width: 15px;
+      height: 20px;
+    }
+  }
+  &__container {
+
+  }
+  &__block {
+
+  }
+  &__body {
+
+    &-title {
+
+    }
+    &-shrotdesc {
+
+    }
+    &-img {
+
+    }
+    &-desc1 {
+
+    }
+    &-desc2 {
+
+    }
+
+  }
+  &__list {
+
+  }
+}
+
 //codepen close button, https://codepen.io/perry_nt/pen/NxobOm
 .outer {
   position: relative;
-  margin: auto;
-  width: 70px;
-  margin-top: 200px;
+  width: 20px;
   cursor: pointer;
 }
 
@@ -16,7 +58,7 @@
 }
 
 label {
-  font-size: .8em;
+  font-size: .5em;
   line-height: 4em;
   text-transform: uppercase;
   color: #fff;
@@ -60,4 +102,22 @@ label {
 
 .outer:hover .inner:after {
   bottom: 0;
+}
+
+
+@media(min-width: 767px) {
+  .outer {
+    width: 40px;
+  }
+  label {
+    font-size: .6em;
+  }
+}
+@media(min-width: 1024px) {
+  .outer {
+    width: 70px;
+  }
+  label {
+    font-size: .8em;
+  }
 }

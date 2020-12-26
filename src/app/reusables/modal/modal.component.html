@@ -1,8 +1,12 @@
 <div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal__content">
-      <div class="modal__close outer" (click)="closeModal()">
-        <div class="inner">
-          <label>Back</label>
+      <div class="modal__close" (click)="closeModal()">
+        <div class="modal__close-fake">
+        </div>
+        <div class="outer">
+          <div class="inner">
+            <label>Back</label>
+          </div>
         </div>
       </div>
       <div class="modal__container">
