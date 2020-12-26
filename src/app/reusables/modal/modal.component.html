@@ -1,12 +1,27 @@
-<div id="modal-content-wrapper">
-  <header id="modal-header">
-      <h1 id="modal-title">Are you sure you want to logout?</h1>
-  </header>
-  <section id="modal-body">
-      <p>If you logout bad things might happen, but don't mind me, I'm just the description in a modal...</p>
-  </section>
-  <footer id="modal-footer">
-      <button id="modal-action-button" (click)="actionFunction()">Logout</button>
-      <button id="modal-cancel-button" (click)="closeModal()">Go back</button>
-  </footer>
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal__content">
+      <div class="modal__close outer" (click)="closeModal()">
+        <div class="inner">
+          <label>Back</label>
+        </div>
+      </div>
+      <div class="modal__container">
+          <div class="modal__block">
+            <div class="modal__body">
+              <h2 class="modal__body-title">Photo Name</h2>
+              <p class="modal__body-shrotdesc">Lorem ipsum dolor sit amet consectetur.</p>
+              <img class="modal__body-img" src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" alt="">
+              <p class="modal__body-desc1">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+              </p>
+              <p class="modal__body-desc2">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="modal__list">
+                  <li>Date: July 2014</li>
+                  <li>Category: Graphic Design</li>
+              </ul>
+              <button (click)="closeModal()">Back</button>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>
