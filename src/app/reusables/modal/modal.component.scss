@@ -22,21 +22,46 @@
 
   }
   &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $font-bold;
 
     &-title {
-
+      display: block;
+      font-size: rem(25px);
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      line-height: 1.2;
     }
     &-shrotdesc {
+      display: block;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: rem(18px);
+      text-align: center;
 
+      @media(min-width: 767px) {
+        font-size: rem(20px);
+      }
     }
     &-img {
-
+      height: auto;
+      width: 100%;
+      object-fit:cover;
     }
     &-desc1 {
-
+      display: block;
+      padding: 15px 10px;
+      text-align: justify;
     }
     &-desc2 {
-
+      display: block;
+      padding: 10px 10px;
+      text-align: justify;
     }
 
   }
@@ -61,7 +86,7 @@ label {
   font-size: .5em;
   line-height: 4em;
   text-transform: uppercase;
-  color: #fff;
+  color: $grey-400;
   transition: all .3s ease-in;
   opacity: 0;
   cursor: pointer;
