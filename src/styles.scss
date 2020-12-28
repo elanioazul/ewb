@@ -53,6 +53,7 @@ mat-dialog-container#modal-component {
   background-color: $grey;
   color: $grey-400;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 .cdk-overlay-container {
   //background-color: $ewb-color;
