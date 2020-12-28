@@ -84,4 +84,21 @@
   }
 }
 
+.btn-close {
+  position: relative;
+  border-left: none;
+  border-right: none;
+  border-color: #FFC107;
+  background-color: $grey;
+  color: $grey-400;
+
+  font-size: 0.8rem;
+  line-height: 3em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  margin-top: 1rem;
+}
+
+
 
