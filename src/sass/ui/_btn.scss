@@ -86,6 +86,7 @@
 
 .btn-close {
   position: relative;
+  outline: none;
   border-left: none;
   border-right: none;
   border-color: #FFC107;
@@ -98,6 +99,11 @@
   cursor: pointer;
 
   margin-top: 1rem;
+
+  &:hover {
+    color: $grey-200;
+  }
+
 }
 
 
