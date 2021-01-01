@@ -1,0 +1,10 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+.progress {
+  border-bottom: 2px solid yellow;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
