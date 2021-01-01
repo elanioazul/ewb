@@ -33,8 +33,6 @@ export class GalleriaPhotosComponent implements OnInit {
     dialogConfig.width = "100vw";
     dialogConfig.data = this.photoId;
     const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
-
-    console.log(this.photoId)
   }
 
 }
