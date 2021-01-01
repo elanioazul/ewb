@@ -25,15 +25,15 @@ export class GalleriaPhotosComponent implements OnInit {
   }
 
   openModal(id) {
+    this.photoId = id
     const dialogConfig = new MatDialogConfig();
-    // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = true;
     dialogConfig.id = "modal-component";
     dialogConfig.height = "100vh";
     dialogConfig.width = "100vw";
-    // https://material.angular.io/components/dialog/overview
+    dialogConfig.data = this.photoId;
     const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
-    this.photoId = id
+
     console.log(this.photoId)
   }
 
