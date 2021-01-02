@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent as ModalComponent } from './reusables/modal/modal.component';
+import { ParthershipComponent } from './components/landingpage/parthership/parthership.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ModalComponent as ModalComponent } from './reusables/modal/modal.compon
     ScrollmarkComponent,
     GalleriaComponent,
     GalleriaPhotosComponent,
-    ModalComponent
+    ModalComponent,
+    ParthershipComponent
   ],
   imports: [
     BrowserModule,
