@@ -12,4 +12,5 @@ export class ParthershipComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
