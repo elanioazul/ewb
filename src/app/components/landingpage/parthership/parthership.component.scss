@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $grey;
 
   @media(min-width: 767px) {
     flex-direction: row;
@@ -140,9 +141,9 @@
 .frontTitle {
   padding-top:5px;
   text-align:center;
-  font-family:'latoregular',arial;
+  font-family: $font-extrabold,arial;
   font-size:18px;
-  color:#000;
+  color:$grey-300;
   height:45px;
 }
 
@@ -159,38 +160,38 @@
 }
 
 .boisedigital {
- background-image:url(/assets/photos/logos-organizations/men_logo_natasa.png);
-      background-size:85% auto;
+  background-image:url(/assets/photos/logos-organizations/men_logo_natasa.png);
+  background-size:85% auto;
   background-position:center center;
 }
 
 .dissolve {
- background-image:url('http://portfolio.dizin.x10.bz/images/dissolve.png');
-      background-size:125px 125px;
+  background-image:url('http://portfolio.dizin.x10.bz/images/dissolve.png');
+  background-size:125px 125px;
 }
 
 .frontLocation {
-  padding-top:10px;
+  padding: 10px 4px;
   text-align:center;
-  color:#aaa;
-  font-family:'latoregular',arial;
+  color:$grey-200;
+  font-family: $font-bold,arial;
   font-size:18px;
 }
 
 .backTitle {
   padding:10px;
    color:#000;
-  font-family:'latohairline',arial;
+  font-family:$font-bold,arial;
   font-size:16px;
   font-weight:bold;
 }
 
 .backParagraph {
-   padding:10px;
+  padding:10px;
   padding-top:0;
-   color:#000;
-  font-family:'latoregular',arial;
-  font-size:14px;
+  color:#000;
+  font-family:$font-light,arial;
+  font-size: rem(16px);
 }
 
 .backGoto {
