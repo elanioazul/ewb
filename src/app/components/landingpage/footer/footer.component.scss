@@ -2,12 +2,48 @@
 @import 'mixins/mixins';
 
 
-.footer {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $ewb-color;
   color: $base;
   font-family: $font-bold;
-  height: auto;
+}
+
+.logo {
+  cursor: pointer;
+  padding: 25px 0px;
+
+
+  &__link {
+  }
+  &__png {
+    height: 50px;
+    width: 100px;
+  }
+
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+
+
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.authority {
+
 }
