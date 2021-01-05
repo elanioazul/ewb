@@ -13,7 +13,6 @@ import { FooterComponent } from './components/landingpage/footer/footer.componen
 import { MapComponent } from './components/map/map/map.component';
 import { PinselectorComponent } from './components/map/pinselector/pinselector.component';
 import { CommunityComponent } from './components/landingpage/community/community.component';
-import { PingpongComponent } from './components/landingpage/pingpong/pingpong.component';
 import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollmark.component';
 import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
 import { GalleriaPhotosComponent } from './components/landingpage/galleria-photos/galleria-photos.component';
@@ -37,7 +36,6 @@ import { ParthershipComponent } from './components/landingpage/parthership/parth
     MapComponent,
     PinselectorComponent,
     CommunityComponent,
-    PingpongComponent,
     ScrollmarkComponent,
     GalleriaComponent,
     GalleriaPhotosComponent,

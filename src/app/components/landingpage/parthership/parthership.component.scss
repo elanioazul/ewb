@@ -83,9 +83,12 @@
   -moz-perspective: 600px;
 
   @media(min-width: 767px) {
-    margin: 20px 25px;
+    margin: 20px 0px 50px 0px;
   }
   @media(min-width: 1024px) {
+    margin: 20px 25px;
+  }
+  @media(min-width: 1200px) {
     margin: 20px 75px;
   }
 }
