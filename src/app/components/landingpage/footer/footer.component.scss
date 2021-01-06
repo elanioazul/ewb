@@ -14,14 +14,19 @@
 
 .logo {
   cursor: pointer;
-  padding: 25px 0px;
+  padding-top: 25px;
+  padding-bottom: 0px;
 
 
   &__link {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
   &__png {
-    height: 50px;
-    width: 100px;
+    height: 70px;
+    width: 130px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
 
 }
@@ -31,9 +36,24 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 
+  padding-bottom: 50px;
 
+  &__link {
+    font-size: 25px;
+  }
+}
+.fa {
+  margin: 0px 7px;
+}
+.fa-twitter-square {
+  color: $base;
+}
+.fa-linkedin-square {
+  color: $base;
+}
+.fa-facebook-square {
+  color: $base;
 }
 
 .project {
@@ -41,9 +61,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: $font-extrabold;
+  font-size: rem(20px);
+  padding-bottom: rem(25px);
+
+  &__title {
+    padding-bottom: 8px;
+  }
+
+  &__section {
+    font-family: $font-light;
+    font-size: rem(20px);
+    color: $base;
+    display: inline-block;
+    padding: 3px 0px;
+  }
 
 }
 
 .authority {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-light;
+  font-size: rem(18px);
+  margin-top: 25px;
+  padding: 0px 25px;
+  text-align: center;
+  &__awesome {
+
+  }
+  &__webmaps {
+
+  }
+  &__copyright {
+    margin-top: 15px;
+  }
 
 }
