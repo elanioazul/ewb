@@ -14,7 +14,7 @@
 
 .logo {
   cursor: pointer;
-  padding-top: 25px;
+  padding-top: 50px;
   padding-bottom: 0px;
 
 
@@ -97,6 +97,12 @@
   }
   &__copyright {
     margin-top: 15px;
+  }
+  &__link {
+    color: $base;
+  }
+  &__link:hover {
+    color: $hover;
   }
 
 }
