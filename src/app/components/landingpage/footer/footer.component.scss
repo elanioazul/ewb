@@ -116,12 +116,15 @@
   }
   &__copyright {
     margin-top: 15px;
+    color: $grey-400;
+    opacity: 0.7;
   }
   &__link {
     color: $base;
   }
   &__link:hover {
     color: $hover;
+    opacity: 1;
   }
 
 }
