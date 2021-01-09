@@ -1,0 +1,56 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+.blockband {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  &__link {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  &__png {
+    height: 70px;
+    width: 130px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 50px;
+
+  &__link {
+    font-size: 25px;
+  }
+}
+.fa {
+  margin: 0px 7px;
+}
+.fa-twitter-square {
+  color: $base;
+}
+.fa-linkedin-square {
+  color: $base;
+}
+.fa-facebook-square {
+  color: $base;
+}

@@ -1,0 +1,62 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-extrabold;
+  font-size: rem(20px);
+  padding-bottom: rem(25px);
+  // @media(min-width: 767px) {
+  //   flex-direction: row;
+
+  // }
+
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &-title {
+      padding-bottom: 8px;
+    }
+
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(min-width: 767px) {
+      flex-direction: row;
+    }
+    &-col1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-col2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-section {
+      font-family: $font-light;
+      font-size: rem(20px);
+      color: $base;
+      display: inline-block;
+      padding: 3px 0px;
+    }
+  }
+
+
+
+}
