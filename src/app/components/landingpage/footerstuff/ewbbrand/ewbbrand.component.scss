@@ -59,9 +59,24 @@
 .fa-twitter-square {
   color: $base;
 }
+.fa-twitter-square:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .fa-linkedin-square {
   color: $base;
 }
+.fa-linkedin-square:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .fa-facebook-square {
   color: $base;
+}
+.fa-facebook-square:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
