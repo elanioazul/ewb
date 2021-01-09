@@ -9,10 +9,16 @@
   font-family: $font-extrabold;
   font-size: rem(20px);
   padding-bottom: rem(25px);
-  // @media(min-width: 767px) {
-  //   flex-direction: row;
+  @media(min-width: 767px) {
+    padding-top: 50px;
+    align-items: flex-start;
+    padding-left: rem(65px);
 
-  // }
+  }
+  @media(min-width: 1024px) {
+    padding-left: rem(90px);
+
+  }
 
 
   &__header {
@@ -33,20 +39,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // @media(min-width: 767px) {
-    //   flex-direction: row;
-    // }
     &-col1 {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media(min-width: 767px) {
+        align-items: flex-start;
+      }
     }
     &-col2 {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media(min-width: 767px) {
+        align-items: flex-start;
+      }
     }
     &-section {
       font-family: $font-light;
@@ -54,6 +63,9 @@
       color: $base;
       display: inline-block;
       padding: 3px 0px;
+    }
+    &-section:hover {
+      color: $grey-300;
     }
   }
 

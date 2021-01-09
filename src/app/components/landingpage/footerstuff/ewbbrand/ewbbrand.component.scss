@@ -6,10 +6,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media(min-width: 767px) {
+    align-items: flex-end;
+    padding-right: rem(25px);
+  }
+  @media(min-width: 1024px) {
+    padding-right: rem(80px);
+  }
 }
 .logo {
   cursor: pointer;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 0px;
   display: flex;
   flex-direction: column;
@@ -26,6 +33,10 @@
     width: 130px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    @media(min-width: 1024px) {
+      height: 70px;
+      width: 150px;
+    }
   }
 
 }

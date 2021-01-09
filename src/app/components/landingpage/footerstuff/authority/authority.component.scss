@@ -12,9 +12,17 @@
   margin-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 0px;
   padding-bottom: 50px;
   text-align: center;
+  @media(min-width: 767px) {
+    margin-top: 75px;
+    align-items: flex-end;
+    padding-right: rem(25px);
+
+  }
+  @media(min-width: 1024px) {
+    padding-right: rem(90px);
+  }
   &__awesome {
 
   }
@@ -25,10 +33,17 @@
     margin-top: 15px;
     color: $grey-400;
     opacity: 0.7;
-    font-size: rem(16px);
+    font-size: rem(12px);
+    @media(min-width: 1024px) {
+      font-size: rem(14px);
+    }
   }
   &__link {
     color: $base;
+    font-size: rem(10px);
+    @media(min-width: 1024px) {
+      font-size: rem(12px);
+    }
   }
   &__link:hover {
     color: $hover;
