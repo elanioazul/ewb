@@ -131,4 +131,11 @@ hr {
    width: 216px;
 }
 
+.list-inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: rem(5px);
+}
+
 
