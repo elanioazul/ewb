@@ -15,4 +15,37 @@
   background-color: $ewb-color;
   color: $base;
   font-family: $font-bold;
+
+  @media(min-width: 767px) {
+    grid-template-areas:
+    "ewb project"
+    "authority project"
+    ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 70% 1fr;
+  }
+
+  &__boxtop {
+    grid-area: 'ewb';
+    @media(min-width: 767px) {
+      grid-area: 'ewb';
+    }
+  }
+  &__boxmiddle {
+    grid-area: 'project';
+    @media(min-width: 767px) {
+      grid-area: project;
+      // grid-row-start:    ewb-start;
+      // grid-row-end:      authority-start;
+      // grid-column-start: project-start;
+      // grid-column-end:   project-end;
+    }
+  }
+  &__boxbottom {
+    grid-area: 'authority';
+    @media(min-width: 767px) {
+      grid-area: 'authority';
+    }
+  }
+
 }
