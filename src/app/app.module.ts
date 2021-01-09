@@ -9,7 +9,6 @@ import { MapsectionComponent } from './components/landingpage/mapsection/mapsect
 import { TeamComponent } from './components/landingpage/team/team.component';
 import { GuidelinesComponent } from './components/landingpage/guidelines/guidelines.component';
 import { ContactComponent } from './components/landingpage/contact/contact.component';
-import { FooterComponent } from './components/landingpage/footer/footer.component';
 import { MapComponent } from './components/map/map/map.component';
 import { PinselectorComponent } from './components/map/pinselector/pinselector.component';
 import { CommunityComponent } from './components/landingpage/community/community.component';
@@ -37,7 +36,6 @@ import { AuthorityComponent } from './components/landingpage/footerstuff/authori
     TeamComponent,
     GuidelinesComponent,
     ContactComponent,
-    FooterComponent,
     MapComponent,
     PinselectorComponent,
     CommunityComponent,
