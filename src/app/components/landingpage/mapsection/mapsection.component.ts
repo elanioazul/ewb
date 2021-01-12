@@ -17,7 +17,7 @@ export class MapsectionComponent implements OnInit {
   public nl = fromLonLat([4.490559, 51.928023]);
   public view = new View({
     center: this.nl,
-    zoom: 6,
+    zoom: 7,
   });
   public osm = new TileLayer ({
     visible: true,
@@ -44,7 +44,7 @@ export class MapsectionComponent implements OnInit {
 
   flyToGarza() {
     var flyAnimation = ((done) => {
-      var duration = 2000;
+      var duration = 4000;
       var zoom = this.view.getZoom();
       var parts = 2;
       var called = false;
@@ -71,8 +71,8 @@ export class MapsectionComponent implements OnInit {
           duration: duration / 2,
         },
         {
-          zoom: zoom,
-          duration: duration / 2,
+          zoom: 12,
+          duration: duration / 1.8,
         },
         callback
       );
