@@ -34,7 +34,7 @@ export class MapsectionComponent implements OnInit {
       target: 'map',
       layers: [this.osm],
       view: this.view,
-      attribution: false
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
     });
   }
 
