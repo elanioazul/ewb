@@ -64,7 +64,7 @@
 }
 
 
-input[type="checkbox"]:checked~#menu {
+input[type="checkbox"]:checked~.container>#menu {
   transform: translatey(0);
   top: 40px
     /*change here related your top menu height*/
