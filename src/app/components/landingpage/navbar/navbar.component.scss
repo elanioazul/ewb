@@ -149,68 +149,29 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 @media screen and (min-width: 950px) {
   .navbar {
-    height: rem(80px);
+    height: rem(70px);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
   }
   .authorLink {
     font-family: $font-bold, Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
-    padding-left: rem(12px);
-    padding-top: rem(22px);
-    display: inline-block;
-    width: 30%;
-    @media screen and (min-width: 1030px) {
-      width: 35%;
-    }
-    @media screen and (min-width: 1100px) {
-      width: 39.5%;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 42%;
-    }
-    @media screen and (min-width: 1300px) {
-      width: 50%;
-    }
-    @media screen and (min-width: 1400px) {
-      width: 52.5%;
-    }
-    @media screen and (min-width: 1500px) {
-      width: 57%;
-    }
-    @media screen and (min-width: 1600px) {
-      width: 60%;
-    }
+    padding-left: rem(16px);
+    padding-top: 0px;
   }
-
   #menu {
     display: inline-block;
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: space-between;
-    padding-right: 80px;
-    padding-top: rem(30px);
-    transform: translateY(0px);
-    width: 70%;
-    @media screen and (min-width: 1030px) {
-      width: 65%;
-    }
-    @media screen and (min-width: 1100px) {
-      width: 61.5%;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 58%;
-    }
-    @media screen and (min-width: 1300px) {
-      width: 50%;
-    }
-    @media screen and (min-width: 1400px) {
-      width: 47.5%;
-    }
-    @media screen and (min-width: 1500px) {
-      width: 43%;
-    }
-    @media screen and (min-width: 1600px) {
-      width: 40%;
-    }
+    z-index: 0;
+    position: relative;
+    top: auto;
+    width: auto;
+    transform: none;
+    padding-right: rem(16px);
   }
 
   .main-content-wrapper {
