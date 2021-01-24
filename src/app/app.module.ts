@@ -10,7 +10,6 @@ import { TeamComponent } from './components/landingpage/team/team.component';
 import { GuidelinesComponent } from './components/landingpage/guidelines/guidelines.component';
 import { ContactComponent } from './components/landingpage/contact/contact.component';
 import { MapComponent } from './components/map/map/map.component';
-import { PinselectorComponent } from './components/map/pinselector/pinselector.component';
 import { CommunityComponent } from './components/landingpage/community/community.component';
 import { ScrollmarkComponent } from './components/landingpage/scrollmark/scrollmark.component';
 import { GalleriaComponent } from './components/landingpage/galleria/galleria.component';
@@ -25,6 +24,8 @@ import { NavbarflexComponent } from './components/reusables/navbarflex/navbarfle
 import { EwbbrandComponent } from './components/landingpage/footerstuff/ewbbrand/ewbbrand.component';
 import { ProjectComponent } from './components/landingpage/footerstuff/project/project.component';
 import { AuthorityComponent } from './components/landingpage/footerstuff/authority/authority.component';
+import { LandingpageComponent } from './components/landingpage/landingpage/landingpage.component';
+import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,6 @@ import { AuthorityComponent } from './components/landingpage/footerstuff/authori
     GuidelinesComponent,
     ContactComponent,
     MapComponent,
-    PinselectorComponent,
     CommunityComponent,
     ScrollmarkComponent,
     GalleriaComponent,
@@ -49,6 +49,8 @@ import { AuthorityComponent } from './components/landingpage/footerstuff/authori
     EwbbrandComponent,
     ProjectComponent,
     AuthorityComponent,
+    LandingpageComponent,
+    CanvasmapComponent,
   ],
   imports: [
     BrowserModule,

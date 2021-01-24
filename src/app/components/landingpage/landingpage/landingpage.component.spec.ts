@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PinselectorComponent } from './pinselector.component';
+import { LandingpageComponent } from './landingpage.component';
 
-describe('PinselectorComponent', () => {
-  let component: PinselectorComponent;
-  let fixture: ComponentFixture<PinselectorComponent>;
+describe('LandingpageComponent', () => {
+  let component: LandingpageComponent;
+  let fixture: ComponentFixture<LandingpageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PinselectorComponent ]
+      declarations: [ LandingpageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PinselectorComponent);
+    fixture = TestBed.createComponent(LandingpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
