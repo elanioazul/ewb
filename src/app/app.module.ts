@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/landingpage/navbar/navbar.component';
@@ -26,6 +27,7 @@ import { ProjectComponent } from './components/landingpage/footerstuff/project/p
 import { AuthorityComponent } from './components/landingpage/footerstuff/authority/authority.component';
 import { LandingpageComponent } from './components/landingpage/landingpage/landingpage.component';
 import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.component';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.compone
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
