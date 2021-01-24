@@ -21,7 +21,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent as ModalComponent } from './reusables/modal/modal.component';
 import { ParthershipComponent } from './components/landingpage/parthership/parthership.component';
 import { FootergridComponent } from './components/reusables/footergrid/footergrid.component';
-import { NavbarflexComponent } from './components/reusables/navbarflex/navbarflex.component';
 import { EwbbrandComponent } from './components/landingpage/footerstuff/ewbbrand/ewbbrand.component';
 import { ProjectComponent } from './components/landingpage/footerstuff/project/project.component';
 import { AuthorityComponent } from './components/landingpage/footerstuff/authority/authority.component';
@@ -47,7 +46,6 @@ import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.compone
     ModalComponent,
     ParthershipComponent,
     FootergridComponent,
-    NavbarflexComponent,
     EwbbrandComponent,
     ProjectComponent,
     AuthorityComponent,
