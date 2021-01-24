@@ -26,6 +26,9 @@ import { ProjectComponent } from './components/landingpage/footerstuff/project/p
 import { AuthorityComponent } from './components/landingpage/footerstuff/authority/authority.component';
 import { LandingpageComponent } from './components/landingpage/landingpage/landingpage.component';
 import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.component';
+import { NavComponent } from './components/map/nav/nav.component';
+import { FootComponent } from './components/map/foot/foot.component';
+import { SidepanelComponent } from './components/map/sidepanel/sidepanel.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.compone
     AuthorityComponent,
     LandingpageComponent,
     CanvasmapComponent,
+    NavComponent,
+    FootComponent,
+    SidepanelComponent,
   ],
   imports: [
     BrowserModule,

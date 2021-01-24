@@ -1,0 +1,57 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+header {
+  background-color: $ewb-color;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &__fontawsome {
+    color: $base;
+    padding-left: rem(15px);
+    @media(min-width: 767px) {
+      padding-left: rem(25px);
+    }
+  }
+  &__goback {
+    display: inline-block;
+    color: hsl(222, 25%, 14%);
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding-left: rem(5px);
+    font-family: $font-bold;
+    font-size: rem(16px);
+    color: $base;
+  }
+  &__goback:hover {
+    transform: translateX(4px);
+    color: $grey-300;
+  }
+  &__hiddenornot {
+    display: none;
+    @media(min-width: 767px) {
+      display: inline;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    padding-right: rem(15px);
+    @media(min-width: 767px) {
+      padding-right: rem(25px);
+    }
+  }
+
+}
+.textTransformX {
+
+}
+
+.textTransformX:hover {
+  transform: translateX(4px);
+  color: hsl(243, 80%, 62%);
+}

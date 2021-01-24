@@ -1,0 +1,40 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+.foot {
+  background-color: $grey;
+}
+
+.authority {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: rem(18px);
+  padding: 10px 0px;
+
+  &__webmaps {
+    font-size: rem(13px);
+  }
+  &__copyright {
+    margin-top: 15px;
+    color: $grey-400;
+    opacity: 0.7;
+    font-size: rem(12px);
+    @media(min-width: 1024px) {
+      font-size: rem(14px);
+    }
+  }
+  &__link {
+    color: $ewb-color;
+    font-size: rem(10px);
+    @media(min-width: 1024px) {
+      font-size: rem(12px);
+    }
+  }
+  &__link:hover {
+    color: $hover;
+    opacity: 1;
+  }
+}
