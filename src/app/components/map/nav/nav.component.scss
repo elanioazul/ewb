@@ -10,6 +10,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  &__back:active {
+    border: none;
+    outline: 0;
+  }
   &__fontawsome {
     color: $base;
     padding-left: rem(15px);
@@ -17,7 +21,7 @@ header {
       padding-left: rem(25px);
     }
   }
-  &__goback {
+  &__text {
     display: inline-block;
     color: hsl(222, 25%, 14%);
     transition: transform 0.2s ease, color 0.2s ease;
@@ -26,7 +30,7 @@ header {
     font-size: rem(16px);
     color: $base;
   }
-  &__goback:hover {
+  &__text:hover {
     transform: translateX(4px);
     color: $grey-300;
   }
@@ -46,12 +50,4 @@ header {
     }
   }
 
-}
-.textTransformX {
-
-}
-
-.textTransformX:hover {
-  transform: translateX(4px);
-  color: hsl(243, 80%, 62%);
 }
