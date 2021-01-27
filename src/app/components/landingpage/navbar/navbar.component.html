@@ -9,12 +9,15 @@
     <a class="authorLink" href="https://twitter.com/elanio_herrador">Website author</a>
     <div id="menu" class="menu">
       <div class="main-content-wrapper">
-        <a class="link-nav" href="#guidelines">Guidelines</a>
-        <a class="link-nav" href="#location">Location</a>
-        <a class="link-nav" href="#about">About</a>
-        <a class="link-nav" href="#team">Team</a>
-        <a class="link-nav" href="#community">Community</a>
-        <a class="link-nav" href="#contact">Contact</a>
+        <a class="link-nav" (click)="onClickScroll('guidelines')" href="#guidelines">Guidelines</a>
+        <a class="link-nav" (click)="onClickScroll('about')" href="#about">About</a>
+        <a class="link-nav" (click)="onClickScroll('community')" href="#about">Community</a>
+        <a class="link-nav" (click)="onClickScroll('gallery')" href="#about">Gallery</a>
+        <a class="link-nav" (click)="onClickScroll('team')" href="#team">Team</a>
+        <a class="link-nav" (click)="onClickScroll('location')" href="#location">Location</a>
+        <a class="link-nav" (click)="onClickScroll('partnership')" href="#team">Partership</a>
+        <a class="link-nav" (click)="onClickScroll('community')" href="#community">Community</a>
+        <a class="link-nav" (click)="onClickScroll('contact')" href="#contact">Contact</a>
       </div>
     </div>
   </div>
