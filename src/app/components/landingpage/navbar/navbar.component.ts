@@ -19,10 +19,6 @@ export class NavbarComponent implements OnInit {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 
-  // checkBtn({target: {checked }}) {
-  //   this.ischeck = checked;
-  // }
-
   checkBtn($event) {
     if (this.isCheck) {
       this.isCheck = false;
