@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <input type="checkbox"  class="openMenu" id="openMenu">
+  <input type="checkbox"  class="openMenu" id="openMenu" [(ngModel)]="isCheck">
   <label for="openMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
       <div class="spinner horizontal"></div>
@@ -9,14 +9,14 @@
     <a class="authorLink" href="https://twitter.com/elanio_herrador">Website author</a>
     <div id="menu" class="menu">
       <div class="main-content-wrapper">
-        <a class="link-nav" (click)="onClickScroll('guidelines')" href="#guidelines">Guidelines</a>
-        <a class="link-nav" (click)="onClickScroll('about')" href="#about">About</a>
-        <a class="link-nav" (click)="onClickScroll('community')" href="#communitys">Community</a>
-        <a class="link-nav" (click)="onClickScroll('gallery')" href="#gallery">Gallery</a>
-        <a class="link-nav" (click)="onClickScroll('team')" href="#team">Team</a>
-        <a class="link-nav" (click)="onClickScroll('location')" href="#location">Location</a>
-        <a class="link-nav" (click)="onClickScroll('partnership')" href="#partnership">Partership</a>
-        <a class="link-nav" (click)="onClickScroll('contact')" href="#contact">Contact</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('guidelines')" href="#">Guidelines</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('about')" href="#">About</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('community')" href="#">Community</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('gallery')" href="#">Gallery</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('team')" href="#">Team</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('location')" href="#">Location</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('partnership')" href="#">Partership</a>
+        <a class="link-nav" (click)="checkBtn($event)" (click)="onClickScroll('contact')" href="#">Contact</a>
       </div>
     </div>
   </div>

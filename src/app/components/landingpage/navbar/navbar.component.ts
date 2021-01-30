@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  public isCheck = false;
+
   constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
@@ -15,6 +17,18 @@ export class NavbarComponent implements OnInit {
 
   onClickScroll(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  // checkBtn({target: {checked }}) {
+  //   this.ischeck = checked;
+  // }
+
+  checkBtn($event) {
+    if (this.isCheck) {
+      this.isCheck = false;
+    } else {
+      this.isCheck = true;
+    }
   }
 
 }
