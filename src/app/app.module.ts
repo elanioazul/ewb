@@ -29,8 +29,6 @@ import { LandingpageComponent } from './components/landingpage/landingpage/landi
 import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.component';
 import { NavComponent } from './components/map/nav/nav.component';
 import { FootComponent } from './components/map/foot/foot.component';
-import { SidepanelComponent } from './components/map/sidepanel/sidepanel.component';
-import { ZpanelComponent } from './components/map/zpanel/zpanel.component';
 
 
 @NgModule({
@@ -57,9 +55,7 @@ import { ZpanelComponent } from './components/map/zpanel/zpanel.component';
     LandingpageComponent,
     CanvasmapComponent,
     NavComponent,
-    FootComponent,
-    SidepanelComponent,
-    ZpanelComponent,
+    FootComponent
   ],
   imports: [
     BrowserModule,
