@@ -26,9 +26,13 @@ import { EwbbrandComponent } from './components/landingpage/footerstuff/ewbbrand
 import { ProjectComponent } from './components/landingpage/footerstuff/project/project.component';
 import { AuthorityComponent } from './components/landingpage/footerstuff/authority/authority.component';
 import { LandingpageComponent } from './components/landingpage/landingpage/landingpage.component';
-import { CanvasmapComponent } from './components/map/canvasmap/canvasmap.component';
 import { NavComponent } from './components/map/nav/nav.component';
 import { FootComponent } from './components/map/foot/foot.component';
+import { MenuTableComponent } from './components/map/menu-table/menu-table.component';
+import { ProjectInfoComponent } from './components/map/project-info/project-info.component';
+import { ProjectInfoMapComponent } from './components/map/project-info-map/project-info-map.component';
+import { ProjectInfoPanelComponent } from './components/map/project-info-panel/project-info-panel.component';
+import { MenuTableBtnComponent } from './components/map/menu-table-btn/menu-table-btn.component';
 
 
 @NgModule({
@@ -53,9 +57,13 @@ import { FootComponent } from './components/map/foot/foot.component';
     ProjectComponent,
     AuthorityComponent,
     LandingpageComponent,
-    CanvasmapComponent,
     NavComponent,
-    FootComponent
+    FootComponent,
+    MenuTableComponent,
+    ProjectInfoComponent,
+    ProjectInfoMapComponent,
+    ProjectInfoPanelComponent,
+    MenuTableBtnComponent
   ],
   imports: [
     BrowserModule,
