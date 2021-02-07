@@ -1,0 +1,65 @@
+[
+ {
+   "id": "MEN1-7SGSY3",
+   "lat": 6.285377042,
+   "lon": -10.65609589,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">50 and <500",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MEN1-7SGZF2",
+   "lat": 6.273550428,
+   "lon": -10.64961358,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">50 and <500",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MENnyosie-7TMCKV",
+   "lat": 6.2878955,
+   "lon": -10.6553102,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">500 ",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MEN1-7TMFPT",
+   "lat": 6.285960255,
+   "lon": -10.65633226,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">500 ",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MEN1-7TMG84",
+   "lat": 6.284597148,
+   "lon": -10.65670148,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">500 ",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MENnyosie-7TMLNG",
+   "lat": 6.2853645,
+   "lon": -10.6583386,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">50 and <500",
+   "coveredwhenfloods": "Yes"
+ },
+ {
+   "id": "MENnyosie-7VD4L9",
+   "lat": 6.2767863,
+   "lon": -10.6528668,
+   "kind": "Well hand pump",
+   "use": "drinking, cooking and producing mineral water",
+   "householders": ">50 and <500",
+   "coveredwhenfloods": "Yes"
+ }
+]

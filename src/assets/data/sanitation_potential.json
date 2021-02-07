@@ -1,0 +1,30 @@
+[
+ {
+   "id": "MEN1-7SGVPB",
+   "lat": 6.285148971,
+   "lon": -10.65670635,
+   "kind": "pit latrine",
+   "replacement": "Yes"
+ },
+ {
+   "id": "MEN1-7SGZZN",
+   "lat": 6.274098814,
+   "lon": -10.64973931,
+   "kind": "pit latrine",
+   "replacement": "No, new one"
+ },
+ {
+   "id": "MEN1-7TMEZL",
+   "lat": 6.28670373,
+   "lon": -10.65551427,
+   "kind": "pit latrine",
+   "replacement": "No, new one"
+ },
+ {
+   "id": "MEN1-7U8EWD",
+   "lat": 6.280882498,
+   "lon": -10.65655271,
+   "kind": "pit latrine",
+   "replacement": "No, new one"
+ }
+]

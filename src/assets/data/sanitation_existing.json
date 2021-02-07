@@ -1,0 +1,54 @@
+[
+ {
+   "id": "MEN1-7SGSB7",
+   "lat": 6.285006185,
+   "lon": -10.65615046,
+   "kind": "pit latrine",
+   "filledout": "Yes",
+   "stuckblocked": "No",
+   "isprotected": "unprotected. poop migrates through the soil",
+   "inuse": "Yes",
+   "year": 2003,
+   "coveredwhenfloods": "Yes",
+   "fee": "No"
+ },
+ {
+   "id": "MEN1-7SGU3N",
+   "lat": 6.285325116,
+   "lon": -10.65562592,
+   "kind": "pit latrine",
+   "filledout": "Yes",
+   "stuckblocked": "No",
+   "isprotected": "unprotected. poop migrates through the soil",
+   "inuse": "Yes",
+   "year": 2003,
+   "coveredwhenfloods": "Yes",
+   "fee": "No"
+ },
+ {
+   "id": "MENnyosie-7TMEGG",
+   "lat": 6.2866922,
+   "lon": -10.6554289,
+   "kind": "pit latrine",
+   "filledout": "Yes",
+   "stuckblocked": "Yes",
+   "isprotected": "unprotected. poop migrates through the soil",
+   "inuse": "No, no anymore",
+   "year": 2006,
+   "coveredwhenfloods": "No",
+   "fee": "No"
+ },
+ {
+   "id": "MENnyosie-7TMFCF",
+   "lat": 6.2862492,
+   "lon": -10.6560877,
+   "kind": "pit latrine",
+   "filledout": "Yes",
+   "stuckblocked": "Yes",
+   "isprotected": "unprotected. poop migrates through the soil",
+   "inuse": "No, no anymore",
+   "year": 2006,
+   "coveredwhenfloods": "No",
+   "fee": "No"
+ }
+]
