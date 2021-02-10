@@ -1,0 +1,22 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
+.projectinfo {
+  width: 100%;
+  height: 100%;
+}
+
+.projectinfomap {
+  width: 100%;
+  height: 100%;
+}
+
+.projectinfopanel {
+  display: none;
+  @media screen and (min-width: 757px) {
+    display: block;
+  }
+}
+
+
+
