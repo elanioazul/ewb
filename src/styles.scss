@@ -74,6 +74,12 @@ mat-dialog-container#modal-component {
     font-size: 14px;
   }
 }
+
+.ol-zoom {
+  left: unset;
+  right: 8px;
+}
+
 .ol-zoom .ol-zoom-in {
   background-color: $ewb-color;
   width: 20px;
