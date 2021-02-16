@@ -31,6 +31,7 @@ import { FootComponent } from './components/map/foot/foot.component';
 import { ProjectInfoComponent } from './components/map/project-info/project-info.component';
 import { ProjectInfoMapComponent } from './components/map/project-info-map/project-info-map.component';
 import { ProjectInfoPanelComponent } from './components/map/project-info-panel/project-info-panel.component';
+import { ProjectInfoSidebarComponent } from './components/map/project-info-sidebar/project-info-sidebar.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ProjectInfoPanelComponent } from './components/map/project-info-panel/p
     FootComponent,
     ProjectInfoComponent,
     ProjectInfoMapComponent,
-    ProjectInfoPanelComponent
+    ProjectInfoPanelComponent,
+    ProjectInfoSidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { openlayersMap } from './openlayers-map'
   templateUrl: './project-info-map.component.html',
   styleUrls: ['./project-info-map.component.scss']
 })
-export class ProjectInfoMapComponent implements OnInit {
+export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
 
   map: openlayersMap
