@@ -1,5 +1,4 @@
 
-
 .ol-attribution {
   font-size: 8px;
   font-family: $font-light;
@@ -22,6 +21,9 @@
     height: 25px;
   }
 }
+.ol-zoom .ol-zoom-in:focus {
+  outline: none;
+}
 .ol-zoom .ol-zoom-out {
   background-color: $ewb-color;
   width: 20px;
@@ -30,6 +32,9 @@
     width: 25px;
     height: 25px;
   }
+}
+.ol-zoom .ol-zoom-out:focus {
+  outline: none;
 }
 
 //overViewControl
@@ -49,6 +54,10 @@
 }
 .mapcanvas .ol-custom-overviewmap .ol-overviewmap-map {
   border: none;
+  @media(min-width:767px) {
+    width: 400px;
+    height: 300px;
+  }
 }
 .mapcanvas .ol-custom-overviewmap .ol-overviewmap-box {
   border: 1px solid red;
@@ -62,6 +71,10 @@
   }
   background-color: rgb(185, 100, 100);
 }
+.mapcanvas .ol-custom-overviewmap:not(.ol-collapsed) button:focus {
+  outline: none;
+}
+
 .mapcanvas .ol-custom-overviewmap button {
   width: 20px;
   height: 20px;
@@ -70,4 +83,8 @@
     height: 25px;
   }
   background-color: $ewb-color;
+}
+
+.mapcanvas .ol-custom-overviewmap button:focus {
+  outline: none;
 }

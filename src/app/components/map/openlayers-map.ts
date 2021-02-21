@@ -44,8 +44,6 @@ export class openlayersMap {
         })
     ],
     collapsed: true,
-    label: '\u00BB',
-    collapseLabel: '\u00AB',
     tipLabel: 'Mapa de referencia'
 })
 
