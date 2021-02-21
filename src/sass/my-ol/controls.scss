@@ -1,0 +1,73 @@
+
+
+.ol-attribution {
+  font-size: 8px;
+  font-family: $font-light;
+  @media(min-width:767px) {
+    font-size: 14px;
+  }
+}
+
+.ol-zoom {
+  left: unset;
+  right: 8px;
+}
+
+.ol-zoom .ol-zoom-in {
+  background-color: $ewb-color;
+  width: 20px;
+  height: 20px;
+  @media(min-width:767px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+.ol-zoom .ol-zoom-out {
+  background-color: $ewb-color;
+  width: 20px;
+  height: 20px;
+  @media(min-width:767px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+//overViewControl
+.mapcanvas .ol-custom-overviewmap,
+.mapcanvas .ol-custom-overviewmap.ol-uncollapsible {
+  bottom: auto;
+  left: auto;
+  right: 8px;
+  top: 60px;
+  @media(min-width:767px) {
+    top: 65px;
+  }
+}
+
+.mapcanvas .ol-custom-overviewmap:not(.ol-collapsed)  {
+  border: 2px solid $ewb-color;
+}
+.mapcanvas .ol-custom-overviewmap .ol-overviewmap-map {
+  border: none;
+}
+.mapcanvas .ol-custom-overviewmap .ol-overviewmap-box {
+  border: 1px solid red;
+}
+.mapcanvas .ol-custom-overviewmap:not(.ol-collapsed) button {
+  width: 20px;
+  height: 20px;
+  @media(min-width:767px) {
+    width: 25px;
+    height: 25px;
+  }
+  background-color: rgb(185, 100, 100);
+}
+.mapcanvas .ol-custom-overviewmap button {
+  width: 20px;
+  height: 20px;
+  @media(min-width:767px) {
+    width: 25px;
+    height: 25px;
+  }
+  background-color: $ewb-color;
+}

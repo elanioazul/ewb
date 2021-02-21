@@ -6,6 +6,7 @@ import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 // import Control from 'ol/control/Control';
 // import Zoom from 'ol/control/Zoom';
+import { defaults as defaultControls, OverviewMap } from 'ol/control';
 
 
 export class openlayersMap {
@@ -33,13 +34,30 @@ export class openlayersMap {
     type: 'base'
   });
 
+  public overviewMapControl = new OverviewMap({
+    className: 'ol-overviewmap ol-custom-overviewmap',
+    layers: [
+        new TileLayer({
+            source: new OSM({
+                'url': 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+            })
+        })
+    ],
+    collapsed: true,
+    label: '\u00BB',
+    collapseLabel: '\u00AB',
+    tipLabel: 'Mapa de referencia'
+})
+
   constructor(id: string) {
     this.map = new Map ({
       target: id,
       layers: [this.osm],
       view: this.view,
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>',
-      //controls: [this.myControl]
+      controls: defaultControls().extend([
+        this.overviewMapControl
+      ]),
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { openlayersMap } from './openlayers-map'
+import { openlayersMap } from '../openlayers-map'
 
 @Component({
   selector: 'app-project-info-map',

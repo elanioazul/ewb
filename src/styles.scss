@@ -16,6 +16,11 @@
 @import "./sass/ui/btn";
 
 // ------------------------------------
+// OL
+// ------------------------------------
+@import "./sass/my-ol/controls.scss";
+
+// ------------------------------------
 // MIXINS
 // ------------------------------------
 
@@ -57,44 +62,14 @@ mat-dialog-container#modal-component {
   overflow: auto;
   scroll-behavior: smooth;
 }
-.cdk-overlay-container {
-  //background-color: $ewb-color;
-}
-.cdk-overlay-backdrop {
-  //background-color: #fff;
-}
+// .cdk-overlay-container {
+//   //background-color: $ewb-color;
+// }
+// .cdk-overlay-backdrop {
+//   //background-color: #fff;
+// }
 .cdk-global-overlay-wrapper {
   background-color: #fff;
 }
 
-.ol-attribution {
-  font-size: 8px;
-  font-family: $font-light;
-  @media(min-width:767px) {
-    font-size: 14px;
-  }
-}
 
-.ol-zoom {
-  left: unset;
-  right: 8px;
-}
-
-.ol-zoom .ol-zoom-in {
-  background-color: $ewb-color;
-  width: 20px;
-  height: 20px;
-  @media(min-width:767px) {
-    width: 25px;
-    height: 25px;
-  }
-}
-.ol-zoom .ol-zoom-out {
-  background-color: $ewb-color;
-  width: 20px;
-  height: 20px;
-  @media(min-width:767px) {
-    width: 25px;
-    height: 25px;
-  }
-}
