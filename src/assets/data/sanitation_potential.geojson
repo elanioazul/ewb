@@ -1,0 +1,53 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -10.65670635,6.285148971 ]
+    },
+    "properties": {
+    "id":"MEN1-7SGVPB",
+    "kind":"pit latrine",
+    "replacement":"Yes"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -10.64973931,6.274098814 ]
+    },
+    "properties": {
+    "id":"MEN1-7SGZZN",
+    "kind":"pit latrine",
+    "replacement":"No, new one"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -10.65551427,6.28670373 ]
+    },
+    "properties": {
+    "id":"MEN1-7TMEZL",
+    "kind":"pit latrine",
+    "replacement":"No, new one"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -10.65655271,6.280882498 ]
+    },
+    "properties": {
+    "id":"MEN1-7U8EWD",
+    "kind":"pit latrine",
+    "replacement":"No, new one"
+    }
+  }
+]
+}
