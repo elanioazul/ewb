@@ -1,80 +1,64 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable, inject, Inject, Optional } from '@angular/core';
 //import Control from 'ol/control/Control';
-import {Control, defaults as defaultControls} from 'ol/control';
+import * as ol from 'ol';
+import { Control, defaults as defaultControls } from 'ol/control';
 
 @Component({
   selector: 'app-project-info-sidebar',
   templateUrl: './project-info-sidebar.component.html',
-  styleUrls: ['./project-info-sidebar.component.scss']
+  styleUrls: ['./project-info-sidebar.component.scss'],
+  providers: [Control]
 })
-export class ProjectInfoSidebarComponent implements OnInit {
+export class ProjectInfoSidebarComponent /*extends Control*/ implements OnInit {
 
-  public sidebarControl = /*@__PURE__*/(function (Control) {
-    function sidebarControl(settings) {
-      var defaults = {
-        element: null,
-        position: 'left'
-      }, i, child;
+  public defaultOLControl = Control;
 
-      this._options = Object.assign({}, defaults, settings);
+  public RotateNorthControl = /*@__PURE__*/(function (Control) {
+    function RotateNorthControl(opt_options) {
+      var options = opt_options || {};
+
+      var button = document.createElement('button');
+      button.innerHTML = 'N';
+
+      var element = document.createElement('div');
+      element.className = 'rotate-north ol-unselectable ol-control';
+      element.appendChild(button);
 
       Control.call(this, {
-        element: document.getElementById(this._options.element),
-        target: this._options.target
+        element: element,
+        target: options.target,
       });
 
-      // Attach .sidebar-left/right class
-      this.element.classList.add('sidebar-' + this._options.position);
-
-      // Find sidebar > div.sidebar-content
-      for (i = this.element.children.length - 1; i >= 0; i--) {
-        child = this.element.children[i];
-        if (child.tagName === 'DIV' &&
-          child.classList.contains('sidebar-content')) {
-          this._container = child;
-        }
-      }
-
-      // Find sidebar ul.sidebar-tabs > li, sidebar .sidebar-tabs > ul > li
-      this._tabitems = this.element.querySelectorAll('ul.sidebar-tabs > li, .sidebar-tabs > ul > li');
-      for (i = this._tabitems.length - 1; i >= 0; i--) {
-        this._tabitems[i]._sidebar = this;
-      }
-
-      // Find sidebar > div.sidebar-content > div.sidebar-pane
-      this._panes = [];
-      this._closeButtons = [];
-      for (i = this._container.children.length - 1; i >= 0; i--) {
-        child = this._container.children[i];
-        if (child.tagName == 'DIV' &&
-          child.classList.contains('sidebar-pane')) {
-          this._panes.push(child);
-
-          var closeButtons = child.querySelectorAll('.sidebar-close');
-          for (var j = 0, len = closeButtons.length; j < len; j++) {
-            this._closeButtons.push(closeButtons[j]);
-          }
-        }
-      }
+      button.addEventListener('click', this.handleRotateNorth.bind(this), false);
     }
 
-    if ( Control ) sidebarControl.__proto__ = Control;
-    sidebarControl.prototype = Object.create( Control && Control.prototype );
-    sidebarControl.prototype.constructor = sidebarControl;
+    if ( Control ) RotateNorthControl.__proto__ = Control;
+    RotateNorthControl.prototype = Object.create( Control && Control.prototype );
+    RotateNorthControl.prototype.constructor = RotateNorthControl;
 
-    sidebarControl.prototype.handleRotateNorth = function handleRotateNorth () {
+    // let ol_ext_inherits = function(RotateNorthControl, Control) {
+    //   RotateNorthControl.prototype = Object.create(Control.prototype);
+    //   RotateNorthControl.prototype.constructor = RotateNorthControl;
+    // };
+    // this.ol_ext_inherits();
+
+    RotateNorthControl.prototype.handleRotateNorth = function handleRotateNorth () {
       this.getMap().getView().setRotation(0);
     };
 
-    return sidebarControl;
+    return RotateNorthControl;
 
   }(Control));
 
-  //public sidebar = new Control.Sidebar({ element: 'sidebar', position: 'left' });
-
-  constructor() {}
+  constructor(private control: Control) {
+    //super(control);
+    //this.RotateNorthControl = this.control
+  }
 
   ngOnInit(): void {
+    //this.sidebarControl
   }
+
+
 
 }

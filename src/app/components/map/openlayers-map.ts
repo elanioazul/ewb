@@ -4,16 +4,14 @@ import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
-// import Control from 'ol/control/Control';
-// import Zoom from 'ol/control/Zoom';
-import { defaults as defaultControls, Attribution, OverviewMap } from 'ol/control';
+import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
+import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component';
 
 
 export class openlayersMap {
 
   public map;
   public garzaCoord = fromLonLat([-10.654678, 6.281704]);
-  // public myControl = new Control(new Zoom());
   public view = new View({
     center: this.garzaCoord,
     zoom: 7,
@@ -51,15 +49,17 @@ export class openlayersMap {
     collapsible: false,
   });
 
+  sidebarControl: ProjectInfoSidebarComponent;
+
   constructor(id: string) {
     this.map = new Map ({
       target: id,
       layers: [this.osm],
       view: this.view,
-      //attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>',
       controls: defaultControls().extend([
         this.overviewMapControl,
-        this.attribution
+        this.attribution,
+        //this.sidebarControl
       ]),
     });
   }

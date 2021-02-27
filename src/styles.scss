@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import 'ol/ol.css';
 //@import url('https://fonts.googleapis.com/css?family=Chewy');
 // ------------------------------------
 // GLOBAL
@@ -18,6 +17,7 @@
 // ------------------------------------
 // OL
 // ------------------------------------
+@import 'ol/ol.css';
 @import "./sass/my-ol/controls.scss";
 
 // ------------------------------------

@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { openlayersMap } from '../openlayers-map'
+import { openlayersMap } from '../openlayers-map';
+
 
 @Component({
   selector: 'app-project-info-map',
@@ -18,6 +19,6 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.map = new openlayersMap('mapcanvas')
+    this.map = new openlayersMap('mapcanvas');
   }
 }

@@ -1,6 +1,11 @@
 @import 'global/variables';
 @import 'mixins/mixins';
 
+.ol-attribution.ol-unselectable.ol-control.ol-uncollapsible {
+  background-color: $grey;
+  border-radius: 1px;
+  border-bottom: 1px dotted $ewb-color;
+}
 .ol-attribution ul li {
   font-size: 8px;
   font-family: $font-light;
