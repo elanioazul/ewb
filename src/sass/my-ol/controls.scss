@@ -1,7 +1,10 @@
+@import 'global/variables';
+@import 'mixins/mixins';
 
-.ol-attribution {
+.ol-attribution ul li {
   font-size: 8px;
   font-family: $font-light;
+  color: $ewb-color;
   @media(min-width:767px) {
     font-size: 14px;
   }

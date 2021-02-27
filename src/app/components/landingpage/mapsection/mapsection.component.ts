@@ -5,7 +5,7 @@ import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
-import Control from 'ol/control/Control';
+import {Attribution, defaults as defaultControls} from 'ol/control';
 @Component({
   selector: 'app-mapsection',
   templateUrl: './mapsection.component.html',
@@ -23,9 +23,13 @@ export class MapsectionComponent implements OnInit {
     visible: true,
     opacity: 0.8,
     source: new OSM(),
-    maxZoom: 18
+    maxZoom: 18,
+
   });
   public garzaCoord = fromLonLat([-10.654678, 6.281704]);
+  public attribution = new Attribution({
+    collapsible: false,
+  });
 
   constructor() { }
 
@@ -34,7 +38,8 @@ export class MapsectionComponent implements OnInit {
       target: 'map',
       layers: [this.osm],
       view: this.view,
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      controls: defaultControls({attribution: false}).extend([this.attribution])
+      //this.attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
     });
   }
 

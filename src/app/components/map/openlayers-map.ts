@@ -6,7 +6,7 @@ import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 // import Control from 'ol/control/Control';
 // import Zoom from 'ol/control/Zoom';
-import { defaults as defaultControls, OverviewMap } from 'ol/control';
+import { defaults as defaultControls, Attribution, OverviewMap } from 'ol/control';
 
 
 export class openlayersMap {
@@ -22,16 +22,16 @@ export class openlayersMap {
     visible: true,
     opacity: 0.8,
     source: new OSM(),
-    title: 'OSMStandard',
-    type: 'base',
+    //title: 'OSMStandard',
+    //type: 'base',
     maxZoom: 18
   });
   public openStretMapHumanitarian = new TileLayer({
     source: new OSM({
       url: 'https://{a-c}.tile.openstreetmap.fr.hot/{z}{x}/{y}.png'
     }),
-    tile: 'OSMHumanitarian',
-    type: 'base'
+    //title: 'OSMHumanitarian',
+    //type: 'base'
   });
 
   public overviewMapControl = new OverviewMap({
@@ -45,16 +45,21 @@ export class openlayersMap {
     ],
     collapsed: true,
     tipLabel: 'Mapa de referencia'
-})
+  })
+
+  public attribution = new Attribution({
+    collapsible: false,
+  });
 
   constructor(id: string) {
     this.map = new Map ({
       target: id,
       layers: [this.osm],
       view: this.view,
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>',
+      //attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>',
       controls: defaultControls().extend([
-        this.overviewMapControl
+        this.overviewMapControl,
+        this.attribution
       ]),
     });
   }
