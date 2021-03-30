@@ -13,7 +13,7 @@ import { Control, defaults as defaultControls } from 'ol/control';
 @Injectable()
 export class ProjectInfoSidebarComponent extends Control /*implements OnInit*/ {
 
-  //@ViewChild('sidebar') mySidebarDiv: ElementRef;
+  @ViewChild('sidebar') mySidebarDiv: ElementRef;
   //element: HTMLElement;
 
   _container;
@@ -23,7 +23,7 @@ export class ProjectInfoSidebarComponent extends Control /*implements OnInit*/ {
   classList;
   _sidebar;
 
-  constructor(@Inject(String)opt_options/*, @Inject(DOCUMENT) document*/) {
+  constructor(@Inject(String)opt_options/*, @Inject(DOCUMENT) document, elementRef: ElementRef*/) {
 
     var defaults = {
         element: null,
@@ -33,11 +33,18 @@ export class ProjectInfoSidebarComponent extends Control /*implements OnInit*/ {
     var options = Object.assign({}, defaults, opt_options);
 
     var element = document.getElementById(options.element);
+    //var element = this.mySidebarDiv.nativeElement.querySelector(options.element)
 
     super({
         element: element,
         target: options.target
     });
+    // super((() => {
+    //   return {
+    //     element: this.mySidebarDiv.nativeElement.querySelector(options.element),
+    //     target: options.target
+    //   }
+    // })());
 
     // Attach .sidebar-left/right class
     element.classList.add('sidebar-' + options.position);
