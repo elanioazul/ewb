@@ -59,7 +59,8 @@ export class openlayersMap {
 
   //public sidebarControl: ProjectInfoSidebarComponent;
   //public sidebarControl2 = new ProjectInfoSidebarComponent({});
-  public sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'})
+  public sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'});
+  //public sidebar2 : ProjectInfoSidebarComponent;
 
   constructor(@Inject(String)id: string) {
     this.map = new Map ({
