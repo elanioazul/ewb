@@ -5,9 +5,14 @@ import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
+import { MyOlControl } from 'src/app/types/myOlControl';
 import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component';
 
+import { Injectable, Inject } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root' // just before your class
+})
 export class openlayersMap {
 
   public map;
@@ -15,6 +20,7 @@ export class openlayersMap {
   public view = new View({
     center: this.garzaCoord,
     zoom: 7,
+    rotation: 1
   });
   public osm = new TileLayer ({
     visible: true,
@@ -49,9 +55,13 @@ export class openlayersMap {
     collapsible: false,
   });
 
-  sidebarControl: ProjectInfoSidebarComponent;
+  //public northControl = new MyOlControl({});
 
-  constructor(id: string) {
+  //public sidebarControl: ProjectInfoSidebarComponent;
+  //public sidebarControl2 = new ProjectInfoSidebarComponent({});
+  public sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'})
+
+  constructor(@Inject(String)id: string) {
     this.map = new Map ({
       target: id,
       layers: [this.osm],
@@ -59,7 +69,10 @@ export class openlayersMap {
       controls: defaultControls().extend([
         this.overviewMapControl,
         this.attribution,
+        //this.northControl
         //this.sidebarControl
+        //this.sidebarControl2
+        this.sidebar2
       ]),
     });
   }

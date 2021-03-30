@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { openlayersMap } from '../openlayers-map';
+import { ProjectInfoSidebarComponent } from '../project-info-sidebar/project-info-sidebar.component';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { openlayersMap } from '../openlayers-map';
 export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
 
-  map: openlayersMap
+  mimapa: openlayersMap;
+  //sidebar: ProjectInfoSidebarComponent;
+  //sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'})
 
   constructor() { }
 
@@ -19,6 +22,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.map = new openlayersMap('mapcanvas');
+    this.mimapa = new openlayersMap('mapcanvas');
+    //this.mimapa.map.addControl(this.sidebar2);
   }
 }
