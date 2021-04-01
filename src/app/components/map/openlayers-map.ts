@@ -5,10 +5,9 @@ import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
-import { MyOlControl } from 'src/app/types/myOlControl';
-import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component';
 
 import { Injectable, Inject } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root' // just before your class
@@ -59,7 +58,6 @@ export class openlayersMap {
 
   //public sidebarControl: ProjectInfoSidebarComponent;
   //public sidebarControl2 = new ProjectInfoSidebarComponent({});
-  public sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'});
   //public sidebar2 : ProjectInfoSidebarComponent;
 
   constructor(@Inject(String)id: string) {
@@ -73,7 +71,6 @@ export class openlayersMap {
         //this.northControl
         //this.sidebarControl
         //this.sidebarControl2
-        this.sidebar2
       ]),
     });
   }
