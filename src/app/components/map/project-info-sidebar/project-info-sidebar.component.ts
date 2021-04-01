@@ -33,7 +33,7 @@ export class ProjectInfoSidebarComponent extends Control /*implements OnInit*/ {
     var options = Object.assign({}, defaults, opt_options);
 
     var element = document.getElementById(options.element);
-    //var element = this.mySidebarDiv.nativeElement.querySelector(options.element)
+    //var element = this.mySidebarDiv.nativeElement(options.element)
 
     super({
         element: element,
@@ -79,6 +79,10 @@ export class ProjectInfoSidebarComponent extends Control /*implements OnInit*/ {
             }
         }
     }
+  }
+
+  initprops(options) {
+    var element = this.mySidebarDiv.nativeElement(options.element)
   }
   /**
   * Set the map instance the control is associated with.
