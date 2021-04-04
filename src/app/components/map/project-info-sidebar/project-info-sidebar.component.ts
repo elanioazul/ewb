@@ -1,17 +1,26 @@
 import { Component, ViewChild, ElementRef, AfterViewInit, Inject, InjectionToken } from "@angular/core";
 import Sidebar from "../../../js/ol5-sidebar.js";
+//import { SidebarOptions } from '../../../types/sidebaroptions';
 
 const SIDEBAR_OPTS = new InjectionToken<SidebarOptions>('SIDEBAR_OPTS');
 
 interface SidebarOptions {
   /* default: `left` */
   position?: string;
-  target: HTMLElement | string; // not sure what the correct type is here
+  target?: HTMLElement | string; // not sure what the correct type is here
 }
 
+const SIDEBAR_DI_CONFIG: SidebarOptions = {
+  position: 'left'
+};
 @Component({
-  selector: "sidebar",
-  template: "<div #sidebar></div>",
+  selector: 'sidebar',
+  templateUrl: './project-info-sidebar.component.html',
+  styleUrls: ['./project-info-sidebar.component.scss'],
+  providers: [{
+    provide: SIDEBAR_OPTS,
+    useValue: SIDEBAR_DI_CONFIG
+  }]
 })
 export class ProjectInfoSidebarComponent implements AfterViewInit {
   @ViewChild("sidebar") mySidebarDiv: ElementRef<HTMLDivElement>;
@@ -26,7 +35,8 @@ export class ProjectInfoSidebarComponent implements AfterViewInit {
 
     // create an OLSidebar instance, which handles everything from here
     this.sidebar = new Sidebar({
-      element,
+      element: element,
+      position: 'left',
       target: this.options.target,
     });
   }

@@ -11,10 +11,10 @@ export default class Sidebar extends Control {
 
         var options = Object.assign({}, defaults, opt_options);
 
-        var element = document.getElementById(options.element);
+        var element = options.element;
 
         super({
-            element: element,
+            element: options.element,
             target: options.target
         });
 

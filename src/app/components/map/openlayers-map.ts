@@ -7,7 +7,7 @@ import {fromLonLat} from 'ol/proj';
 import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
 
 import { Injectable, Inject } from '@angular/core';
-
+//import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component'
 
 @Injectable({
   providedIn: 'root' // just before your class
