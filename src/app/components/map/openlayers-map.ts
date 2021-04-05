@@ -7,7 +7,7 @@ import {fromLonLat} from 'ol/proj';
 import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
 
 import { Injectable, Inject } from '@angular/core';
-//import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component'
+import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component'
 
 @Injectable({
   providedIn: 'root' // just before your class
@@ -56,7 +56,7 @@ export class openlayersMap {
 
   //public northControl = new MyOlControl({});
 
-  //public sidebarControl: ProjectInfoSidebarComponent;
+  public sidebarControl: ProjectInfoSidebarComponent;
   //public sidebarControl2 = new ProjectInfoSidebarComponent({});
   //public sidebar2 : ProjectInfoSidebarComponent;
 
@@ -69,7 +69,7 @@ export class openlayersMap {
         this.overviewMapControl,
         this.attribution,
         //this.northControl
-        //this.sidebarControl
+        this.sidebarControl.sidebar.setMap(id)
         //this.sidebarControl2
       ]),
     });
