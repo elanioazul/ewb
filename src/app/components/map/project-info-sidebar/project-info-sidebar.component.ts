@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, AfterViewInit, Inject, InjectionToken } from "@angular/core";
 import Sidebar from "../../../js/ol5-sidebar.js";
+import Control from 'ol/control/Control';
+import { element } from "protractor";
 //import { SidebarOptions } from '../../../types/sidebaroptions';
 //import { openlayersMap } from '../openlayers-map';
 
@@ -37,7 +39,7 @@ export class ProjectInfoSidebarComponent implements AfterViewInit {
     // create an OLSidebar instance, which handles everything from here
     this.sidebar = new Sidebar({
       element: element,
-      position: 'left',
+      position: this.options.position/*'left'*/,
       target: this.options.target,
     });
     //this.sidebar.setMap(openlayersMap)

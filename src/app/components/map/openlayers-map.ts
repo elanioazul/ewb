@@ -54,7 +54,6 @@ export class openlayersMap {
     collapsible: false,
   });
 
-  //public northControl = new MyOlControl({});
 
   public sidebarControl: ProjectInfoSidebarComponent;
   //public sidebarControl2 = new ProjectInfoSidebarComponent({});
@@ -68,7 +67,6 @@ export class openlayersMap {
       controls: defaultControls().extend([
         this.overviewMapControl,
         this.attribution,
-        //this.northControl
         this.sidebarControl.sidebar.setMap(id)
         //this.sidebarControl2
       ]),

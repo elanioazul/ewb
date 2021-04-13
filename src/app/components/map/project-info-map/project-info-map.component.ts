@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { openlayersMap } from '../openlayers-map';
-import {ProjectInfoSidebarComponent } from '../project-info-sidebar/project-info-sidebar.component'
+import { ProjectInfoSidebarComponent } from '../project-info-sidebar/project-info-sidebar.component'
 
 
 @Component({
@@ -12,8 +12,9 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
 
   mimapa: openlayersMap;
-  sidebar: ProjectInfoSidebarComponent;
-  //sidebar2 = new ProjectInfoSidebarComponent({element: 'sidebar', position: 'left'})
+  //sidebar = new ProjectInfoSidebarComponent({position: 'right'});
+  //sidebar2 = new ProjectInfoSidebarComponent({ position: 'left'});
+  //sidebar3: ProjectInfoSidebarComponent;
 
   constructor() { }
 
@@ -23,6 +24,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.mimapa = new openlayersMap('mapcanvas');
-    this.mimapa.map.addControl(this.sidebar)
+    //this.sidebar3 = new ProjectInfoSidebarComponent({position: 'left'});
+    //this.mimapa.map.addControl(this.sidebar3);
   }
 }
