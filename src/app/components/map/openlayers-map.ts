@@ -4,17 +4,17 @@ import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
-import { defaults as defaultControls, Attribution, OverviewMap, Control } from 'ol/control';
+import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
 
 import { Injectable, Inject } from '@angular/core';
-import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component'
+import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component';
 
 @Injectable({
   providedIn: 'root' // just before your class
 })
 export class openlayersMap {
 
-  public map;
+  public map: Map;
   public garzaCoord = fromLonLat([-10.654678, 6.281704]);
   public view = new View({
     center: this.garzaCoord,
@@ -54,6 +54,8 @@ export class openlayersMap {
     collapsible: false,
   });
 
+  public zoom = new Zoom();
+
 
   public sidebarControl: ProjectInfoSidebarComponent;
   //public sidebarControl2 = new ProjectInfoSidebarComponent({});
@@ -64,12 +66,13 @@ export class openlayersMap {
       target: id,
       layers: [this.osm],
       view: this.view,
-      controls: defaultControls().extend([
+      controls: [
         this.overviewMapControl,
         this.attribution,
-        this.sidebarControl.sidebar.setMap(id)
+        this.zoom
+        //this.sidebarControl.sidebar.setMap(id)
         //this.sidebarControl2
-      ]),
+      ],
     });
   }
 
