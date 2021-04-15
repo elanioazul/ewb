@@ -18,8 +18,7 @@ export class openlayersMap {
   public garzaCoord = fromLonLat([-10.654678, 6.281704]);
   public view = new View({
     center: this.garzaCoord,
-    zoom: 7,
-    rotation: 1
+    zoom: 7
   });
   public osm = new TileLayer ({
     visible: true,
