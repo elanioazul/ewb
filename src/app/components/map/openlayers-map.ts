@@ -1,4 +1,3 @@
-
 import Map from 'ol/Map';
 import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
@@ -7,7 +6,6 @@ import {fromLonLat} from 'ol/proj';
 import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
 
 import { Injectable, Inject } from '@angular/core';
-import { ProjectInfoSidebarComponent } from './project-info-sidebar/project-info-sidebar.component';
 
 @Injectable({
   providedIn: 'root' // just before your class
@@ -56,11 +54,7 @@ export class openlayersMap {
   public zoom = new Zoom();
 
 
-  public sidebarControl: ProjectInfoSidebarComponent;
-  //public sidebarControl2 = new ProjectInfoSidebarComponent({});
-  //public sidebar2 : ProjectInfoSidebarComponent;
-
-  constructor(@Inject(String)id: string) {
+  constructor(@Inject(String)id: string){
     this.map = new Map ({
       target: id,
       layers: [this.osm],
@@ -69,8 +63,6 @@ export class openlayersMap {
         this.overviewMapControl,
         this.attribution,
         this.zoom
-        //this.sidebarControl.sidebar.setMap(id)
-        //this.sidebarControl2
       ],
     });
   }

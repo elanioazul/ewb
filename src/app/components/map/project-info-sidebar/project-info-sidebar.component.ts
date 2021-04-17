@@ -1,9 +1,6 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, Inject, InjectionToken } from "@angular/core";
+import { Component, ViewChild, ElementRef, TemplateRef, AfterViewInit, Inject, InjectionToken } from "@angular/core";
 import Sidebar from "../../../js/ol5-sidebar.js";
-import Control from 'ol/control/Control';
-import { element } from "protractor";
-//import { SidebarOptions } from '../../../types/sidebaroptions';
-//import { openlayersMap } from '../openlayers-map';
+import { TemplateserviceService } from 'src/app/services/templateservice.service';
 
 const SIDEBAR_OPTS = new InjectionToken<SidebarOptions>('SIDEBAR_OPTS');
 
@@ -23,18 +20,23 @@ const SIDEBAR_DI_CONFIG: SidebarOptions = {
   providers: [{
     provide: SIDEBAR_OPTS,
     useValue: SIDEBAR_DI_CONFIG
-  }]
+  },]
 })
 export class ProjectInfoSidebarComponent implements AfterViewInit {
   @ViewChild("sidebar") mySidebarDiv: ElementRef<HTMLDivElement>;
 
   sidebar: Sidebar | null = null;
 
-  constructor(@Inject(SIDEBAR_OPTS) private options: SidebarOptions) {}
+  childTemplate?: ElementRef<HTMLElement>;
+
+  constructor(@Inject(SIDEBAR_OPTS) private options: SidebarOptions, private templateService: TemplateserviceService) {}
 
   ngAfterViewInit() {
-    // get a reference to the `<div>` we just rendered to the DOM
+    // get a reference to the `<div>` we just rendered to the DOM to pass to OLSidebar instance
     const element = this.mySidebarDiv.nativeElement;
+    // get a reference to the same DOM element to pass to service
+    this.childTemplate = this.mySidebarDiv;
+    this.templateService.setTemplate(this.childTemplate)
 
     // create an OLSidebar instance, which handles everything from here
     this.sidebar = new Sidebar({
@@ -42,6 +44,5 @@ export class ProjectInfoSidebarComponent implements AfterViewInit {
       position: this.options.position/*'left'*/,
       target: this.options.target,
     });
-    //this.sidebar.setMap(openlayersMap)
   }
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { openlayersMap } from '../openlayers-map';
-import { ProjectInfoSidebarComponent } from '../project-info-sidebar/project-info-sidebar.component'
+import Control from 'ol/control/Control';
+import { TemplateserviceService } from 'src/app/services/templateservice.service';
 
 
 @Component({
@@ -12,19 +13,24 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
 
   mimapa: openlayersMap;
-  //sidebar = new ProjectInfoSidebarComponent({position: 'right'});
-  //sidebar2 = new ProjectInfoSidebarComponent({ position: 'left'});
-  //sidebar3: ProjectInfoSidebarComponent;
+  childTemplate?: ElementRef<HTMLElement>;
 
-  constructor() { }
+  public sidebarControl: Control;
+
+  constructor(private templateService: TemplateserviceService) {
+    // receive templates from the service and assign
+    this.templateService.template$.subscribe(t => this.childTemplate = t);
+  }
 
   ngOnInit(): void {
 
   }
 
   ngAfterViewInit() {
+    this.sidebarControl = new Control({
+      element: this.templateService.template$
+    })
     this.mimapa = new openlayersMap('mapcanvas');
-    //this.sidebar3 = new ProjectInfoSidebarComponent({position: 'left'});
-    //this.mimapa.map.addControl(this.sidebar3);
+    this.mimapa.map.addControl(this.sidebarControl);
   }
 }
