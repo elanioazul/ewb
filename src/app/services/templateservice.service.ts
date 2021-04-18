@@ -1,5 +1,4 @@
 import { Injectable, ElementRef } from '@angular/core';
-import { Observable } from 'ol';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -7,13 +6,13 @@ import { Subject } from 'rxjs';
 })
 export class TemplateserviceService {
 
-  private templateSource = new Subject<ElementRef<HTMLElement> | undefined>();
+  private templateSource = new Subject<ElementRef<HTMLDivElement> | undefined>();
 
   template$ = this.templateSource.asObservable();
 
   constructor() { }
 
-  setTemplate(template?: ElementRef<HTMLElement>) {
+  setTemplate(template?: ElementRef<HTMLDivElement>) {
     this.templateSource.next(template)
   }
 }
