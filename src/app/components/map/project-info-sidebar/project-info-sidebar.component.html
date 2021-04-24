@@ -1,8 +1,8 @@
 <div #sidebar class="sidebar collapsed">
 <!-- Nav tabs -->
-<app-project-info-sidebar-tabs></app-project-info-sidebar-tabs>
+<app-project-info-sidebar-tabs (newItemEvent)="tabSelected($event)"></app-project-info-sidebar-tabs>
 
 <!-- Tab panes -->
-<app-project-info-sidebar-content></app-project-info-sidebar-content>
+<app-project-info-sidebar-content [tabToShowContent]="tabToBeOpened"></app-project-info-sidebar-content>
 </div>
 

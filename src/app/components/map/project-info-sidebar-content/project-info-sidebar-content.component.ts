@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-info-sidebar-content',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-info-sidebar-content.component.scss']
 })
 export class ProjectInfoSidebarContentComponent implements OnInit {
+
+  @Input() tabToShowContent: string;
 
   constructor() { }
 

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter
+ } from '@angular/core';
 
 @Component({
   selector: 'app-project-info-sidebar-tabs',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectInfoSidebarTabsComponent implements OnInit {
 
+  @Output() newItemEvent = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
   }
 
 }
