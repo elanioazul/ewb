@@ -26,5 +26,6 @@ export class ProjectInfoSidebarComponent implements AfterViewInit {
 
   tabSelected(id: string) {
     this.tab = id;
+    this.tabToBeOpened = id;
   }
 }

@@ -1,7 +1,7 @@
 <div class="sidebar-tabs">
   <ul role="tablist">
-    <li><a (click)="addNewItem(widget.href)" #widget href="switch-layers" role="tab"><i class="fa fa-toggle-on"></i></a></li>
-    <li><a (click)="addNewItem(widget.href)" #widget href="show-data" role="tab"><i class="fa fa-table"></i></a></li>
+    <li><a (click)="showThisTabContent(widget.id)" #widget id="switch-layers" role="tab"><i class="fa fa-toggle-on"></i></a></li>
+    <li><a (click)="showThisTabContent(peras.id)" #peras id="show-data" role="tab"><i class="fa fa-table"></i></a></li>
   </ul>
 
   <ul role="tablist">

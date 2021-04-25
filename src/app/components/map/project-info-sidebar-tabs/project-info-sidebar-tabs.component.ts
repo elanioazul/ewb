@@ -19,7 +19,7 @@ export class ProjectInfoSidebarTabsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addNewItem(value: string) {
+  showThisTabContent(value: string) {
     this.newItemEvent.emit(value);
   }
 
