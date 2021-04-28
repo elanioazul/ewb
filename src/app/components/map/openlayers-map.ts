@@ -1,9 +1,22 @@
 import Map from 'ol/Map';
 import OSM from 'ol/source/OSM';
+import SourceStamen from 'ol/source/Stamen';
 import TileLayer from 'ol/layer/Tile';
+import LayerTile from 'ol/layer/Tile';
+import LayerGroup from 'ol/layer/Group';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
+
+import LayerSwitcher from 'ol-layerswitcher';
+import {
+  Options,
+  RenderOptions,
+  GroupSelectStyle,
+  BaseLayerOptions,
+  GroupLayerOptions
+ } from 'ol-layerswitcher';
+
 
 import { Injectable, Inject } from '@angular/core';
 
@@ -11,29 +24,44 @@ import { Injectable, Inject } from '@angular/core';
   providedIn: 'root' // just before your class
 })
 export class openlayersMap {
-
+  //esqueleto
   public map: Map;
   public garzaCoord = fromLonLat([-10.654678, 6.281704]);
   public view = new View({
     center: this.garzaCoord,
     zoom: 7
   });
-  public osm = new TileLayer ({
+
+  //capas
+  public osm = new LayerTile ({
     visible: true,
     opacity: 0.8,
     source: new OSM(),
-    //title: 'OSMStandard',
-    //type: 'base',
+    title: 'OSMStandard',
+    type: 'base',
     maxZoom: 18
-  });
-  public openStretMapHumanitarian = new TileLayer({
+  } as BaseLayerOptions);
+  public openStretMapHumanitarian = new LayerTile({
     source: new OSM({
       url: 'https://{a-c}.tile.openstreetmap.fr.hot/{z}{x}/{y}.png'
     }),
-    //title: 'OSMHumanitarian',
-    //type: 'base'
-  });
+    title: 'OSMHumanitarian',
+    type: 'base'
+  } as BaseLayerOptions);
+  public watercolor = new LayerTile({
+    title: 'Water color',
+    type: 'base',
+    visible: false,
+    source: new SourceStamen({
+      layer: 'watercolor'
+    })
+  } as BaseLayerOptions);
+  public baseMaps = new LayerGroup({
+    title: 'Base maps',
+    layers: [this.osm, this.watercolor, this.openStretMapHumanitarian]
+  } as GroupLayerOptions);
 
+  //controles
   public overviewMapControl = new OverviewMap({
     className: 'ol-overviewmap ol-custom-overviewmap',
     layers: [
@@ -46,11 +74,9 @@ export class openlayersMap {
     collapsed: true,
     tipLabel: 'Mapa de referencia'
   })
-
   public attribution = new Attribution({
     collapsible: false,
   });
-
   public zoom = new Zoom();
 
 
