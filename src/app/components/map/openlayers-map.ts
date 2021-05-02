@@ -8,15 +8,10 @@ import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
 
-import LayerSwitcher from 'ol-layerswitcher';
 import {
-  Options,
-  RenderOptions,
-  GroupSelectStyle,
   BaseLayerOptions,
   GroupLayerOptions
  } from 'ol-layerswitcher';
-
 
 import { Injectable, Inject } from '@angular/core';
 
@@ -83,7 +78,7 @@ export class openlayersMap {
   constructor(@Inject(String)id: string){
     this.map = new Map ({
       target: id,
-      layers: [this.osm],
+      layers: [this.baseMaps],
       view: this.view,
       controls: [
         this.overviewMapControl,
