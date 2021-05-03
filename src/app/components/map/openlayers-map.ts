@@ -36,13 +36,13 @@ export class openlayersMap {
     type: 'base',
     maxZoom: 18
   } as BaseLayerOptions);
-  public openStretMapHumanitarian = new LayerTile({
-    source: new OSM({
-      url: 'https://{a-c}.tile.openstreetmap.fr.hot/{z}{x}/{y}.png'
-    }),
-    title: 'OSMHumanitarian',
-    type: 'base'
-  } as BaseLayerOptions);
+  // public openStretMapHumanitarian = new LayerTile({
+  //   source: new OSM({
+  //     url: 'https://{a-c}.tile.openstreetmap.fr.hot/{z}{x}/{y}.png'
+  //   }),
+  //   title: 'OSMHumanitarian',
+  //   type: 'base'
+  // } as BaseLayerOptions);
   public watercolor = new LayerTile({
     title: 'Water color',
     type: 'base',
@@ -53,7 +53,7 @@ export class openlayersMap {
   } as BaseLayerOptions);
   public baseMaps = new LayerGroup({
     title: 'Base maps',
-    layers: [this.osm, this.watercolor, this.openStretMapHumanitarian]
+    layers: [this.osm, this.watercolor/*, this.openStretMapHumanitarian*/]
   } as GroupLayerOptions);
 
   //controles

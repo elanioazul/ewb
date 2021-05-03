@@ -12,7 +12,7 @@ export class TemplateserviceService {
 
   constructor() { }
 
-  setTemplate(template?: ElementRef<HTMLDivElement>) {
+  sendTemplate(template?: ElementRef<HTMLDivElement>) {
     //emitimos los valores con método next pq Subject es tbn Observer
     this.templateSource.next(template)
     //this.templateSource.complete()

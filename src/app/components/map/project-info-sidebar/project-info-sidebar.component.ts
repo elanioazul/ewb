@@ -8,27 +8,27 @@ import { TemplateserviceService } from 'src/app/services/templateservice.service
   styleUrls: ['./project-info-sidebar.component.scss'],
 })
 export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
-  @ViewChild("sidebar") mySidebarDiv: ElementRef<HTMLElement>;
+  @ViewChild("sidebar") sidebarDiv: ElementRef<HTMLElement>;
   @ViewChild("layers") switchLayersDiv: ElementRef<HTMLElement>;
 
   sidebar: Sidebar | null = null;
 
-  div1?: any;
-  div2?: any;
+  divSidebar?: any;
+  divSwitcher?: any;
 
   constructor(private templateService: TemplateserviceService) {}
 
   ngAfterViewInit() {
-    const element = this.mySidebarDiv.nativeElement;
-    this.div1 = element;
-    this.templateService.setTemplate(this.div1);
+    const element = this.sidebarDiv.nativeElement;
+    this.divSidebar = element;
+    this.templateService.sendTemplate(this.divSidebar);
 
     const element2 = this.switchLayersDiv.nativeElement;
-    this.div2 = element2;
-    this.templateService.setTemplate(this.div2);
+    this.divSwitcher = element2;
+    this.templateService.sendTemplate(this.divSwitcher);
   }
 
   ngOnDestroy() {
-    this.templateService.setTemplate();
+    this.templateService.sendTemplate();
   }
 }

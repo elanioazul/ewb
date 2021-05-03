@@ -6,33 +6,58 @@ import LayerSwitcher from 'ol-layerswitcher';
 import {
   RenderOptions,
  } from 'ol-layerswitcher';
- import Control from 'ol/control/Control';
+
+import { filter, reduce } from "rxjs/operators";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-info-map',
   templateUrl: './project-info-map.component.html',
   styleUrls: ['./project-info-map.component.scss']
 })
-export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
+export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   mimapa: openlayersMap;
+
   sidebarDiv?: ElementRef<HTMLElement>;
   layerSwitcherDiv?: ElementRef<HTMLElement>;
+  domElement: any;
+  templateArray: ElementRef<HTMLElement>[] = [];
+
+  templateSubscription: Subscription;
+
 
   sidebar: Sidebar | null = null;
   layerSwitcher: LayerSwitcher | null = null;
   optionsToRenderLayerSwitcher: RenderOptions;
 
   constructor(private templateService: TemplateserviceService) {
-    this.templateService.template$.subscribe(t => this.sidebarDiv = t);
-    this.templateService.template$.subscribe(t => this.layerSwitcherDiv = t);
+    this.templateSubscription = this.templateService.template$.subscribe( domNode => {
+      if (domNode) {
+        this.templateArray.push(domNode)
+      } else {
+        this.templateArray = []
+      }
+    })
   }
 
   ngOnInit(): void {
   }
 
+  setDivs() {
+    this.templateArray.forEach(element => {
+      if (element['className'] === 'sidebar collapsed') {
+        this.sidebarDiv = element;
+      } else if (element['className'] === 'layer-switcher') {
+        this.layerSwitcherDiv = element
+      }
+    })
+  }
+
   ngAfterViewInit() {
     this.mimapa = new openlayersMap('mapcanvas');
+
+    this.setDivs();
 
     this.sidebar = new Sidebar({
       element: this.sidebarDiv
@@ -42,11 +67,20 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit {
 
     this.layerSwitcher = new LayerSwitcher({
       reverse: true,
-      groupSelectStyle: 'group'
+      groupSelectStyle: 'children',
+      activationMode: 'mouseover',
+      startActive: false,
+      label: '',
+      collapseTipLabel: 'Collapse legend',
     });
-    var toc = this.layerSwitcherDiv;
-    LayerSwitcher.renderPanel(this.mimapa.map, toc.nativeElement, { reverse: true})
+    this.domElement = this.layerSwitcherDiv;
+    LayerSwitcher.renderPanel(this.mimapa.map, this.domElement, { reverse: true})
     this.mimapa.map.addControl(this.layerSwitcher);
 
+  }
+
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.templateSubscription.unsubscribe();
   }
 }
