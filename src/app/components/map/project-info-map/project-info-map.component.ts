@@ -66,16 +66,15 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     this.mimapa.map.addControl(this.sidebar);
 
     this.layerSwitcher = new LayerSwitcher({
-      reverse: true,
-      groupSelectStyle: 'children',
-      activationMode: 'mouseover',
+      reverse: false,
+      groupSelectStyle: 'none',
+      activationMode: 'click',
       startActive: false,
       label: '',
       collapseTipLabel: 'Collapse legend',
     });
     this.domElement = this.layerSwitcherDiv;
     LayerSwitcher.renderPanel(this.mimapa.map, this.domElement, { reverse: true})
-    this.mimapa.map.addControl(this.layerSwitcher);
 
   }
 
