@@ -32,17 +32,10 @@ export class openlayersMap {
     visible: true,
     opacity: 0.8,
     source: new OSM(),
-    title: 'OSMStandard',
+    title: 'OpenStreetMap',
     type: 'base',
     maxZoom: 18
   } as BaseLayerOptions);
-  // public openStretMapHumanitarian = new LayerTile({
-  //   source: new OSM({
-  //     url: 'https://{a-c}.tile.openstreetmap.fr.hot/{z}{x}/{y}.png'
-  //   }),
-  //   title: 'OSMHumanitarian',
-  //   type: 'base'
-  // } as BaseLayerOptions);
   public watercolor = new LayerTile({
     title: 'Water color',
     type: 'base',
@@ -51,9 +44,19 @@ export class openlayersMap {
       layer: 'watercolor'
     })
   } as BaseLayerOptions);
+  public google = new LayerTile({
+    visible: true,
+    opacity: 0.9,
+    source: new OSM({
+      'url': 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+    }),
+    title: 'GoogleMaps',
+    type: 'base',
+    maxZoom: 18
+  } as BaseLayerOptions)
   public baseMaps = new LayerGroup({
     title: 'Base maps',
-    layers: [this.osm, this.watercolor/*, this.openStretMapHumanitarian*/]
+    layers: [this.osm, this.watercolor, this.google]
   } as GroupLayerOptions);
 
   //controles
