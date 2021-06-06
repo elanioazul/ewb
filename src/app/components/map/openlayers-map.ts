@@ -33,7 +33,7 @@ export class openlayersMap {
   public view = new View({
     projection: 'EPSG:3857',
     center: this.garzaCoord,
-    zoom: 7
+    zoom: 13
   });
 
   //capasBase
