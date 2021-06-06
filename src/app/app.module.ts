@@ -32,6 +32,9 @@ import { ProjectInfoComponent } from './components/map/project-info/project-info
 import { ProjectInfoMapComponent } from './components/map/project-info-map/project-info-map.component';
 import { ProjectInfoSidebarComponent } from './components/map/project-info-sidebar/project-info-sidebar.component';
 
+import { WaterService } from '../app/services/water.service';
+import { SanitationService } from '../app/services/sanitation.service';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +71,7 @@ import { ProjectInfoSidebarComponent } from './components/map/project-info-sideb
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [WaterService, SanitationService],
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent]
 })
