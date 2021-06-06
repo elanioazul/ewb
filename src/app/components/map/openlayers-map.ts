@@ -69,13 +69,14 @@ export class openlayersMap {
   } as GroupLayerOptions);
 
   //CapasOverlays
+  //water
   public waterExisitngPoints = new VectorLayer({
     source: new VectorSource({
       features: new GeoJSON().readFeatures(waterExisitngPoints, {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Exisitng water points'
+    title: 'Exisitng locations'
   } as BaseLayerOptions);
   public waterPotentialPoints = new VectorLayer({
     source: new VectorSource({
@@ -83,15 +84,26 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Potential water points'
+    title: 'Potential locations'
   } as BaseLayerOptions);
+
+  public waterOverlays = new LayerGroup({
+    title: 'Water Facilities',
+    layers: [
+      this.waterExisitngPoints,
+      this.waterPotentialPoints,
+    ],
+    fold: 'open'
+  } as GroupLayerOptions);
+  //CapasOverlays
+  //sanitation
   public sanitationExisitngPoints = new VectorLayer({
     source: new VectorSource({
       features: new GeoJSON().readFeatures(sanitationExistingPoints, {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Exisitng sanitation points'
+    title: 'Exisitng locations'
   } as BaseLayerOptions);
   public sanitationPotentialPoints = new VectorLayer({
     source: new VectorSource({
@@ -99,13 +111,12 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Potential sanitation points'
+    title: 'Potential locations'
   } as BaseLayerOptions);
-  public overlays = new LayerGroup({
-    title: 'Facilities locations',
+
+  public sanitationOverlays = new LayerGroup({
+    title: 'Sanitation Facilities',
     layers: [
-      this.waterExisitngPoints,
-      this.waterPotentialPoints,
       this.sanitationExisitngPoints,
       this.sanitationPotentialPoints
     ],
@@ -136,7 +147,7 @@ export class openlayersMap {
   constructor(@Inject(String)id: string){
     this.map = new Map ({
       target: id,
-      layers: [this.baseMaps, this.overlays],
+      layers: [this.baseMaps, this.waterOverlays, this.sanitationOverlays],
       view: this.view,
       controls: [
         this.overviewMapControl,
