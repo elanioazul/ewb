@@ -1,1 +1,6 @@
-<p>select-tolist works!</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <select formControlName="mycontrol" (change)="changeDesire($event)">
+    <option disabled>Select a dataset</option>
+    <option *ngFor="let dataset of datasets">{{dataset}}</option>
+  </select>
+</form>
