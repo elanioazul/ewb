@@ -19,8 +19,10 @@ import {
   GroupLayerOptions
  } from 'ol-layerswitcher';
 
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, InjectionToken } from '@angular/core';
 
+const SERVICEABOUTWATER = new InjectionToken<string>("SERVICEABOUTWATER")
+const SERVICEABOURSANITATION = new InjectionToken<string>("SERVICEABOURSANITATION")
 @Injectable({
   providedIn: 'root' // just before your class
 })
@@ -101,8 +103,13 @@ export class openlayersMap {
   public sanitationPotentialFeatures;
 
 
+
+
   constructor(
-    @Inject(String)id: string, private waterService?: WaterService, private sanitationService?: SanitationService){
+    @Inject(String)id: string,
+    @Inject(SERVICEABOUTWATER) public waterService?: WaterService,
+    @Inject(SERVICEABOURSANITATION) private sanitationService?: SanitationService
+    ){
     this.waterExistingFeatures = new GeoJSON().readFeatures(this.waterService.getWaterExistingData, {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
     })
