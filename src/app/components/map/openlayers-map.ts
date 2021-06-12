@@ -95,8 +95,26 @@ export class openlayersMap {
   });
   public zoom = new Zoom();
 
+  public waterExistingFeatures;
+  public waterPotetialFeatures ;
+  public sanitationExistingFeatures;
+  public sanitationPotentialFeatures;
 
-  constructor(@Inject(String)id: string, public waterService: WaterService, public sanitationService: SanitationService){
+
+  constructor(
+    @Inject(String)id: string, private waterService?: WaterService, private sanitationService?: SanitationService){
+    this.waterExistingFeatures = new GeoJSON().readFeatures(this.waterService.getWaterExistingData, {
+        dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
+    })
+    this.waterPotetialFeatures = new GeoJSON().readFeatures(this.waterService.getWaterPotentialData, {
+      dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
+    })
+    this.sanitationExistingFeatures = new GeoJSON().readFeatures(this.sanitationService.getSanitationExistingData, {
+      dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
+    })
+    this.sanitationPotentialFeatures = new GeoJSON().readFeatures(this.sanitationService.getSanitationPotentialData, {
+      dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
+    })
     this.loadWaterDataFromServices();
     this.loadSanitationDataFromServices()
     this.map = new Map ({
@@ -114,17 +132,13 @@ export class openlayersMap {
   loadWaterDataFromServices() {
     this.waterExisitngPoints = new VectorLayer({
       source: new VectorSource({
-        features: new GeoJSON().readFeatures(this.waterService.getWaterExistingData, {
-          dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
-        })
+        features: this.waterExistingFeatures
       }),
       title: 'Exisitng locations'
     } as BaseLayerOptions);
     this.waterPotentialPoints = new VectorLayer({
       source: new VectorSource({
-        features: new GeoJSON().readFeatures(this.waterService.getWaterPotentialData, {
-          dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
-        })
+        features: this.waterPotetialFeatures
       }),
       title: 'Potential locations'
     } as BaseLayerOptions);
@@ -141,17 +155,13 @@ export class openlayersMap {
   loadSanitationDataFromServices() {
     this.sanitationExisitngPoints = new VectorLayer({
       source: new VectorSource({
-        features: new GeoJSON().readFeatures(this.sanitationService.getSanitationExistingData, {
-          dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
-        })
+        features: this.sanitationExistingFeatures
       }),
       title: 'Exisitng locations'
     } as BaseLayerOptions);
     this.sanitationPotentialPoints = new VectorLayer({
       source: new VectorSource({
-        features: new GeoJSON().readFeatures(this.sanitationService.getSanitationPotentialData, {
-          dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
-        })
+        features: this.sanitationPotentialFeatures
       }),
       title: 'Potential locations'
     } as BaseLayerOptions);

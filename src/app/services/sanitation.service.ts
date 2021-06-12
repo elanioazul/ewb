@@ -4,9 +4,7 @@ import { sanitationPotentialPoints } from '../data/sanitation_potential';
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SanitationService {
 
   public sanitationExisting: GeoJSON = sanitationExistingPoints;
