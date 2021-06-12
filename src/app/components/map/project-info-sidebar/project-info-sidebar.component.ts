@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, TemplateRef, AfterViewInit, Inject, InjectionToken, OnDestroy } from "@angular/core";
+import { Component, ViewChild, ElementRef, Input, AfterViewInit, Inject, InjectionToken, OnDestroy } from "@angular/core";
 import Sidebar from "../../../js/ol5-sidebar.js";
 import { TemplateserviceService } from 'src/app/services/templateservice.service';
 
@@ -16,6 +16,9 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
   divSidebar?: any;
   divSwitcher?: any;
 
+  datasetsOptions: any = ['water-e', 'water-p', 'sanitation-e', 'sanitation-p'];
+  datasetSelected: string;
+
   constructor(private templateService: TemplateserviceService) {}
 
   ngAfterViewInit() {
@@ -26,6 +29,18 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
     const element2 = this.switchLayersDiv.nativeElement;
     this.divSwitcher = element2;
     this.templateService.sendTemplate(this.divSwitcher);
+  }
+
+  processSelection(selection: string) {
+    this.datasetsOptions.find(element => {
+      if (element.localeCompare(selection) == 0) {
+        this.datasetSelected = selection
+        return this.datasetSelected
+      } else {
+        this.datasetSelected = ''
+      }
+    });
+    console.log('el dataset requested que llega al parent es : ' + this.datasetSelected);
   }
 
   ngOnDestroy() {
