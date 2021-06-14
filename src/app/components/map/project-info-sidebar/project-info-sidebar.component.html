@@ -23,7 +23,7 @@
   <div class="sidebar-pane" id="zoom-tolocation" >
     <h1 class="sidebar-header">Zoom to location<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
     <app-select-tolist (changeEvent)="processSelection($event)"></app-select-tolist>
-    <app-ul-list *ngIf="datasetSelected" [datasetToList]="datasetSelected"></app-ul-list>
+    <app-ul-list *ngIf="datasetSelected" [datasetToList]="datasetSelected" ></app-ul-list>
   </div>
 
   <div class="sidebar-pane" id="point-details">
