@@ -23,7 +23,7 @@ export class UlListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log('comp para listar va a listar :' + this.datasetToList);
+    //console.log('comp para listar va a listar :' + this.datasetToList);
     this.determineWhatList();
   }
   determineWhatList() {
@@ -44,7 +44,10 @@ export class UlListComponent implements OnInit, OnChanges {
         break;
     }
     this.arrayOfFeaturesToList = this.geoJsonToList['features'];
-    console.log('este es el geojson to list :' + JSON.stringify(this.geoJsonToList))
+  }
+
+  onFeatureSelected(feature: Feature) {
+    console.log('onFeatureSelected is :' + feature)
   }
 
 }

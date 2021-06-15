@@ -1,5 +1,9 @@
 <ul>
-  <li *ngFor="let feature of arrayOfFeaturesToList">
-    {{feature['id']}}
+  <li
+  *ngFor="let feature of arrayOfFeaturesToList;"
+  title="{{feature.properties.kind | titlecase }}"
+  (click)="onFeatureSelected(feature)"
+  >
+    {{ feature.properties.id | titlecase}}
   </li>
 </ul>

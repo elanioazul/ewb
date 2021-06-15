@@ -40,7 +40,6 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
         this.datasetSelected = ''
       }
     });
-    console.log('el dataset requested que llega al parent es : ' + this.datasetSelected);
   }
 
   ngOnDestroy() {
