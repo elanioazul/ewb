@@ -8,13 +8,27 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 95%;
+  width: 75%;
+  color: $ewb-color;
+
 
   &-parameter {
     width: 40vw;
     height: 30px;
     border-radius: (4px);
-    border: none;
-
+    border: 1.5px solid $ewb-color;
+    margin: 0 auto;
+    color: $ewb-color;
+    padding: 15px;
+    height: 25px;
+    cursor: pointer;
   }
+  &-parameter:focus {
+    outline: none;
+  }
+
+}
+
+select option {
+  color: $grey-200;
 }
