@@ -9,6 +9,7 @@ import {
 
 import { filter, reduce } from "rxjs/operators";
 import { Subscription } from 'rxjs';
+import { Feature } from "ol";
 
 @Component({
   selector: 'app-project-info-map',
@@ -30,6 +31,8 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
   sidebar: Sidebar | null = null;
   layerSwitcher: LayerSwitcher | null = null;
   optionsToRenderLayerSwitcher: RenderOptions;
+
+  currentFeature: Feature;
 
   constructor(private templateService: TemplateserviceService) {
     this.templateSubscription = this.templateService.template$.subscribe( domNode => {
@@ -76,6 +79,10 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     this.domElement = this.layerSwitcherDiv;
     LayerSwitcher.renderPanel(this.mimapa.map, this.domElement, { reverse: true})
 
+  }
+
+  handleFeatureToShareWithMap(feature: Feature) {
+    console.log('onhandlingFeatureToShareWithMap, feature is :' + JSON.stringify(feature));
   }
 
   ngOnDestroy() {

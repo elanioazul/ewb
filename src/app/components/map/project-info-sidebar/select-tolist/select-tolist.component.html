@@ -1,5 +1,5 @@
-<form [formGroup]="myForm">
-  <select formControlName="mycontrol" (change)="changeDesire($event)">
+<form class="popup__upcontrol" [formGroup]="myForm">
+  <select class="popup__upcontrol-parameter" formControlName="mycontrol" (change)="changeDesire($event)">
     <option disabled>Select a dataset</option>
     <option *ngFor="let dataset of datasets">{{dataset}}</option>
   </select>

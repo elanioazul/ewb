@@ -6,7 +6,7 @@ ul {
   width: 100%;
   height: 100%;
   margin: .3rem .9rem;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
 }
 
 li {
@@ -18,6 +18,9 @@ li {
    text-overflow: ellipsis;
    white-space: nowrap;
    border-left: 4px solid $ewb-color;
+   @media(min-width:1024px) {
+    font-size: larger;
+  }
 }
 
 li:hover {

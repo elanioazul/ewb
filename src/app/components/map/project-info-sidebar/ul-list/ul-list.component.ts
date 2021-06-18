@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { WaterService } from '../../../../services/water.service';
 import { SanitationService } from '../../../../services/sanitation.service';
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
@@ -14,16 +14,16 @@ export class UlListComponent implements OnInit, OnChanges {
   public geoJsonToList: GeoJSON;
   public arrayOfFeaturesToList: Array<object>;
 
+  @Output() featureSelected: EventEmitter<Feature> = new EventEmitter()
+
   constructor(public waterS: WaterService, public sanitationS: SanitationService) { }
 
 
 
   ngOnInit(): void {
-    //console.log('this is the waterS :' + JSON.stringify(this.waterS.getWaterExistingData))
   }
 
   ngOnChanges() {
-    //console.log('comp para listar va a listar :' + this.datasetToList);
     this.determineWhatList();
   }
   determineWhatList() {
@@ -46,8 +46,9 @@ export class UlListComponent implements OnInit, OnChanges {
     this.arrayOfFeaturesToList = this.geoJsonToList['features'];
   }
 
-  onFeatureSelected(feature: Feature) {
-    console.log('onFeatureSelected is :' + feature)
+  onFeatureSelected(feature: Feature): void {
+    console.log('onFeatureSelected is :' + JSON.stringify(feature));
+    this.featureSelected.emit(feature)
   }
 
 }
