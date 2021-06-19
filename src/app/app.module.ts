@@ -34,6 +34,7 @@ import { ProjectInfoMapComponent } from './components/map/project-info-map/proje
 import { ProjectInfoSidebarComponent } from './components/map/project-info-sidebar/project-info-sidebar.component';
 import { SelectTolistComponent } from './components/map/project-info-sidebar/select-tolist/select-tolist.component';
 import { UlListComponent } from './components/map/project-info-sidebar/ul-list/ul-list.component';
+import { FeatureInfoComponent } from './components/map/project-info-sidebar/feature-info/feature-info.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { UlListComponent } from './components/map/project-info-sidebar/ul-list/u
     ProjectInfoMapComponent,
     ProjectInfoSidebarComponent,
     SelectTolistComponent,
-    UlListComponent
+    UlListComponent,
+    FeatureInfoComponent
   ],
   imports: [
     BrowserModule,

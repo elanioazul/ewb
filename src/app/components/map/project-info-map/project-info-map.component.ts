@@ -83,6 +83,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
 
   handleFeatureToShareWithMap(feature: Feature) {
     console.log('onhandlingFeatureToShareWithMap, feature is :' + JSON.stringify(feature));
+    this.currentFeature = feature;
   }
 
   ngOnDestroy() {

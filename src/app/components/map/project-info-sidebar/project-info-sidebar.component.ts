@@ -19,6 +19,7 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
 
   datasetsOptions: any = ['water-e', 'water-p', 'sanitation-e', 'sanitation-p'];
   datasetSelected: string;
+  currentFeature: Feature;
   @Output() featureToBubbleUp: EventEmitter<Feature> = new EventEmitter();
 
   constructor(private templateService: TemplateserviceService) {}
@@ -46,7 +47,8 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
 
   handleFeatureChange(feature: Feature) {
     console.log('onhandlingFeatureInSidebar, feature is :' + JSON.stringify(feature));
-    this.featureToBubbleUp.emit(feature)
+    this.featureToBubbleUp.emit(feature);
+    this.currentFeature = feature;
   }
 
   ngOnDestroy() {

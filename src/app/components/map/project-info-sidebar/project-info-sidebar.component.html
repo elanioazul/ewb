@@ -21,13 +21,14 @@
   </div>
 
   <div class="sidebar-pane" id="zoom-tolocation">
-    <h1 class="sidebar-header">Zoom to location<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+    <h1 class="sidebar-header">Themes<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
     <app-select-tolist (changeEvent)="processSelection($event)"></app-select-tolist>
     <app-ul-list *ngIf="datasetSelected" [datasetToList]="datasetSelected" (featureSelected)="handleFeatureChange($event)"></app-ul-list>
   </div>
 
   <div class="sidebar-pane" id="point-details">
-    <h1 class="sidebar-header">Point details<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+    <h1 class="sidebar-header">Location Info<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+    <app-feature-info [feature]="currentFeature"></app-feature-info>
   </div>
 
 </div>
