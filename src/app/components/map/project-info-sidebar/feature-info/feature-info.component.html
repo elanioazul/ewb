@@ -1,3 +1,75 @@
-<p *ngIf="feature">
+<!-- <p *ngIf="feature">
   {{ feature.properties.id }}
-</p>
+</p> -->
+
+
+<div *ngIf="feature" class='card'>
+  <div class='card-header'>
+    {{ feature.properties.id }}
+  </div>
+  <div class="card-body">
+    <div [ngSwitch]="sortOfDataset">
+      <div *ngSwitchCase="'water-e'">
+        <table class="rwd-table">
+          <tr>
+            <th>Movie Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Gross</th>
+            <th>EAssss</th>
+          </tr>
+          <tr>
+            <td data-th="Movie Title">Star Wars</td>
+            <td data-th="Genre">Adventure, Sci-fi</td>
+            <td data-th="Year">1977</td>
+            <td data-th="Gross">$460,935,665</td>
+            <td data-th="Gross">$sasas</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'water-p'">
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+          </tr>
+          <tr>
+            <th>Asnwr</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+          </tr>
+          <tr>
+            <th>Gross</th>
+          </tr>
+          <tr>
+            <th>EAssss</th>
+          </tr>
+          <tr>
+            <td data-th="Movie Title">Star Wars</td>
+            <td data-th="Genre">Adventure, Sci-fi</td>
+            <td data-th="Year">1977</td>
+            <td data-th="Gross">$460,935,665</td>
+            <td data-th="Gross">$sasas</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'sanitation-e'">I am sanitation-e</div>
+      <div *ngSwitchCase="'sanitation-p'">I am sanitation-p</div>
+      <div *ngSwitchDefault>
+        <table class="rwd-table">
+          <tr>
+            <th>Movie Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Gross</th>
+          </tr>
+          <tr>
+            <td data-th="Movie Title">Star Wars</td>
+            <td data-th="Genre">Adventure, Sci-fi</td>
+            <td data-th="Year">1977</td>
+            <td data-th="Gross">$460,935,665</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
