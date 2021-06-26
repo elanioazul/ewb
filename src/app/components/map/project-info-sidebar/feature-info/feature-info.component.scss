@@ -1,36 +1,41 @@
+@import 'global/variables';
+@import 'mixins/mixins';
+
 $breakpoint-alpha: 480px;
 
+.card {
+  background-color: $base;
+  &__header {
+    padding: 15px 2px;
+    font-family: $font-bold;
+    font-size: rem(16px);
+    color: $grey-300;
+  }
+  &__body {
+    display: flex;
+  }
+}
 .rwd-table {
   margin: 1em 0;
-  min-width: 300px; // adjust to your needs
-
   tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid $ewb-color;
+    border-bottom: 1px solid $ewb-color;
   }
-
   th {
-    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+    display: none;
   }
-
   td {
     display: block;
-
     &:first-child {
       padding-top: .5em;
     }
     &:last-child {
       padding-bottom: .5em;
     }
-
     &:before {
-      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+      //content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
       font-weight: bold;
-
-      // optional stuff to make it look nicer
-      width: 6.5em; // magic number :( adjust according to your own content
-      display: inline-block;
-      // end options
+      width: 6.5em;
 
       @media (min-width: $breakpoint-alpha) {
         display: none;
@@ -60,12 +65,11 @@ $breakpoint-alpha: 480px;
 }
 
 .rwd-table {
-  background: #34495E;
-  color: #fff;
+  color: $grey-300;
   border-radius: .4em;
   overflow: hidden;
   tr {
-    border-color: lighten(#34495E, 10%);
+    border-color: lighten($ewb-color, 10%);
   }
   th, td {
     margin: .5em 1em;
@@ -74,6 +78,6 @@ $breakpoint-alpha: 480px;
     }
   }
   th, td:before {
-    color: #dd5;
+    color: $hover;
   }
 }
