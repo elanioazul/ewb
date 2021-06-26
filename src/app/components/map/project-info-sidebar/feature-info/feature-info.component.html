@@ -9,52 +9,126 @@
   </div>
   <div class="card-body">
     <div [ngSwitch]="sortOfDataset">
-      <div *ngSwitchCase="'water-e'">
-        <table class="rwd-table">
-          <tr>
-            <th>Movie Title</th>
-            <th>Genre</th>
-            <th>Year</th>
-            <th>Gross</th>
-            <th>EAssss</th>
-          </tr>
-          <tr>
-            <td data-th="Movie Title">Star Wars</td>
-            <td data-th="Genre">Adventure, Sci-fi</td>
-            <td data-th="Year">1977</td>
-            <td data-th="Gross">$460,935,665</td>
-            <td data-th="Gross">$sasas</td>
-          </tr>
-        </table>
-      </div>
-      <div *ngSwitchCase="'water-p'">
+      <div *ngSwitchCase="'water-e'">I am water-e
         <table class="rwd-table">
           <tr>
             <th>Question</th>
+            <th>Surveyed</th>
           </tr>
           <tr>
-            <th>Asnwr</th>
+            <td>kind</td>
+            <td>{{ feature.properties.kind }}</td>
           </tr>
           <tr>
-            <th>Year</th>
+            <td>isused</td>
+            <td>{{ feature.properties.isused }}</td>
           </tr>
           <tr>
-            <th>Gross</th>
+            <td>use</td>
+            <td>{{ feature.properties.use }}</td>
           </tr>
           <tr>
-            <th>EAssss</th>
+            <td>year</td>
+            <td>{{ feature.properties.year }}</td>
           </tr>
           <tr>
-            <td data-th="Movie Title">Star Wars</td>
-            <td data-th="Genre">Adventure, Sci-fi</td>
-            <td data-th="Year">1977</td>
-            <td data-th="Gross">$460,935,665</td>
-            <td data-th="Gross">$sasas</td>
+            <td>assesment</td>
+            <td>{{ feature.properties.assesment }}</td>
+          </tr>
+          <tr>
+            <td>qualitytest</td>
+            <td>{{ feature.properties.qualitytest }}</td>
+          </tr>
+          <tr>
+            <td>fee</td>
+            <td>{{ feature.properties.fee }}</td>
+          </tr>
+          <tr>
+            <td>householders</td>
+            <td>{{ feature.properties.householders }}</td>
           </tr>
         </table>
       </div>
-      <div *ngSwitchCase="'sanitation-e'">I am sanitation-e</div>
-      <div *ngSwitchCase="'sanitation-p'">I am sanitation-p</div>
+      <div *ngSwitchCase="'water-p'">I am water-p
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td>kind</td>
+            <td>{{ feature.properties.kind }}</td>
+          </tr>
+          <tr>
+            <td>use</td>
+            <td>{{ feature.properties.use }}</td>
+          </tr>
+          <tr>
+            <td>householders</td>
+            <td>{{ feature.properties.householders }}</td>
+          </tr>
+          <tr>
+            <td>coveredwhenfloods</td>
+            <td>{{ feature.properties.coveredwhenfloods }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'sanitation-e'">I am sanitation-e
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td>kind</td>
+            <td>{{ feature.properties.kind }}</td>
+          </tr>
+          <tr>
+            <td>filledout</td>
+            <td>{{ feature.properties.filledout }}</td>
+          </tr>
+          <tr>
+            <td>inuse</td>
+            <td>{{ feature.properties.inuse }}</td>
+          </tr>
+          <tr>
+            <td>stuckblocked</td>
+            <td>{{ feature.properties.stuckblocked }}</td>
+          </tr>
+          <tr>
+            <td>isprotected</td>
+            <td>{{ feature.properties.isprotected }}</td>
+          </tr>
+          <tr>
+            <td>year</td>
+            <td>{{ feature.properties.year }}</td>
+          </tr>
+          <tr>
+            <td>coveredwhenfloods</td>
+            <td>{{ feature.properties.coveredwhenfloods }}</td>
+          </tr>
+          <tr>
+            <td>fee</td>
+            <td>{{ feature.properties.fee }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'sanitation-p'">I am sanitation-p
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td>kind</td>
+            <td>{{ feature.properties.kind }}</td>
+          </tr>
+          <tr>
+            <td>replacement</td>
+            <td>{{ feature.properties.replacement }}</td>
+          </tr>
+        </table>
+      </div>
       <div *ngSwitchDefault>
         <table class="rwd-table">
           <tr>
@@ -73,3 +147,4 @@
       </div>
     </div>
   </div>
+</div>
