@@ -8,7 +8,7 @@ import { FormBuilder } from "@angular/forms";
 })
 export class SelectTolistComponent implements OnInit {
 
-  datasets: any = ['water-e', 'water-p', 'sanitation-e', 'sanitation-p']
+  datasets: any = ['water existing locations', 'water potential locations', 'sanitation exisiting locations', 'sanitation potential locations']
 
   @Output() changeEvent = new EventEmitter<string>();
 

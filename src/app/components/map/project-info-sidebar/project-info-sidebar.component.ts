@@ -17,7 +17,7 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
   divSidebar?: any;
   divSwitcher?: any;
 
-  datasetsOptions: any = ['water-e', 'water-p', 'sanitation-e', 'sanitation-p'];
+  datasetsOptions: any = ['water existing locations', 'water potential locations', 'sanitation exisiting locations', 'sanitation potential locations'];
   datasetSelected: string;
   currentFeature: Feature;
   @Output() featureToBubbleUp: EventEmitter<Feature> = new EventEmitter();

@@ -4,7 +4,7 @@
   </div>
   <div class="card__body">
     <div [ngSwitch]="sortOfDataset">
-      <div *ngSwitchCase="'water-e'">Water exisiting point
+      <div *ngSwitchCase="'water existing locations'">Water exisiting point
         <table class="rwd-table">
           <tr>
             <th>Question</th>
@@ -44,7 +44,7 @@
           </tr>
         </table>
       </div>
-      <div *ngSwitchCase="'water-p'">Water desired point
+      <div *ngSwitchCase="'water potential locations'">Water desired point
         <table class="rwd-table">
           <tr>
             <th>Question</th>
@@ -68,7 +68,7 @@
           </tr>
         </table>
       </div>
-      <div *ngSwitchCase="'sanitation-e'">Sanitation exisiting point
+      <div *ngSwitchCase="'sanitation exisiting locations'">Sanitation exisiting point
         <table class="rwd-table">
           <tr>
             <th>Question</th>
@@ -108,7 +108,7 @@
           </tr>
         </table>
       </div>
-      <div *ngSwitchCase="'sanitation-p'">Sanitation desired point
+      <div *ngSwitchCase="'sanitation potential locations'">Sanitation desired point
         <table class="rwd-table">
           <tr>
             <th>Question</th>
@@ -127,14 +127,10 @@
       <div *ngSwitchDefault>
         <table class="rwd-table">
           <tr>
-            <th>Movie Title</th>
-            <th>Genre</th>
             <th>Year</th>
             <th>Gross</th>
           </tr>
           <tr>
-            <td data-th="Movie Title">Star Wars</td>
-            <td data-th="Genre">Adventure, Sci-fi</td>
             <td data-th="Year">1977</td>
             <td data-th="Gross">$460,935,665</td>
           </tr>

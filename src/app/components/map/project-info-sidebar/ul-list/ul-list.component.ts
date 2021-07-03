@@ -28,16 +28,16 @@ export class UlListComponent implements OnInit, OnChanges {
   }
   determineWhatList() {
     switch (this.datasetToList) {
-      case 'water-e':
+      case 'water existing locations':
         this.geoJsonToList = this.waterS.getWaterExistingData;
         break;
-      case 'water-p':
+      case 'water potential locations':
         this.geoJsonToList = this.waterS.getWaterPotentialData;
         break;
-      case 'sanitation-e':
+      case 'sanitation exisiting locations':
         this.geoJsonToList = this.sanitationS.getSanitationExistingData;
         break;
-      case 'sanitation-p':
+      case 'sanitation potential locations':
         this.geoJsonToList = this.sanitationS.getSanitationPotentialData;
         break;
       default:
