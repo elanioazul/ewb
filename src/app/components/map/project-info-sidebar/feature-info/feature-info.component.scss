@@ -5,6 +5,9 @@ $breakpoint-alpha: 480px;
 
 .card {
   background-color: $base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &__header {
     padding: 15px 2px;
     font-family: $font-bold;
@@ -13,6 +16,8 @@ $breakpoint-alpha: 480px;
   }
   &__body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .rwd-table {
@@ -33,13 +38,17 @@ $breakpoint-alpha: 480px;
       padding-bottom: .5em;
     }
     &:before {
-      //content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
       font-weight: bold;
       width: 6.5em;
 
       @media (min-width: $breakpoint-alpha) {
         display: none;
       }
+    }
+  }
+  .surveryQuestion {
+    &:after {
+      content: ':';
     }
   }
 
