@@ -10,6 +10,8 @@ import LayerGroup from 'ol/layer/Group';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
+import Feature from 'ol/Feature';
+import * as olCoordinate from 'ol/coordinate';
 
 import { waterExisitngPoints } from '../../data/water_existing';
 import { waterPotentialPoints } from '../../data/water_potential';
@@ -143,6 +145,8 @@ export class openlayersMap {
   });
   public zoom = new Zoom();
 
+  //interacting with sidebar logic, which sends a point ref to fly to
+  public pointSelected: Feature;
 
   constructor(@Inject(String)id: string){
     this.map = new Map ({
@@ -155,6 +159,14 @@ export class openlayersMap {
         this.zoom
       ],
     });
+  }
+
+  update(coordinates: olCoordinate.Coordinate, id: string): void {
+    let newView = new View({
+      center: fromLonLat(coordinates),
+      zoom: 18
+    });
+    this.map.setView(newView);
   }
 
 }

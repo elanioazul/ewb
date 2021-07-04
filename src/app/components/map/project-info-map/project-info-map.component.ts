@@ -9,7 +9,9 @@ import {
 
 import { filter, reduce } from "rxjs/operators";
 import { Subscription } from 'rxjs';
-import { Feature } from "ol";
+//import { Feature } from "ol";
+import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
+
 
 @Component({
   selector: 'app-project-info-map',
@@ -32,7 +34,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
   layerSwitcher: LayerSwitcher | null = null;
   optionsToRenderLayerSwitcher: RenderOptions;
 
-  currentFeature: Feature;
+  currentFeature: any;
 
   constructor(private templateService: TemplateserviceService) {
     this.templateSubscription = this.templateService.template$.subscribe( domNode => {
@@ -84,6 +86,14 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
   handleFeatureToShareWithMap(feature: Feature) {
     console.log('onhandlingFeatureToShareWithMap, feature is :' + JSON.stringify(feature));
     this.currentFeature = feature;
+    if (!this.mimapa) {
+      return;
+    }
+    if (this.mimapa && this.currentFeature) {
+      const {type, coordinates } = this.currentFeature.geometry;
+      const id = this.currentFeature.properties.id;
+      this.mimapa.update(coordinates, id);
+    }
   }
 
   ngOnDestroy() {
