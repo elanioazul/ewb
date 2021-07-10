@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { openlayersMap } from '../openlayers-map';
 import { TemplateserviceService } from 'src/app/services/templateservice.service';
 import Sidebar from "../../../js/ol5-sidebar.js";
@@ -21,6 +21,9 @@ import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryColle
 export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   mimapa: openlayersMap;
+
+  @ViewChild("popup") overlay: ElementRef<HTMLElement>;
+  @ViewChild("popupcloser") popupcloser: ElementRef<HTMLElement>;
 
   sidebarDiv?: ElementRef<HTMLElement>;
   layerSwitcherDiv?: ElementRef<HTMLElement>;
@@ -92,8 +95,13 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     if (this.mimapa && this.currentFeature) {
       const {type, coordinates } = this.currentFeature.geometry;
       const id = this.currentFeature.properties.id;
-      this.mimapa.update(coordinates, id);
+      this.mimapa.updateView(coordinates);
+      this.mimapa.updateOverlay(coordinates, id, this.overlay);
     }
+  }
+
+  onClick() {
+    this.mimapa.updateOverlayToBlur();
   }
 
   ngOnDestroy() {

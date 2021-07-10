@@ -12,6 +12,7 @@ import {fromLonLat} from 'ol/proj';
 import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
 import Feature from 'ol/Feature';
 import * as olCoordinate from 'ol/coordinate';
+import Overlay from 'ol/Overlay';
 
 import { waterExisitngPoints } from '../../data/water_existing';
 import { waterPotentialPoints } from '../../data/water_potential';
@@ -23,7 +24,7 @@ import {
   GroupLayerOptions
  } from 'ol-layerswitcher';
 
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, ElementRef } from '@angular/core';
 
 @Injectable({
   providedIn: 'root' // just before your class
@@ -161,7 +162,7 @@ export class openlayersMap {
     });
   }
 
-  update(coordinates: olCoordinate.Coordinate, id: string): void {
+  updateView(coordinates: olCoordinate.Coordinate): void {
     let newView = new View({
       center: fromLonLat(coordinates),
       zoom: 18
@@ -169,4 +170,16 @@ export class openlayersMap {
     this.map.setView(newView);
   }
 
+  updateOverlay(coordinates: olCoordinate.Coordinate, id: string, div: ElementRef): void {
+    let popup = new Overlay({
+      element: div.nativeElement
+    });
+    this.map.addOverlay(popup);
+    popup.setPosition(fromLonLat(coordinates));
+  }
+
+  updateOverlayToBlur(): void {
+    let overlays = this.map.getOverlays();
+    overlays.forEach(overlay => overlay.setPosition(undefined));
+  }
 }
