@@ -24,6 +24,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
 
   @ViewChild("popup") overlay: ElementRef<HTMLElement>;
   @ViewChild("popupcloser") popupcloser: ElementRef<HTMLElement>;
+  @ViewChild("popupcontent") popupcontent: ElementRef<HTMLElement>;
 
   sidebarDiv?: ElementRef<HTMLElement>;
   layerSwitcherDiv?: ElementRef<HTMLElement>;
@@ -95,6 +96,9 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     if (this.mimapa && this.currentFeature) {
       const {type, coordinates } = this.currentFeature.geometry;
       const id = this.currentFeature.properties.id;
+      this.popupcontent.nativeElement.innerHTML = `
+      <p>Point selected:</p><code>' + ${id} + '</code>
+      `;
       this.mimapa.updateView(coordinates);
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
     }
