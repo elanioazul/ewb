@@ -75,7 +75,7 @@ mat-dialog-container#modal-component {
 
 ::-webkit-scrollbar {
   width: 14px;
-  background-color: #D62929;
+  background-color: $base;
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
