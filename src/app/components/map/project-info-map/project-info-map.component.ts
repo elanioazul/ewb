@@ -97,7 +97,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       const {type, coordinates } = this.currentFeature.geometry;
       const id = this.currentFeature.properties.id;
       this.popupcontent.nativeElement.innerHTML = `
-      <p>Point selected:</p><code>' + ${id} + '</code>
+      <p>Point selected:</p><code> ${id} </code>
       `;
       this.mimapa.updateView(coordinates);
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
