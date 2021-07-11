@@ -3,7 +3,7 @@
 <div class="sidebar-tabs">
   <ul role="tablist">
     <li><a href="#switch-layers" role="tab"><i class="fa fa-toggle-on"></i></a></li>
-    <li><a href="#zoom-tolocation" role="tab"><i class="fa fa-table"></i></a></li>
+    <li><a href="#lists" role="tab"><i class="fa fa-table"></i></a></li>
     <li><a href="#point-details" role="tab"><i class="fa fa-info"></i></a></li>
   </ul>
 
@@ -20,7 +20,7 @@
     <div #layers id="layers" class="layer-switcher"></div>
   </div>
 
-  <div class="sidebar-pane" id="zoom-tolocation">
+  <div class="sidebar-pane" id="lists">
     <h1 class="sidebar-header">Layer's datasets<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
     <app-select-tolist (changeEvent)="processSelection($event)"></app-select-tolist>
     <p>{{datasetSelected | uppercase }}</p>
