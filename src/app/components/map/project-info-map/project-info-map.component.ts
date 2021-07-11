@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { openlayersMap } from '../openlayers-map';
 import { TemplateserviceService } from 'src/app/services/templateservice.service';
+import { PdfService } from 'src/app/services/pdf.service';
+import { pdf } from 'src/app/types/pdf';
 import Sidebar from "../../../js/ol5-sidebar.js";
 import LayerSwitcher from 'ol-layerswitcher';
 import {
@@ -26,6 +28,8 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
   @ViewChild("popupcloser") popupcloser: ElementRef<HTMLElement>;
   @ViewChild("popupcontent") popupcontent: ElementRef<HTMLElement>;
 
+  public targetedPdf: pdf;
+
   sidebarDiv?: ElementRef<HTMLElement>;
   layerSwitcherDiv?: ElementRef<HTMLElement>;
   domElement: any;
@@ -40,7 +44,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
 
   currentFeature: any;
 
-  constructor(private templateService: TemplateserviceService) {
+  constructor(private templateService: TemplateserviceService, private pdfService: PdfService) {
     this.templateSubscription = this.templateService.template$.subscribe( domNode => {
       if (domNode) {
         this.templateArray.push(domNode)
@@ -96,8 +100,18 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     if (this.mimapa && this.currentFeature) {
       const {type, coordinates } = this.currentFeature.geometry;
       const id = this.currentFeature.properties.id;
+      const findObjectInArrayByValue = function(arr: any, key:string, value: string) {
+        const result = arr.filter((obj: any) => {
+          return obj[key] === value;
+        });
+        return result.length > 0 ? result[0] : null;
+      };
+      var pdfToOffer = findObjectInArrayByValue(this.pdfService.pdfsArray, 'id', id);
+      this.targetedPdf = pdfToOffer;
       this.popupcontent.nativeElement.innerHTML = `
-      <p>Point selected:</p><code> ${id} </code>
+      <code> ${id} </code>
+      <br>
+      <a href="../../../assets/pdf/${this.targetedPdf.src}" download="pdf-${this.targetedPdf.id}">Download the file card</a>
       `;
       this.mimapa.updateView(coordinates);
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
