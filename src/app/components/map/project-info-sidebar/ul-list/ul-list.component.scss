@@ -27,3 +27,11 @@ li:hover {
   color: $ewb-color;
   border-left: 4px solid $ol-color;
 }
+
+li.active {
+  background: $hover;
+  line-height: 1;
+  margin: 0px -5px;
+  border-radius: 1px;
+
+}

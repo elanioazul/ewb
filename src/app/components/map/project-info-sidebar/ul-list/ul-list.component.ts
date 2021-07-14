@@ -14,7 +14,9 @@ export class UlListComponent implements OnInit, OnChanges {
   public geoJsonToList: GeoJSON;
   public arrayOfFeaturesToList: Array<object>;
 
-  @Output() featureSelected: EventEmitter<Feature> = new EventEmitter()
+  @Output() featureSelected: EventEmitter<Feature> = new EventEmitter();
+
+  public highlightFeature : Number;
 
   constructor(public waterS: WaterService, public sanitationS: SanitationService) { }
 
@@ -46,9 +48,10 @@ export class UlListComponent implements OnInit, OnChanges {
     this.arrayOfFeaturesToList = this.geoJsonToList['features'];
   }
 
-  onFeatureSelected(feature: Feature): void {
+  onFeatureSelected(feature: Feature, index: number): void {
     console.log('onFeatureSelected is :' + JSON.stringify(feature));
-    this.featureSelected.emit(feature)
+    this.featureSelected.emit(feature);
+    this.highlightFeature = index;
   }
 
 }

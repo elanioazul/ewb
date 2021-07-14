@@ -1,8 +1,10 @@
 <ul>
   <li
-  *ngFor="let feature of arrayOfFeaturesToList;"
+  #clickedFeature
+  *ngFor="let feature of arrayOfFeaturesToList; let i = index"
   title="{{feature.properties.kind | titlecase }}"
-  (click)="onFeatureSelected(feature)"
+  (click)="onFeatureSelected(feature, i)"
+  [class.active]="i == highlightFeature"
   >
     {{ feature.properties.id | titlecase}}
   </li>
