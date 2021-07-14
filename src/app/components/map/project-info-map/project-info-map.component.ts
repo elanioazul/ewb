@@ -114,6 +114,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       <a href="../../../assets/pdf/${this.targetedPdf.src}" download="pdf-${this.targetedPdf.id}">Download the file card</a>
       `;
       this.mimapa.updateView(coordinates);
+      this.sidebar.open("point-details");
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
     }
   }
