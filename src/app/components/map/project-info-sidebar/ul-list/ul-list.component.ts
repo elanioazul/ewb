@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter} from '@angular/core';
 import { WaterService } from '../../../../services/water.service';
 import { SanitationService } from '../../../../services/sanitation.service';
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
@@ -27,6 +27,7 @@ export class UlListComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.determineWhatList();
+    this.highlightFeature = null;
   }
   determineWhatList() {
     switch (this.datasetToList) {
