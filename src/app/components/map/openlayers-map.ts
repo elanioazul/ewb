@@ -13,6 +13,12 @@ import { Attribution, OverviewMap, Control, Zoom } from 'ol/control';
 import Feature from 'ol/Feature';
 import * as olCoordinate from 'ol/coordinate';
 import Overlay from 'ol/Overlay';
+import Select from 'ol/interaction/Select';
+import * as olEvents from 'ol/events/condition';
+//styles
+import { Stroke, Style, Fill, Text } from 'ol/style';
+import CircleStyle from 'ol/style/Circle';
+import Icon from 'ol/style/Icon.js';
 
 import { waterExisitngPoints } from '../../data/water_existing';
 import { waterPotentialPoints } from '../../data/water_potential';
@@ -149,6 +155,24 @@ export class openlayersMap {
   //interacting with sidebar logic, which sends a point ref to fly to
   public pointSelected: Feature;
 
+  public select = null; // ref to currently selected interaction
+
+  public selectInteractionFeatures = new Select({
+    condition: olEvents.click,
+    layers: [this.waterExisitngPoints, this.waterPotentialPoints, this.sanitationExisitngPoints, this.sanitationPotentialPoints],
+    style: new Style ({
+        image: new CircleStyle ({
+            radius: 9,
+            fill: new Fill ({
+                color: '#9acd32'
+            }),
+            stroke: new Stroke ({
+                color: '#00fcf8'
+            })
+        })
+    })
+})
+
   constructor(@Inject(String)id: string){
     this.map = new Map ({
       target: id,
@@ -159,6 +183,7 @@ export class openlayersMap {
         this.attribution,
         this.zoom
       ],
+      interactions: [this.selectInteractionFeatures]
     });
   }
 
@@ -181,5 +206,9 @@ export class openlayersMap {
   updateOverlayToBlur(): void {
     let overlays = this.map.getOverlays();
     overlays.forEach(overlay => overlay.setPosition(undefined));
+  }
+
+  getInfoFromSelectedFeature() {
+
   }
 }
