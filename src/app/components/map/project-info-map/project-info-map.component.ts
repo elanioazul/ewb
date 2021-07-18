@@ -9,7 +9,7 @@ import {
   RenderOptions,
  } from 'ol-layerswitcher';
 
-import { filter, reduce } from "rxjs/operators";
+import { filter, map, reduce } from "rxjs/operators";
 import { Subscription } from 'rxjs';
 //import { Feature } from "ol";
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
@@ -43,6 +43,8 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
   optionsToRenderLayerSwitcher: RenderOptions;
 
   currentFeature: any;
+
+  clickedFeature: any;
 
   constructor(private templateService: TemplateserviceService, private pdfService: PdfService) {
     this.templateSubscription = this.templateService.template$.subscribe( domNode => {
@@ -89,9 +91,22 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     this.domElement = this.layerSwitcherDiv;
     LayerSwitcher.renderPanel(this.mimapa.map, this.domElement, { reverse: true})
 
-    this.mimapa.selectInteractionFeatures.on('select', function (e) {
-      console.log("selected features : ", e.target.getFeatures())
-    });
+    this.mimapa.selectInteractionFeatures.on('select', (e) => {
+      return this.renovateOverlayWhenOhterFeatureClicked(e)
+    })
+
+  }
+
+  renovateOverlayWhenOhterFeatureClicked(e: any) {
+    this.mimapa.updateOverlayToBlur();
+    console.log("selected features : ", e.target.getFeatures());
+    if (e.selected.length > 0) {
+      this.clickedFeature = e.target.getFeatures().array_[0];
+      let idClicked = this.clickedFeature.values_.id;
+      let coodClicked = this.clickedFeature.values_.geometry.flatCoordinates;
+    } else {
+      return
+    }
 
   }
 
@@ -120,6 +135,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       this.mimapa.updateView(coordinates);
       this.sidebar.open("point-details");
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
+      //this.mimapa.selectInteractionFeatures.setActive(false);
     }
   }
 
