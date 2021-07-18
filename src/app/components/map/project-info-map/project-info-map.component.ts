@@ -104,6 +104,9 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       this.clickedFeature = e.target.getFeatures().array_[0];
       let idClicked = this.clickedFeature.values_.id;
       let coodClicked = this.clickedFeature.values_.geometry.flatCoordinates;
+      this.injectPDFinPopup(idClicked);
+      this.mimapa.updateView(coodClicked);
+      this.mimapa.updateOverlay(coodClicked, idClicked, this.overlay);
     } else {
       return
     }
@@ -119,24 +122,28 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     if (this.mimapa && this.currentFeature) {
       const {type, coordinates } = this.currentFeature.geometry;
       const id = this.currentFeature.properties.id;
-      const findObjectInArrayByValue = function(arr: any, key:string, value: string) {
-        const result = arr.filter((obj: any) => {
-          return obj[key] === value;
-        });
-        return result.length > 0 ? result[0] : null;
-      };
-      var pdfToOffer = findObjectInArrayByValue(this.pdfService.pdfsArray, 'id', id);
-      this.targetedPdf = pdfToOffer;
-      this.popupcontent.nativeElement.innerHTML = `
-      <code> ${id} </code>
-      <br>
-      <a href="../../../assets/pdf/${this.targetedPdf.src}" download="pdf-${this.targetedPdf.id}">Download the file card</a>
-      `;
+      this.injectPDFinPopup(id);
       this.mimapa.updateView(coordinates);
       this.sidebar.open("point-details");
       this.mimapa.updateOverlay(coordinates, id, this.overlay);
       //this.mimapa.selectInteractionFeatures.setActive(false);
     }
+  }
+
+  injectPDFinPopup(id:string) {
+    const findObjectInArrayByValue = function(arr: any, key:string, value: string) {
+      const result = arr.filter((obj: any) => {
+        return obj[key] === value;
+      });
+      return result.length > 0 ? result[0] : null;
+    };
+    var pdfToOffer = findObjectInArrayByValue(this.pdfService.pdfsArray, 'id', id);
+    this.targetedPdf = pdfToOffer;
+    this.popupcontent.nativeElement.innerHTML = `
+    <code> ${id} </code>
+    <br>
+    <a href="../../../assets/pdf/${this.targetedPdf.src}" download="pdf-${this.targetedPdf.id}">Download the file card</a>
+    `;
   }
 
   onClick() {
