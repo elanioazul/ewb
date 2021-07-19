@@ -6,14 +6,23 @@ import { Injectable } from '@angular/core';
 export class FeatureClickedService {
 
   private featureName: string;
+  private featureSortOf: string;
 
   constructor() { }
 
-  public get infoFeatureInMapClicked() {
+  public get nameInfoInMapClicked() {
     return this.featureName;
   }
 
-  public set infoFeatureInMapClicked(val) {
+  public set nameInfoInMapClicked(val) {
     this.featureName = val;
+  }
+
+  public get sortOfInfoInMapClicked() {
+    return this.featureSortOf;
+  }
+
+  public set sortOfInfoInMapClicked(val) {
+    this.featureSortOf = val;
   }
 }

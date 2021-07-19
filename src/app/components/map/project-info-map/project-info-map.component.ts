@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ElementRef, OnDestroy, ViewChild } fr
 import { openlayersMap } from '../openlayers-map';
 import { TemplateserviceService } from 'src/app/services/templateservice.service';
 import { PdfService } from 'src/app/services/pdf.service';
+import { FeatureClickedService } from '../../../services/feature-clicked.service';
 import { pdf } from 'src/app/types/pdf';
 import Sidebar from "../../../js/ol5-sidebar.js";
 import LayerSwitcher from 'ol-layerswitcher';
@@ -9,7 +10,6 @@ import {
   RenderOptions,
  } from 'ol-layerswitcher';
 
-import { FeatureClickedService } from '../../../services/feature-clicked.service';
 import { Subscription } from 'rxjs';
 //import { Feature } from "ol";
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
@@ -107,9 +107,11 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     if (e.selected.length > 0) {
       this.clickedFeature = e.target.getFeatures().array_[0];
       let idClicked = this.clickedFeature.values_.id;
+      let sortOfClicked = this.clickedFeature.values_.sort;
       let coodClicked = this.clickedFeature.values_.geometry.flatCoordinates;
       //share with service
-      this.featS.infoFeatureInMapClicked = idClicked;
+      this.featS.nameInfoInMapClicked = idClicked;
+      this.featS.sortOfInfoInMapClicked = sortOfClicked;
       this.injectPDFinPopup(idClicked);
       this.mimapa.updateViewFlatCoord(coodClicked);
       this.mimapa.updateOverlayFlatCoord(coodClicked, idClicked, this.overlay);

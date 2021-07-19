@@ -19,7 +19,11 @@ export class FeatureInfoComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log('tipo de data set para el switch en template :' + this.sortOfDataset)
+    console.log('tipo de data set para el switch en template :' + this.sortOfDataset);
+    if (this.featureS.nameInfoInMapClicked && this.featureS.sortOfInfoInMapClicked) {
+      this.feature = this.featureS.nameInfoInMapClicked
+      this.sortOfDataset = this.featureS.sortOfInfoInMapClicked
+    }
   }
 
 }
