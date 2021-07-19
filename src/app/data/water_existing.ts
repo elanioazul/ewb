@@ -20,7 +20,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"Yes",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -39,7 +40,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -58,7 +60,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -77,7 +80,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -96,7 +100,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -115,7 +120,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"Yes",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -134,7 +140,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -153,7 +160,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -172,7 +180,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -191,7 +200,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -210,7 +220,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -229,7 +240,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -248,7 +260,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -267,7 +280,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">500 "
+  "householders":">500 ",
+  "sort": "watere"
   }
 },
 {
@@ -286,7 +300,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -305,7 +320,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -324,7 +340,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -343,7 +360,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -362,7 +380,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -381,7 +400,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -400,7 +420,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -419,7 +440,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -438,7 +460,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">10 and <50"
+  "householders":">10 and <50",
+  "sort": "watere"
   }
 },
 {
@@ -457,7 +480,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"No",
   "fee":"No",
-  "householders":""
+  "householders":"",
+  "sort": "watere"
   }
 },
 {
@@ -476,7 +500,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -495,7 +520,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -514,7 +540,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -533,7 +560,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -552,7 +580,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -571,7 +600,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -590,7 +620,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -609,7 +640,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -628,7 +660,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Pollution might be other (no fecal)",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 },
 {
@@ -647,7 +680,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"Yes",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":"<10"
+  "householders":"<10",
+  "sort": "watere"
   }
 },
 {
@@ -666,7 +700,8 @@ export const waterExisitngPoints: GeoJSON =  {
   "coveredwhenfloods":"No",
   "qualitytest":"Yes. Located in a poo area",
   "fee":"No",
-  "householders":">50 and <500"
+  "householders":">50 and <500",
+  "sort": "watere"
   }
 }
   ]

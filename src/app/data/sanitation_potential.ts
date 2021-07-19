@@ -12,7 +12,8 @@ export const sanitationPotentialPoints: GeoJSON =   {
    "properties": {
    "id":"MEN1-7SGVPB",
    "kind":"pit latrine",
-   "replacement":"Yes"
+   "replacement":"Yes",
+   "sort": "sanitationp"
    }
  },
  {
@@ -24,7 +25,8 @@ export const sanitationPotentialPoints: GeoJSON =   {
    "properties": {
    "id":"MEN1-7SGZZN",
    "kind":"pit latrine",
-   "replacement":"No, new one"
+   "replacement":"No, new one",
+   "sort": "sanitationp"
    }
  },
  {
@@ -36,7 +38,8 @@ export const sanitationPotentialPoints: GeoJSON =   {
    "properties": {
    "id":"MEN1-7TMEZL",
    "kind":"pit latrine",
-   "replacement":"No, new one"
+   "replacement":"No, new one",
+   "sort": "sanitationp"
    }
  },
  {
@@ -48,7 +51,8 @@ export const sanitationPotentialPoints: GeoJSON =   {
    "properties": {
    "id":"MEN1-7U8EWD",
    "kind":"pit latrine",
-   "replacement":"No, new one"
+   "replacement":"No, new one",
+   "sort": "sanitationp"
    }
  }
   ]

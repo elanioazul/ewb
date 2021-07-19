@@ -18,7 +18,8 @@ export const sanitationExistingPoints: GeoJSON =  {
    "isprotected":"unprotected. poop migrates through the soil",
    "year":2003,
    "coveredwhenfloods":"Yes",
-   "fee":"No"
+   "fee":"No",
+   "sort": "sanitatione"
    }
  },
  {
@@ -36,7 +37,8 @@ export const sanitationExistingPoints: GeoJSON =  {
    "isprotected":"unprotected. poop migrates through the soil",
    "year":2003,
    "coveredwhenfloods":"Yes",
-   "fee":"No"
+   "fee":"No",
+   "sort": "sanitatione"
    }
  },
  {
@@ -54,7 +56,8 @@ export const sanitationExistingPoints: GeoJSON =  {
    "isprotected":"unprotected. poop migrates through the soil",
    "year":2006,
    "coveredwhenfloods":"No",
-   "fee":"No"
+   "fee":"No",
+   "sort": "sanitatione"
    }
  },
  {
@@ -72,7 +75,8 @@ export const sanitationExistingPoints: GeoJSON =  {
    "isprotected":"unprotected. poop migrates through the soil",
    "year":2006,
    "coveredwhenfloods":"No",
-   "fee":"No"
+   "fee":"No",
+   "sort": "sanitatione"
    }
  }
   ]
