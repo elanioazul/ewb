@@ -164,7 +164,7 @@ export class openlayersMap {
         image: new CircleStyle ({
             radius: 9,
             fill: new Fill ({
-                color: '#9acd32'
+                color: '#f5c842'
             }),
             stroke: new Stroke ({
                 color: '#00fcf8'
@@ -182,8 +182,7 @@ export class openlayersMap {
         this.overviewMapControl,
         this.attribution,
         this.zoom
-      ],
-      interactions: [this.selectInteractionFeatures]
+      ]
     });
   }
 

@@ -91,9 +91,10 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
     this.domElement = this.layerSwitcherDiv;
     LayerSwitcher.renderPanel(this.mimapa.map, this.domElement, { reverse: true})
 
+    this.mimapa.map.addInteraction(this.mimapa.selectInteractionFeatures);
     this.mimapa.selectInteractionFeatures.on('select', (e) => {
       return this.renovateOverlayWhenOhterFeatureClicked(e)
-    })
+    });
 
   }
 
