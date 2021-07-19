@@ -9,7 +9,7 @@ import {
   RenderOptions,
  } from 'ol-layerswitcher';
 
-import { filter, map, reduce } from "rxjs/operators";
+import { FeatureClickedService } from '../../../services/feature-clicked.service';
 import { Subscription } from 'rxjs';
 //import { Feature } from "ol";
 import { Feature, FeatureCollection, GeoJSON as GeoJSON, Geometry, GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'geojson';
@@ -46,7 +46,10 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
 
   clickedFeature: any;
 
-  constructor(private templateService: TemplateserviceService, private pdfService: PdfService) {
+  constructor(
+    private templateService: TemplateserviceService,
+    private pdfService: PdfService,
+    private featS: FeatureClickedService) {
     this.templateSubscription = this.templateService.template$.subscribe( domNode => {
       if (domNode) {
         this.templateArray.push(domNode)
@@ -105,6 +108,8 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       this.clickedFeature = e.target.getFeatures().array_[0];
       let idClicked = this.clickedFeature.values_.id;
       let coodClicked = this.clickedFeature.values_.geometry.flatCoordinates;
+      //share with service
+      this.featS.infoFeatureInMapClicked = idClicked;
       this.injectPDFinPopup(idClicked);
       this.mimapa.updateViewFlatCoord(coodClicked);
       this.mimapa.updateOverlayFlatCoord(coodClicked, idClicked, this.overlay);

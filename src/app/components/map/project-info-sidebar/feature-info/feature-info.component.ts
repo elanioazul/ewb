@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Feature } from 'ol';
+import { FeatureClickedService } from '../../../../services/feature-clicked.service';
 
 @Component({
   selector: 'app-feature-info',
@@ -11,7 +12,7 @@ export class FeatureInfoComponent implements OnInit, OnChanges {
   @Input() feature: any;
   @Input() sortOfDataset: string;
 
-  constructor() {
+  constructor(private featureS: FeatureClickedService) {
   }
 
   ngOnInit(): void {
