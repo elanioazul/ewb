@@ -195,12 +195,28 @@ export class openlayersMap {
     this.map.setView(newView);
   }
 
+  updateViewFlatCoord(coordinates: olCoordinate.Coordinate): void {
+    let newView = new View({
+      center: coordinates,
+      zoom: 18
+    });
+    this.map.setView(newView);
+  }
+
   updateOverlay(coordinates: olCoordinate.Coordinate, id: string, div: ElementRef): void {
     let popup = new Overlay({
       element: div.nativeElement
     });
     this.map.addOverlay(popup);
     popup.setPosition(fromLonLat(coordinates));
+  }
+
+  updateOverlayFlatCoord(coordinates: olCoordinate.Coordinate, id: string, div: ElementRef): void {
+    let popup = new Overlay({
+      element: div.nativeElement
+    });
+    this.map.addOverlay(popup);
+    popup.setPosition(coordinates);
   }
 
   updateOverlayToBlur(): void {

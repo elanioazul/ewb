@@ -105,8 +105,8 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       let idClicked = this.clickedFeature.values_.id;
       let coodClicked = this.clickedFeature.values_.geometry.flatCoordinates;
       this.injectPDFinPopup(idClicked);
-      this.mimapa.updateView(coodClicked);
-      this.mimapa.updateOverlay(coodClicked, idClicked, this.overlay);
+      this.mimapa.updateViewFlatCoord(coodClicked);
+      this.mimapa.updateOverlayFlatCoord(coodClicked, idClicked, this.overlay);
     } else {
       return
     }
