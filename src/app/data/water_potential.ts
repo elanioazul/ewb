@@ -14,7 +14,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">50 and <500",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -28,7 +29,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">50 and <500",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -42,7 +44,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">500 ",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -56,7 +59,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">500 ",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -70,7 +74,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">500 ",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -84,7 +89,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">50 and <500",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 },
 {
@@ -98,7 +104,8 @@ export const waterPotentialPoints: GeoJSON = {
   "kind":"Well hand pump",
   "use":"drinking, cooking and producing mineral water",
   "householders":">50 and <500",
-  "coveredwhenfloods":"Yes"
+  "coveredwhenfloods":"Yes",
+  "sort": "water potential locations"
   }
 }
   ]
