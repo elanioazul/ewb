@@ -1,5 +1,8 @@
 <div class="mapcanvas" id="mapcanvas">
-  <sidebar (featureToBubbleUp)="handleFeatureToShareWithMap($event)"></sidebar>
+  <sidebar
+  (featureToBubbleUp)="handleFeatureToShareWithMap($event)"
+  [featureFromMap]="clickedFeature"
+  ></sidebar>
   <div #popup id="popup" class="ol-popup">
     <a href="javascript:void(0)" #popupcloser class="ol-popup-closer" (click)="onClick()"></a>
     <div #popupcontent id="popup-content"></div>

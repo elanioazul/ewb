@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Output, EventEmitter, AfterViewInit, Inject, InjectionToken, OnDestroy } from "@angular/core";
+import { Component, ViewChild, ElementRef, Output, Input, EventEmitter, AfterViewInit, Inject, InjectionToken, OnDestroy } from "@angular/core";
 import Sidebar from "../../../js/ol5-sidebar.js";
 import { TemplateserviceService } from 'src/app/services/templateservice.service';
 import { Feature } from "ol";
@@ -21,6 +21,7 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
   datasetSelected: string;
   currentFeature: Feature;
   @Output() featureToBubbleUp: EventEmitter<Feature> = new EventEmitter();
+  @Input() featureFromMap: any;
 
   constructor(private templateService: TemplateserviceService) {}
 
@@ -46,7 +47,6 @@ export class ProjectInfoSidebarComponent implements AfterViewInit, OnDestroy {
   }
 
   handleFeatureChange(feature: Feature) {
-    console.log('onhandlingFeatureInSidebar, feature is :' + JSON.stringify(feature));
     this.featureToBubbleUp.emit(feature);
     this.currentFeature = feature;
   }

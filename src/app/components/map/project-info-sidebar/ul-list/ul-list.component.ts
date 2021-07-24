@@ -50,7 +50,6 @@ export class UlListComponent implements OnInit, OnChanges {
   }
 
   onFeatureSelected(feature: Feature, index: number): void {
-    console.log('onFeatureSelected is :' + JSON.stringify(feature));
     this.featureSelected.emit(feature);
     this.highlightFeature = index;
   }

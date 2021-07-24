@@ -8,8 +8,11 @@ import { Feature } from 'ol';
 })
 export class FeatureInfoComponent implements OnInit, OnChanges {
 
-  @Input() feature: any;
-  @Input() sortOfDataset: string;
+  @Input() featureFromList: any;
+  @Input() sortOfDatasetFromList: string;
+
+  @Input() featureFromMap: any;
+  // @Input() sortOfDatasetFromMap: string;
 
   constructor() {
   }
@@ -18,7 +21,9 @@ export class FeatureInfoComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log('tipo de data set para el switch en template :' + this.sortOfDataset)
+    console.log('tipo de data set para el switch en template :' + this.sortOfDatasetFromList)
+    console.log('el id que viene de la lista es :' + JSON.stringify(this.featureFromList))
+    console.log('la feature que viene desde el mapa :' + JSON.stringify(this.featureFromMap))
   }
 
 }

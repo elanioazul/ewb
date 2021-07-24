@@ -1,9 +1,9 @@
-<div *ngIf="feature" class='card'>
+<div *ngIf="featureFromList" class='card'>
   <div class='card__header'>
-    {{ feature.properties.id }}
+    {{ featureFromList.properties.id }}
   </div>
   <div class="card__body">
-    <div [ngSwitch]="sortOfDataset">
+    <div [ngSwitch]="sortOfDatasetFromList">
       <div *ngSwitchCase="'water existing locations'">Water exisiting point
         <table class="rwd-table">
           <tr>
@@ -12,35 +12,35 @@
           </tr>
           <tr>
             <td class="surveryQuestion">Type of</td>
-            <td>{{ feature.properties.kind }}</td>
+            <td>{{ featureFromList.properties.kind }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Used currently?</td>
-            <td>{{ feature.properties.isused }}</td>
+            <td>{{ featureFromList.properties.isused }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Main use</td>
-            <td>{{ feature.properties.use }}</td>
+            <td>{{ featureFromList.properties.use }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Construction year</td>
-            <td>{{ feature.properties.year }}</td>
+            <td>{{ featureFromList.properties.year }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Assesment</td>
-            <td>{{ feature.properties.assesment }}</td>
+            <td>{{ featureFromList.properties.assesment }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Quality test required</td>
-            <td>{{ feature.properties.qualitytest }}</td>
+            <td>{{ featureFromList.properties.qualitytest }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Fee for use</td>
-            <td>{{ feature.properties.fee }}</td>
+            <td>{{ featureFromList.properties.fee }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Nº householders using it</td>
-            <td>{{ feature.properties.householders }}</td>
+            <td>{{ featureFromList.properties.householders }}</td>
           </tr>
         </table>
       </div>
@@ -52,19 +52,19 @@
           </tr>
           <tr>
             <td class="surveryQuestion">Type of</td>
-            <td>{{ feature.properties.kind }}</td>
+            <td>{{ featureFromList.properties.kind }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Main use</td>
-            <td>{{ feature.properties.use }}</td>
+            <td>{{ featureFromList.properties.use }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Nº householders would benefit</td>
-            <td>{{ feature.properties.householders }}</td>
+            <td>{{ featureFromList.properties.householders }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Covered when floods</td>
-            <td>{{ feature.properties.coveredwhenfloods }}</td>
+            <td>{{ featureFromList.properties.coveredwhenfloods }}</td>
           </tr>
         </table>
       </div>
@@ -76,35 +76,35 @@
           </tr>
           <tr>
             <td class="surveryQuestion">Type of</td>
-            <td>{{ feature.properties.kind }}</td>
+            <td>{{ featureFromList.properties.kind }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Filled out</td>
-            <td>{{ feature.properties.filledout }}</td>
+            <td>{{ featureFromList.properties.filledout }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">In use</td>
-            <td>{{ feature.properties.inuse }}</td>
+            <td>{{ featureFromList.properties.inuse }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Stuck/blocked</td>
-            <td>{{ feature.properties.stuckblocked }}</td>
+            <td>{{ featureFromList.properties.stuckblocked }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Is protected</td>
-            <td>{{ feature.properties.isprotected }}</td>
+            <td>{{ featureFromList.properties.isprotected }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Construction year</td>
-            <td>{{ feature.properties.year }}</td>
+            <td>{{ featureFromList.properties.year }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Covered when floods</td>
-            <td>{{ feature.properties.coveredwhenfloods }}</td>
+            <td>{{ featureFromList.properties.coveredwhenfloods }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Fee for use</td>
-            <td>{{ feature.properties.fee }}</td>
+            <td>{{ featureFromList.properties.fee }}</td>
           </tr>
         </table>
       </div>
@@ -116,11 +116,11 @@
           </tr>
           <tr>
             <td class="surveryQuestion">Type of</td>
-            <td>{{ feature.properties.kind }}</td>
+            <td>{{ featureFromList.properties.kind }}</td>
           </tr>
           <tr>
             <td class="surveryQuestion">Would replace old one</td>
-            <td>{{ feature.properties.replacement }}</td>
+            <td>{{ featureFromList.properties.replacement }}</td>
           </tr>
         </table>
       </div>
