@@ -1,8 +1,11 @@
-<div *ngIf="featureFromList" class='card'>
-  <div class='card__header'>
+<div *ngIf="featureFromList || featureFromMap" class='card'>
+  <div class='card__header' *ngIf="flipcoind === 'fromlist'">
     {{ featureFromList.properties.id }}
   </div>
-  <div class="card__body">
+  <div class='card__header' *ngIf="flipcoind === 'frommap'">
+    {{ featureFromMap.values_.id }}
+  </div>
+  <div class="card__body" *ngIf="flipcoind === 'fromlist'">
     <div [ngSwitch]="sortOfDatasetFromList">
       <div *ngSwitchCase="'water existing locations'">Water exisiting point
         <table class="rwd-table">
@@ -121,6 +124,142 @@
           <tr>
             <td class="surveryQuestion">Would replace old one</td>
             <td>{{ featureFromList.properties.replacement }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchDefault>
+        <table class="rwd-table">
+          <tr>
+            <th>Year</th>
+            <th>Gross</th>
+          </tr>
+          <tr>
+            <td data-th="Year">1977</td>
+            <td data-th="Gross">$460,935,665</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card__body" *ngIf="flipcoind === 'frommap'">
+    <div [ngSwitch]="featureFromMap.values_.sort">
+      <div *ngSwitchCase="'water existing locations'">Water exisiting point
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Type of</td>
+            <td>{{ featureFromMap.values_.kind }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Used currently?</td>
+            <td>{{ featureFromMap.values_.isused }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Main use</td>
+            <td>{{ featureFromMap.values_.use }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Construction year</td>
+            <td>{{ featureFromMap.values_.year }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Assesment</td>
+            <td>{{ featureFromMap.values_.assesment }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Quality test required</td>
+            <td>{{ featureFromMap.values_.qualitytest }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Fee for use</td>
+            <td>{{ featureFromMap.values_.fee }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Nº householders using it</td>
+            <td>{{ featureFromMap.values_.householders }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'water potential locations'">Water desired point
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Type of</td>
+            <td>{{ featureFromMap.values_.kind }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Main use</td>
+            <td>{{ featureFromMap.values_.use }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Nº householders would benefit</td>
+            <td>{{ featureFromMap.values_.householders }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Covered when floods</td>
+            <td>{{ featureFromMap.values_.coveredwhenfloods }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'sanitation exisiting locations'">Sanitation exisiting point
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Type of</td>
+            <td>{{ featureFromMap.values_.kind }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Filled out</td>
+            <td>{{ featureFromMap.values_.filledout }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">In use</td>
+            <td>{{ featureFromMap.values_.inuse }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Stuck/blocked</td>
+            <td>{{ featureFromMap.values_.stuckblocked }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Is protected</td>
+            <td>{{ featureFromMap.values_.isprotected }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Construction year</td>
+            <td>{{ featureFromMap.values_.year }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Covered when floods</td>
+            <td>{{ featureFromMap.values_.coveredwhenfloods }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Fee for use</td>
+            <td>{{ featureFromMap.values_.fee }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngSwitchCase="'sanitation potential locations'">Sanitation desired point
+        <table class="rwd-table">
+          <tr>
+            <th>Question</th>
+            <th>Surveyed</th>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Type of</td>
+            <td>{{ featureFromMap.values_.kind }}</td>
+          </tr>
+          <tr>
+            <td class="surveryQuestion">Would replace old one</td>
+            <td>{{ featureFromMap.values_.replacement }}</td>
           </tr>
         </table>
       </div>
