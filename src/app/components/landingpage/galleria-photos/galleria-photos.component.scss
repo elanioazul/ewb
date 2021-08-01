@@ -34,7 +34,7 @@
     &-hover {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 500px;
       opacity: 0;
       background: $ewb-color;
       -webkit-transition: all ease .5s;
@@ -48,7 +48,7 @@
       }
     }
     &-hover:hover {
-      opacity: 1;
+      opacity: 0.8;
     }
     &-src {
       //width: 100%;
