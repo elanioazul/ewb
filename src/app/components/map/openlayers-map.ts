@@ -126,7 +126,7 @@ export class openlayersMap {
       image: new RegularShape({
           stroke: new Stroke({
               width: 1,
-              color: [0, 144, 255, 1]
+              color: [247, 8, 60, 1]
           }),
           points: 5,
           radius1: 7,
@@ -180,7 +180,7 @@ export class openlayersMap {
       image: new RegularShape({
         stroke: new Stroke({
           width: 1,
-          color: [0, 144, 255, 1]
+          color: [247, 8, 60, 1]
         }),
         points: 3,
         radius: 10,
