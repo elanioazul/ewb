@@ -103,10 +103,10 @@ export class openlayersMap {
       image: new RegularShape({
           stroke: new Stroke({
               width: 1,
-              color: [6, 125, 34, 1]
+              color: [0, 144, 255, 1]
           }),
           fill: new Fill({
-              color: [25, 235, 75, 0.3]
+              color: [0, 144, 255, 0.7]
           }),
           points: 5,
           radius1: 7,
@@ -126,7 +126,7 @@ export class openlayersMap {
       image: new RegularShape({
           stroke: new Stroke({
               width: 1,
-              color: [6, 125, 34, 1]
+              color: [0, 144, 255, 1]
           }),
           points: 5,
           radius1: 7,
@@ -156,11 +156,11 @@ export class openlayersMap {
     style: new Style({
       image: new RegularShape({
         fill: new Fill({
-          color: [25, 235, 75, 0.3]
+          color: [0, 144, 255, 0.7]
         }),
         stroke: new Stroke({
           width: 1,
-          color: [6, 125, 34, 1]
+          color: [0, 144, 255, 1]
         }),
         points: 3,
         radius: 10,
@@ -180,7 +180,7 @@ export class openlayersMap {
       image: new RegularShape({
         stroke: new Stroke({
           width: 1,
-          color: [6, 125, 34, 1]
+          color: [0, 144, 255, 1]
         }),
         points: 3,
         radius: 10,

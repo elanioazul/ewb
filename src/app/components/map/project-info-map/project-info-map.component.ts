@@ -108,6 +108,7 @@ export class ProjectInfoMapComponent implements OnInit, AfterViewInit, OnDestroy
       this.injectPDFinPopup(idClicked);
       this.mimapa.updateViewFlatCoord(coodClicked);
       this.mimapa.updateOverlayFlatCoord(coodClicked, idClicked, this.overlay);
+      this.sidebar.open("point-details");
     } else {
       return
     }
