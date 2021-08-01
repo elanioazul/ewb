@@ -18,6 +18,7 @@ import * as olEvents from 'ol/events/condition';
 //styles
 import { Stroke, Style, Fill, Text } from 'ol/style';
 import CircleStyle from 'ol/style/Circle';
+import RegularShape from 'ol/style/RegularShape';
 import Icon from 'ol/style/Icon.js';
 
 import { waterExisitngPoints } from '../../data/water_existing';
@@ -85,7 +86,22 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Exisitng locations'
+    title: 'Exisitng locations',
+    style: new Style({
+      image: new RegularShape({
+          stroke: new Stroke({
+              width: 1,
+              color: [6, 125, 34, 1]
+          }),
+          fill: new Fill({
+              color: [25, 235, 75, 0.3]
+          }),
+          points: 5,
+          radius1: 7,
+          radius2: 9,
+          rotation: Math.PI
+      })
+    })
   } as BaseLayerOptions);
   public waterPotentialPoints = new VectorLayer({
     source: new VectorSource({
@@ -93,7 +109,19 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Potential locations'
+    title: 'Potential locations',
+    style: new Style({
+      image: new RegularShape({
+          stroke: new Stroke({
+              width: 1,
+              color: [6, 125, 34, 1]
+          }),
+          points: 5,
+          radius1: 7,
+          radius2: 9,
+          rotation: Math.PI
+      })
+    })
   } as BaseLayerOptions);
 
   public waterOverlays = new LayerGroup({
@@ -112,7 +140,22 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Exisitng locations'
+    title: 'Exisitng locations',
+    style: new Style({
+      image: new RegularShape({
+        fill: new Fill({
+          color: [25, 235, 75, 0.3]
+        }),
+        stroke: new Stroke({
+          width: 1,
+          color: [6, 125, 34, 1]
+        }),
+        points: 3,
+        radius: 10,
+        rotation: Math.PI / 4,
+        angle: 0,
+      }),
+    }),
   } as BaseLayerOptions);
   public sanitationPotentialPoints = new VectorLayer({
     source: new VectorSource({
@@ -120,7 +163,19 @@ export class openlayersMap {
         dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'
       })
     }),
-    title: 'Potential locations'
+    title: 'Potential locations',
+    style: new Style({
+      image: new RegularShape({
+        stroke: new Stroke({
+          width: 1,
+          color: [6, 125, 34, 1]
+        }),
+        points: 3,
+        radius: 10,
+        rotation: Math.PI / 4,
+        angle: 0,
+      }),
+    }),
   } as BaseLayerOptions);
 
   public sanitationOverlays = new LayerGroup({
@@ -157,21 +212,20 @@ export class openlayersMap {
 
   public select = null; // ref to currently selected interaction
 
+  public basicStyle = new Style ({
+    image: new CircleStyle ({
+        radius: 9,
+        stroke: new Stroke ({
+            color: '#00fcf8'
+        })
+    })
+  })
+
   public selectInteractionFeatures = new Select({
     condition: olEvents.click,
     layers: [this.waterExisitngPoints, this.waterPotentialPoints, this.sanitationExisitngPoints, this.sanitationPotentialPoints],
-    style: new Style ({
-        image: new CircleStyle ({
-            radius: 9,
-            fill: new Fill ({
-                color: '#f5c842'
-            }),
-            stroke: new Stroke ({
-                color: '#00fcf8'
-            })
-        })
-    })
-})
+    style: this.basicStyle
+  })
 
   constructor(@Inject(String)id: string){
     this.map = new Map ({
