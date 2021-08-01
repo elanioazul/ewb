@@ -56,7 +56,7 @@
     @media screen and (min-width: 950px) {
       flex-direction: row;
       align-items: center;
-      width: 70vw;
+      width: 90vw;
     }
 
     &-box {
@@ -73,6 +73,9 @@
     &-title {
       display: block;
       font-size: rem(22px);
+      @media screen and (min-width: 950px) {
+        padding: 5px 20px;
+      }
     }
     &-desc {
       display: block;
@@ -82,7 +85,7 @@
 
       padding: 10px 0px 10px 0px;
       @media screen and (min-width: 950px) {
-        padding: 10px 40px;
+        padding: 5px 20px;
       }
     }
   }
