@@ -5,6 +5,7 @@ import TileLayer from 'ol/layer/Tile';
 import LayerTile from 'ol/layer/Tile';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
+import BingMaps from 'ol/source/BingMaps';
 import GeoJSON from 'ol/format/GeoJSON';
 import LayerGroup from 'ol/layer/Group';
 import View from 'ol/View';
@@ -55,12 +56,12 @@ export class openlayersMap {
     type: 'base',
     maxZoom: 18
   } as BaseLayerOptions);
-  public watercolor = new LayerTile({
-    title: 'Water color',
+  public toner = new LayerTile({
+    title: 'Toner',
     type: 'base',
     visible: false,
     source: new SourceStamen({
-      layer: 'watercolor'
+      layer: 'toner'
     })
   } as BaseLayerOptions);
   public google = new LayerTile({
@@ -72,10 +73,21 @@ export class openlayersMap {
     title: 'GoogleMaps',
     type: 'base',
     maxZoom: 18
-  } as BaseLayerOptions)
+  } as BaseLayerOptions);
+  public bing = new TileLayer({
+    title: 'Aerial',
+    type: 'base',
+    visible: false,
+    preload: Infinity,
+    source: new BingMaps({
+      key: 'AuOnHkagHRMe9v1n1yJMNM0G4iyXee2OC_pWr4K9moD63ppuwCIsKAwKJUgEP9CR',
+      imagerySet: 'Aerial',
+      maxZoom: 18
+    }),
+  } as BaseLayerOptions);
   public baseMaps = new LayerGroup({
     title: 'Base maps',
-    layers: [this.osm, this.watercolor, this.google]
+    layers: [this.osm,this.google, this.bing, this.toner]
   } as GroupLayerOptions);
 
   //CapasOverlays
