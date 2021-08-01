@@ -109,9 +109,9 @@ export class openlayersMap {
               color: [0, 144, 255, 0.7]
           }),
           points: 5,
-          radius1: 7,
-          radius2: 9,
-          rotation: Math.PI
+          radius: 10,
+          radius2: 4,
+          angle: 0,
       })
     })
   } as BaseLayerOptions);
@@ -129,9 +129,9 @@ export class openlayersMap {
               color: [247, 8, 60, 1]
           }),
           points: 5,
-          radius1: 7,
-          radius2: 9,
-          rotation: Math.PI
+          radius: 10,
+          radius2: 4,
+          angle: 0,
       })
     })
   } as BaseLayerOptions);
