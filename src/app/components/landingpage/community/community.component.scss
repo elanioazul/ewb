@@ -128,8 +128,18 @@
 
 .community-content {
   padding-bottom: 40px;
-  p:last-child {
-      margin-bottom: 0;
+  &__list {
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
+
+    @media (min-width: 768px) {
+      list-style-type: none;
+    }
+  }
+
+  &__list > li:not(:first-child):not(:last-child) {
+    padding: 10px 0px;
   }
 }
 
