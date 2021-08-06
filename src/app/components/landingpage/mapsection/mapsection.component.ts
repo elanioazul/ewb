@@ -5,7 +5,14 @@ import Stamen from 'ol/source/Stamen';
 import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
+import * as olProj from 'ol/proj';
 import {Attribution, defaults as defaultControls} from 'ol/control';
+import VectorSource from 'ol/source/Vector';
+import VectorLayer from 'ol/layer/Vector';
+import Style from 'ol/style/Style';
+import Icon from 'ol/style/Icon';
+import Feature from 'ol/Feature';
+import Point from 'ol/geom/Point';
 @Component({
   selector: 'app-mapsection',
   templateUrl: './mapsection.component.html',
@@ -32,6 +39,22 @@ export class MapsectionComponent implements OnInit {
   public attribution = new Attribution({
     collapsible: false,
   });
+  public geom = new Point(olProj.fromLonLat(this.nl));
+  public marker = new Feature(this.geom);
+  public markers = new VectorLayer({
+    source: new VectorSource({
+      features: [this.marker]
+    }),
+    style: new Style({
+      image: new Icon({
+        anchor: [0.5, 46],
+        src: '../../../../assets/icons/pin.png'
+      })
+    })
+  })
+
+  //https://openlayers.org/en/latest/examples/icon.html
+
 
   constructor() { }
 
@@ -55,7 +78,7 @@ export class MapsectionComponent implements OnInit {
       var zoom = this.view.getZoom();
       var parts = 2;
       var called = false;
-      function callback(complete) {
+      var callback = (complete) => {
         --parts;
         if (called) {
           return;
@@ -64,6 +87,8 @@ export class MapsectionComponent implements OnInit {
           called = true;
           done(complete);
         }
+        this.map.addLayer(this.markers);
+        console.log(this.map);
       }
       this.view.animate(
         {
