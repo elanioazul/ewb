@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import 'ol/ol.css';
 import Map from 'ol/Map';
-import OSM from 'ol/source/OSM';
+import Stamen from 'ol/source/Stamen';
 import TileLayer from 'ol/layer/Tile';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
@@ -22,7 +22,9 @@ export class MapsectionComponent implements OnInit {
   public osm = new TileLayer ({
     visible: true,
     opacity: 0.8,
-    source: new OSM(),
+    source: new Stamen({
+      layer: 'watercolor',
+    }),
     maxZoom: 18,
 
   });

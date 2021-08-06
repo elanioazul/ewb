@@ -73,11 +73,16 @@
 
 
   }
+
+  &__btnExplore{
+    padding: 10px 0px;
+  }
   &__map {
     width: 300px;
     height: 350px;
     max-width: 90%;
     margin-top: rem(25px);
+    margin-bottom: rem(25px);
     @media(min-width:767px) {
       width: 500px;
       height: 550px;
