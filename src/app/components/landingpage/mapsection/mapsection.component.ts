@@ -9,8 +9,9 @@ import * as olProj from 'ol/proj';
 import {Attribution, defaults as defaultControls} from 'ol/control';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
-import Style from 'ol/style/Style';
 import Icon from 'ol/style/Icon';
+import { Stroke, Style, Fill, Text } from 'ol/style';
+import IconAnchorUnits from 'ol/style/IconAnchorUnits';
 import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
 @Component({
@@ -39,21 +40,30 @@ export class MapsectionComponent implements OnInit {
   public attribution = new Attribution({
     collapsible: false,
   });
-  public geom = new Point(olProj.fromLonLat(this.nl));
+  public superStyle = new Style({
+    image: new Icon({
+      anchorXUnits: IconAnchorUnits.PIXELS,
+      anchorYUnits: IconAnchorUnits.PIXELS,
+      opacity: 0.8,
+      src: '../../../../assets/icons/pin.png'
+      //src:  "data:image/svg+xml;base64," + btoa(mysymbol[i].textXML)
+    }),
+    text: new Text({
+      text: 'Explore the project',
+      fill: new Fill({color: 'black'}),
+      stroke: new Stroke({color: 'white', width: 1}),
+      offsetY: -20,
+      offsetX: 10,
+      font: "Courier New, monospace"
+
+  })
+  });
+  public geom = new Point(this.garzaCoord);
   public marker = new Feature(this.geom);
   public markers = new VectorLayer({
     source: new VectorSource({
-      features: [this.marker]
-    }),
-    style: new Style({
-      image: new Icon({
-        anchor: [0.5, 46],
-        src: '../../../../assets/icons/pin.png'
-      })
     })
-  })
-
-  //https://openlayers.org/en/latest/examples/icon.html
+  });
 
 
   constructor() { }
@@ -85,10 +95,10 @@ export class MapsectionComponent implements OnInit {
         }
         if (parts === 0 || !complete) {
           called = true;
-          done(complete);
+          this.marker.setStyle(this.superStyle)
+          this.markers.getSource().addFeature(this.marker)
+          this.map.addLayer(this.markers);
         }
-        this.map.addLayer(this.markers);
-        console.log(this.map);
       }
       this.view.animate(
         {
