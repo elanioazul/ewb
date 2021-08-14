@@ -92,13 +92,21 @@
   height: 50px;
 }
 
+input[type="checkbox"]:checked~.container>#menu {
+  transform: translatey(0);
+  transition: 0.25s linear .1s transform;
+  top: 40px;
+  @media(min-width: 767px) {
+  }
+  @media(min-width: 1024px) {
+    transform: none;
+    transition: none;
+    top: 0px;
+  }
+  @media(min-width: 1200px) {
 
-//input[type="checkbox"]:checked~.container>#menu {
-  // transform: translatey(0);
-  // transition: 0.25s linear .1s transform;
-  // top: 40px
-    /*change here related your top menu height*/
-//}
+  }
+}
 
 input[type=checkbox] {
   transition: all 0.3s;
