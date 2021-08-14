@@ -11,8 +11,16 @@
           <button class="btn location__btn-btn" (click)="flyToGarza()">Navigate</button>
         </div>
         <div id="map" class="location__map"></div>
-        <div class="location__btn">
-          <button class="btn location__btn-btn" routerLink="/map">Explore the project</button>
+        <div class="location__btn indicator">
+          <div class="loading indicator__item" routerLink="/map">
+            <div class="indicator">
+                <!-- <div class="loadinglayer"></div> -->
+                <button class="btn location__btn-btn indicator__item loadinglayer">Explore the project</button>
+                <div class="loadinglayer second"></div>
+                <div class="loadinglayer third"></div>
+            </div>
+          </div>
+
         </div>
       </div>
   </div>
