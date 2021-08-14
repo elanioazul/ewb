@@ -72,6 +72,10 @@
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &-item {
       padding: 4px;
