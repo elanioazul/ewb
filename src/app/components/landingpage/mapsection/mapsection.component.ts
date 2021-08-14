@@ -48,15 +48,14 @@ export class MapsectionComponent implements OnInit {
       src: '../../../../assets/icons/pin.png'
       //src:  "data:image/svg+xml;base64," + btoa(mysymbol[i].textXML)
     }),
-    text: new Text({
-      text: 'Explore the project',
-      fill: new Fill({color: 'black'}),
-      stroke: new Stroke({color: 'white', width: 1}),
-      offsetY: -20,
-      offsetX: 10,
-      font: "Courier New, monospace"
-
-  })
+    // text: new Text({
+    //   text: 'Explore the project',
+    //   fill: new Fill({color: 'black'}),
+    //   stroke: new Stroke({color: 'white', width: 1}),
+    //   offsetY: -20,
+    //   offsetX: 10,
+    //   font: "Courier New, monospace"
+    // })
   });
   public geom = new Point(this.garzaCoord);
   public marker = new Feature(this.geom);
