@@ -106,7 +106,7 @@ export class openlayersMap {
         anchorXUnits: IconAnchorUnits.PIXELS,
         anchorYUnits: IconAnchorUnits.PIXELS,
         opacity: 0.8,
-        src: '../../../../assets/icons/water_e.png'
+        src: '../../../../assets/icons/water_e_figma.png'
       })
     })
   } as BaseLayerOptions);
@@ -123,7 +123,7 @@ export class openlayersMap {
         anchorXUnits: IconAnchorUnits.PIXELS,
         anchorYUnits: IconAnchorUnits.PIXELS,
         opacity: 0.8,
-        src: '../../../../assets/icons/water_p.png'
+        src: '../../../../assets/icons/water_p_figma.png'
       })
     })
   } as BaseLayerOptions);
@@ -151,7 +151,7 @@ export class openlayersMap {
         anchorXUnits: IconAnchorUnits.PIXELS,
         anchorYUnits: IconAnchorUnits.PIXELS,
         opacity: 0.8,
-        src: '../../../../assets/icons/sanitation_e.png'
+        src: '../../../../assets/icons/sanitation_e_figma.png'
       })
     })
   } as BaseLayerOptions);
@@ -168,7 +168,7 @@ export class openlayersMap {
         anchorXUnits: IconAnchorUnits.PIXELS,
         anchorYUnits: IconAnchorUnits.PIXELS,
         opacity: 0.8,
-        src: '../../../../assets/icons/sanitation_p.png'
+        src: '../../../../assets/icons/sanitation_p_figma.png'
       })
     })
   } as BaseLayerOptions);
