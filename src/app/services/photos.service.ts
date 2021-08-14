@@ -36,16 +36,16 @@ export class PhotosService {
       category: 'Baseline survey'
     },
     {
-      title:'Utilities',
+      title:'Sanitation facilities',
       subtitle: 'Example of the sanitation facilities to be renovated',
       src: 'sanitation_1.jpg',
       desc: 'Four enumerators profiles where set up to conduct the 4 geosurveys proposed to assess current state of facilitites and water points to get a better understanding of the situation.',
-      comments: 'The conditions are very bad, specially some of the sanitation facilities. 4 sanitation points were showed. 	All are unprotected (excrement migrates through soil and water). All are collapsed and filled out, specially two, closed currently. The . Plastic drum urine diverting dry toilet where initially thought as a proposel. This way seat provides reduction of 2/3 of the mass and 1/3 of the area and pedestal will increase in length to ease urinating and squatting both for men and women.',
+      comments: 'The conditions are very bad, specially some of the sanitation facilities. 4 sanitation points were showed. All are unprotected (excrement migrates through soil and water). All are collapsed and filled out, specially two, closed currently. Plastic drum urine diverting dry toilet where initially thought as a proposel. This way seat provides reduction of 2/3 of the mass and 1/3 of the area and pedestal will increase in length to ease urinating and squatting both for men and women.',
       date: 'Oct 2019',
       category: 'mWater survey'
     },
     {
-      title:'Utilities',
+      title:'Water utilities',
       subtitle: 'Example of the water facilities to be renovated',
       src: 'water_1.jpg',
       desc: 'Only 4 out of 35 water points are well hand pumps. Two are dry, one is functioning fine and last one is located in a defecation area. 3 out of 35 water points are river/streams. 23 unprotected open pits (hand dug likely. Some partially bricked. 5 protected pits (hand dug likely. Some partially bricked.',
@@ -54,7 +54,7 @@ export class PhotosService {
       category: 'mWater survey'
     },
     {
-      title:'Utilities',
+      title:'Water utilities',
       subtitle: 'Example of the water facilities to be renovated',
       src: 'water_3.jpg',
       desc: 'Only 4 out of 35 water points are well hand pumps. Two are dry, one is functioning fine and last one is located in a defecation area. 3 out of 35 water points are river/streams. 23 unprotected open pits (hand dug likely. Some partially bricked. 5 protected pits (hand dug likely. Some partially bricked.',
