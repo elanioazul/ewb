@@ -18,8 +18,9 @@ import Select from 'ol/interaction/Select';
 import * as olEvents from 'ol/events/condition';
 //styles
 import { Stroke, Style, Fill, Text } from 'ol/style';
+import IconAnchorUnits from 'ol/style/IconAnchorUnits';
+import IconOrigin from 'ol/style/IconOrigin';
 import CircleStyle from 'ol/style/Circle';
-import RegularShape from 'ol/style/RegularShape';
 import Icon from 'ol/style/Icon.js';
 
 import { waterExisitngPoints } from '../../data/water_existing';
@@ -44,7 +45,7 @@ export class openlayersMap {
   public view = new View({
     projection: 'EPSG:3857',
     center: this.garzaCoord,
-    zoom: 13
+    zoom: 15
   });
 
   //capasBase
@@ -65,7 +66,7 @@ export class openlayersMap {
     })
   } as BaseLayerOptions);
   public google = new LayerTile({
-    visible: true,
+    visible: false,
     opacity: 0.9,
     source: new OSM({
       'url': 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
@@ -100,18 +101,12 @@ export class openlayersMap {
     }),
     title: 'Exisitng locations',
     style: new Style({
-      image: new RegularShape({
-          stroke: new Stroke({
-              width: 1,
-              color: [0, 144, 255, 1]
-          }),
-          fill: new Fill({
-              color: [0, 144, 255, 0.7]
-          }),
-          points: 5,
-          radius: 10,
-          radius2: 4,
-          angle: 0,
+      image: new Icon({
+        anchorOrigin: IconOrigin.TOP_RIGHT,
+        anchorXUnits: IconAnchorUnits.PIXELS,
+        anchorYUnits: IconAnchorUnits.PIXELS,
+        opacity: 0.8,
+        src: '../../../../assets/icons/water_e.png'
       })
     })
   } as BaseLayerOptions);
@@ -123,15 +118,12 @@ export class openlayersMap {
     }),
     title: 'Potential locations',
     style: new Style({
-      image: new RegularShape({
-          stroke: new Stroke({
-              width: 1,
-              color: [247, 8, 60, 1]
-          }),
-          points: 5,
-          radius: 10,
-          radius2: 4,
-          angle: 0,
+      image: new Icon({
+        anchorOrigin: IconOrigin.TOP_RIGHT,
+        anchorXUnits: IconAnchorUnits.PIXELS,
+        anchorYUnits: IconAnchorUnits.PIXELS,
+        opacity: 0.8,
+        src: '../../../../assets/icons/water_p.png'
       })
     })
   } as BaseLayerOptions);
@@ -154,20 +146,14 @@ export class openlayersMap {
     }),
     title: 'Exisitng locations',
     style: new Style({
-      image: new RegularShape({
-        fill: new Fill({
-          color: [0, 144, 255, 0.7]
-        }),
-        stroke: new Stroke({
-          width: 1,
-          color: [0, 144, 255, 1]
-        }),
-        points: 3,
-        radius: 10,
-        rotation: Math.PI / 4,
-        angle: 0,
-      }),
-    }),
+      image: new Icon({
+        anchorOrigin: IconOrigin.TOP_RIGHT,
+        anchorXUnits: IconAnchorUnits.PIXELS,
+        anchorYUnits: IconAnchorUnits.PIXELS,
+        opacity: 0.8,
+        src: '../../../../assets/icons/sanitation_e.png'
+      })
+    })
   } as BaseLayerOptions);
   public sanitationPotentialPoints = new VectorLayer({
     source: new VectorSource({
@@ -177,17 +163,14 @@ export class openlayersMap {
     }),
     title: 'Potential locations',
     style: new Style({
-      image: new RegularShape({
-        stroke: new Stroke({
-          width: 1,
-          color: [247, 8, 60, 1]
-        }),
-        points: 3,
-        radius: 10,
-        rotation: Math.PI / 4,
-        angle: 0,
-      }),
-    }),
+      image: new Icon({
+        anchorOrigin: IconOrigin.TOP_RIGHT,
+        anchorXUnits: IconAnchorUnits.PIXELS,
+        anchorYUnits: IconAnchorUnits.PIXELS,
+        opacity: 0.8,
+        src: '../../../../assets/icons/sanitation_p.png'
+      })
+    })
   } as BaseLayerOptions);
 
   public sanitationOverlays = new LayerGroup({
@@ -226,7 +209,7 @@ export class openlayersMap {
 
   public basicStyle = new Style ({
     image: new CircleStyle ({
-        radius: 9,
+        radius: 4,
         stroke: new Stroke ({
             color: '#00fcf8'
         })
@@ -236,7 +219,9 @@ export class openlayersMap {
   public selectInteractionFeatures = new Select({
     condition: olEvents.click,
     layers: [this.waterExisitngPoints, this.waterPotentialPoints, this.sanitationExisitngPoints, this.sanitationPotentialPoints],
-    style: this.basicStyle
+    style: null,
+    multi: false,
+    hitTolerance: 2
   })
 
   constructor(@Inject(String)id: string){
@@ -287,9 +272,5 @@ export class openlayersMap {
   updateOverlayToBlur(): void {
     let overlays = this.map.getOverlays();
     overlays.forEach(overlay => overlay.setPosition(undefined));
-  }
-
-  getInfoFromSelectedFeature() {
-
   }
 }
