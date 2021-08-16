@@ -150,10 +150,18 @@
   background-color: $ewb-color;
 }
 
+
 .timeline>li .timeline-image h4 {
   margin-top: 12px;
   font-size: 10px;
   line-height: 14px;
+}
+
+.bepart-title {
+  color: $hover;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .timeline>li.timeline-inverted>.timeline-panel {
@@ -231,6 +239,10 @@
       line-height: 18px;
   }
 
+  .bepart-title {
+    font-size: 15px;
+  }
+
   .timeline>li.timeline-inverted>.timeline-panel {
       float: right;
       padding: 0 30px 20px 20px;
@@ -257,6 +269,10 @@
       margin-top: 30px;
       font-size: 18px;
       line-height: 26px;
+  }
+
+  .bepart-title {
+    font-size: 20px;
   }
 
   .timeline>li.timeline-inverted>.timeline-panel {
