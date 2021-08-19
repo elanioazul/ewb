@@ -96,15 +96,6 @@
 
 }
 
-.specialbtn {
-  font-size: 0.7rem;
-  @media(min-width:767px) {
-  }
-  @media(min-width:1024px) {
-    font-size: 1rem;
-  }
-}
-
 .indicator {
   display: flex;
   flex-direction: row;
@@ -112,61 +103,15 @@
   justify-content: center;
 
   &__item {
-    padding: 0px 15px;
+    padding: 25px 15px;
+    @media(min-width:767px) {
+      padding: 30px 15px;
+    }
+    @media(min-width:1024px) {
+      padding: 35px 15px;
+    }
   }
 
 }
 
-//burbon
-.loading {
-  min-width: 100%;
-  min-height: 100%;
-  flex: 1 0 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  .indicator {
-      width: 4em;
-      height: 4em;
-      position: relative;
-      @media(min-width:767px) {
-        width: 6em;
-        height: 6em;
-      }
-      @media(min-width:1024px) {
-        width: 6em;
-        height: 6em;
-      }
-
-      .loadinglayer {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          background-color: $ewb-color;
-          opacity: 0.6;
-          position: absolute;
-          top: 0;
-          left: 0;
-
-          animation: bloom 3s infinite ease-in-out;
-
-          &.second {
-              animation-delay:-0.5s;
-          }
-          &.third {
-              animation-delay: -1s;
-          }
-      }
-  }
-}
-
-
-@keyframes bloom {
-  0%, 100% { transform: (scale(0.0)); opacity: 0.3; }
-  15% { transform: (scale(1.2)); opacity: 0.6; }
-  75% { transform: (scale(0.0)); opacity: 0; }
-
-}
 
